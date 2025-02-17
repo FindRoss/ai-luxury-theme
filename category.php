@@ -1,6 +1,5 @@
 <?php get_header();
 
-  // require locate_template('breadcrumb.php');
   get_template_part( 'template-parts/breadcrumbs/breadcrumbs' );
 
   // Get the current category object
@@ -29,7 +28,7 @@
     if ($query->have_posts()) : 
       while ($query->have_posts()) : $query->the_post(); 
 
-        require locate_template('card.php');
+        get_template_part( 'template-parts/card/card' );
   
      endwhile; 
     endif; ?>
