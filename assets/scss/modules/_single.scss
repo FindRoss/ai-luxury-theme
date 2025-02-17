@@ -1,0 +1,78 @@
+/* Single.php */
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  border-top: 10px solid #000;
+  gap: 1rem;
+  background-color: #e4bb97;
+}
+
+.heading__content {
+  padding: var(--size-200);
+}
+
+.heading__content h1 {
+  font-size: var(--size-700);
+  line-height: 1.4;
+
+  @media screen and (min-width: var(--breakpoint-small)) {
+    font-size: var(--size-900);
+  }
+}
+
+.heading__content .date {
+  margin-top: var(--size-300);
+  font-size: var(--size-500);
+  color: var(--color-tertiary);
+  font-family: var(--font-family-heading);
+}
+
+.heading__image {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.heading__image img {
+  width: 100%;
+  height: auto;
+}
+
+/* DESKTOP */
+@media screen and (min-width: 768px) {
+
+  .heading__content,
+  .heading__image {
+    flex: 1;
+  }
+
+  .heading__image {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .heading {
+    flex-direction: row;
+  }
+}
+
+/* Content */
+.content>*+* {
+  margin-top: var(--size-500);
+}
+
+.content {
+  max-width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    max-width: 800px;
+  }
+}

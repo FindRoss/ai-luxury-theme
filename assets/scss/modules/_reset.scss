@@ -1,3 +1,5 @@
+// No changes needed if this file only contains reset styles
+/* RESET STYLES (ignore) */
 /* Box sizing rules */
 *,
 *::before,
@@ -54,10 +56,10 @@ img {
   display: block;
 }
 
-/* Natural flow and rhythm in articles by default */
-article>*+* {
+/* Natural flow and rhythm in articles by default
+article > * + * {
   margin-top: 1em;
-}
+} */
 
 /* Inherit fonts for inputs and buttons */
 input,
@@ -76,3 +78,5 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+/* RESET STYLES END */

@@ -7,8 +7,8 @@
 	<?php wp_head(); ?>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 
@@ -32,16 +32,13 @@
 				
 				
 				<nav class="main-navigation">
-				<?php
-      wp_nav_menu(array(
-        'theme_location' => 'primary',
-        'menu_class' => 'primary',
-        'container' => false,
-      ));
-      ?>
-		
-		
+					<?php wp_nav_menu(array(
+						'theme_location' => 'primary',
+						'menu_class' => 'primary',
+						'container' => false,
+					)); ?>
 				</nav>
+				
 			</div><!-- .nav-layout --> 
 		</div><!-- .container --> 
 	</header>

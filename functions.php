@@ -2,8 +2,7 @@
 
 // Add the main stylesheet to the theme
 function enqueue_theme_styles() {  
-  wp_enqueue_style( 'reset-styles', get_template_directory_uri() . '/reset.css', array(), wp_get_theme()->get('Version'));
-  wp_enqueue_style( 'main-styles', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get('Version'));
+  wp_enqueue_style( 'style-index', get_template_directory_uri() . '/build/style-index.css', array(), wp_get_theme()->get('Version'));
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_theme_styles');
 

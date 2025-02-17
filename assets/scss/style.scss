@@ -1,5 +1,11 @@
-@import "modules/reset";
-@import "modules/general";
-@import "modules/header";
+@use "modules/_reset";
+@use "modules/_variables";
+@use "modules/_typography";
+@use "modules/_general";
+@use "modules/_header";
+@use "modules/_breadcrumbs";
+@use "modules/_single";
+@use "modules/_footer";
+@use "modules/_cards";
 
 

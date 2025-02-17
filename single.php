@@ -1,23 +1,10 @@
 <?php get_header(); ?>
 
-<!-- 
-What we need: 
-- Heading
-- Excerpt
-- Image
-- Publish Date
-- Category
-- Content
--->
-
-
+<?php get_template_part( 'template-parts/breadcrumbs/breadcrumbs' ); ?>
 
 <div class="container">
 
-
   <article>
-
-  
 
     <!-- Heading -->
     <section class="heading">
@@ -55,16 +42,11 @@ What we need:
     if ($query->have_posts()) :
 
       echo '<div class="card-grid">';
-      
-
-         while ($query->have_posts()) : $query->the_post(); 
-
-          require locate_template('card.php');
-  
-      endwhile; ?>
-      </div>
-    <?php endif; ?>
-
+        while ($query->have_posts()) : $query->the_post(); 
+          get_template_part( 'template-parts/card/card' );
+        endwhile; 
+      echo '</div>';
+    endif; ?>
 
 </div>
 
