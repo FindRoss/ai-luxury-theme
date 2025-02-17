@@ -5,12 +5,10 @@
   flex-direction: column;
   border-top: 10px solid #000;
   gap: 1rem;
-  margin-top: 1.5rem;
   background-color: #e4bb97;
 }
 
 .heading__content {
-  margin-top: 1rem;
   padding: var(--size-200);
 }
 
@@ -25,7 +23,7 @@
 
 .heading__content .date {
   margin-top: var(--size-300);
-  font-size: 20px;
+  font-size: var(--size-500);
   color: var(--color-tertiary);
   font-family: var(--font-family-heading);
 }
@@ -60,11 +58,7 @@
 
 /* Content */
 .content>*+* {
-  margin-top: 1rem;
-}
-
-.content>*+* {
-  margin-top: 2rem;
+  margin-top: var(--size-500);
 }
 
 .content {
@@ -74,7 +68,7 @@
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-  /* background-color: #e4bb97; */
+  
 }
 
 @media screen and (min-width: 768px) {

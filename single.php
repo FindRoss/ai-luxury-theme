@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php get_template_part( 'tempalte-parts/breadcrumbs/breadcrumbs' ); ?>
+<?php get_template_part( 'template-parts/breadcrumbs/breadcrumbs' ); ?>
 
 <div class="container">
 

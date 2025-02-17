@@ -19,7 +19,7 @@
       <h3><?php the_title(); ?></h3>
     </a>
     <span class="date">Published <?php echo $date; ?></span>
-    <p class="excerpt"><?php the_excerpt(); ?></p>
+    <p class="excerpt"><?php echo get_the_excerpt(); ?></p>
   </div>
 
 </div>
