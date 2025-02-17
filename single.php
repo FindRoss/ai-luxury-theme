@@ -37,6 +37,9 @@ What we need:
       <?php the_content(); ?>
     </section>
 
+    <!-- I WANT A SIDEBAR HERE -->
+    <div class="sidebar"></div>
+
   </article>
 
 

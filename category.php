@@ -1,5 +1,8 @@
 <?php get_header();
 
+  // require locate_template('breadcrumb.php');
+  get_template_part( 'template-parts/breadcrumbs/breadcrumbs' );
+
   // Get the current category object
   $category = get_queried_object(); 
 
