@@ -57,7 +57,6 @@ body {
 }
 
 footer {
-  margin-top: auto;
   background: var(--color-dark);
   color: #ffffff;
 }
@@ -114,27 +113,6 @@ footer {
   .heading {
     flex-direction: row;
   }
-}
-
-/* MAIN NAV */
-
-.nav-layout {
-  height: 6rem;
-  background-color: #e4bb97;
-}
-
-.primary {
-  display: flex;
-  flex-direction: row;
-  gap: 7rem;
-  font-size: var(--size-700);
-  font-weight: 700;
-  font-family: "Lexend", sans-serif;
-}
-
-.primary a {
-  color: #000;
-  text-decoration: none;
 }
 
 /* Content */
