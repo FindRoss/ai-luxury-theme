@@ -1,32 +1,30 @@
 header {
-
+  background-color: var(--color-primary);
+  
   .nav-layout {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 6rem;
-    background-color: #e4bb97;
   }
-
-
-  // .main-navigation {
-  //   display: flex;
-  //   gap: 0.5rem;
-  // }
 
   .primary {
-    display: flex;
-    flex-direction: row;
-    gap: 7rem;
-    font-size: var(--size-700);
-    font-weight: 700;
-    font-family: "Lexend", sans-serif;
+    display: none; 
+    visibility: hidden;
 
-    a {
-      color: #000;
-      text-decoration: none;
-    }
+    @media screen and (min-width: var(--breakpoint-medium)) {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      font-size: var(--size-500);
+      font-weight: 700;
+      font-family: "Lexend", sans-serif;
+    } 
+  }
+
+  // This is global for dekstop and mobile menu;
+  a {
+    color: #000;
+    text-decoration: none;
   }
 }
-
-

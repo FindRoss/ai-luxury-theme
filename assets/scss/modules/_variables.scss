@@ -2,10 +2,12 @@
 :root {
   --color-dark: #000000;
   --color-tertiary: #4a5568;
+  --color-primary: #e4bb97;
+  --color-body: #f3ccaa;
 
   --font-family-heading: "Lexend", sans-serif;
-  --font-family-body: sans-serif;
-
+  --font-family-body: "Catamaran", sans-serif;
+  
   --size-100: 0.579rem;
   --size-200: 0.694rem;
   --size-300: 0.833rem;
@@ -15,4 +17,11 @@
   --size-700: 2.074rem;
   --size-800: 2.488rem;
   --size-900: 2.986rem;
-}
+
+  --breakpoint-small: 576px;
+  --breakpoint-medium: 768px;
+  --breakpoint-large: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
+
+} 
