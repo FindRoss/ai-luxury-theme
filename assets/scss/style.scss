@@ -1,5 +1,6 @@
-@import "modules/reset";
-@import "modules/general";
-@import "modules/header";
+@use "modules/_variables";
+@use "modules/_reset";
+@use "modules/_general";
+@use "modules/_header";
 
 
