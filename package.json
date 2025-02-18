@@ -2,9 +2,10 @@
   "name": "ai-luxury-theme",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "wp-scripts build",
+    "start": "wp-scripts start"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,8 @@
     "url": "https://github.com/FindRoss/ai-luxury-theme/issues"
   },
   "homepage": "https://github.com/FindRoss/ai-luxury-theme#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@wordpress/scripts": "^30.11.0"
+  }
 }
