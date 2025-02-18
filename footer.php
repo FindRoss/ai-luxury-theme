@@ -33,6 +33,9 @@
 
       </div>
     </div><!-- .footer-layout -->
+    
+    
+    <?php get_template_part( 'template-parts/components/theme-mode' ); ?>
   </div><!-- .container --> 
 </footer>
 </body>

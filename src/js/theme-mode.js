@@ -2,6 +2,7 @@ export function themeMode() {
   const modeBtn = document.getElementById('mode-button');
   const htmlEl = document.querySelector('html');
 
+
   modeBtn.addEventListener('click', () => {
     const isLightTheme = htmlEl.classList.contains('light-theme');
 

@@ -1,10 +1,10 @@
 <?php get_header();
 
+  // Breadcrumbs
   get_template_part( 'template-parts/breadcrumbs/breadcrumbs' );
 
   // Get the current category object
   $category = get_queried_object(); 
-
 
   $category_id          = $category->term_id;   
   $category_name        = $category->name;  
@@ -22,7 +22,6 @@
       'posts_per_page' => -1,
       'category'       => $category_id
     );
-
     $query = new WP_Query($args);
 
     if ($query->have_posts()) : 
