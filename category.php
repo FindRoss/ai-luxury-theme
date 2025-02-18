@@ -1,5 +1,6 @@
-<?php get_header();
-
+<?php get_header();?>
+<div class="category-container">
+  <?php
   get_template_part( 'template-parts/breadcrumbs/breadcrumbs' );
 
   // Get the current category object
@@ -16,22 +17,41 @@
   <p><?php echo $category_description; ?></p>
 </div>
   
+
+
+
 <?php 
     $args = array(
       'post_type'      => 'post', 
-      'posts_per_page' => -1,
+      'posts_per_page' => 3,
       'category'       => $category_id
     );
 
     $query = new WP_Query($args);
-
+echo '<div class="category-grid">';
     if ($query->have_posts()) : 
       while ($query->have_posts()) : $query->the_post(); 
 
         get_template_part( 'template-parts/card/card' );
-  
-     endwhile; 
+      endwhile; 
+      echo '</div>';
     endif; ?>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam modi atque accusamus esse temporibus quaerat voluptas expedita sequi placeat facere est corporis asperiores, eligendi iure impedit repudiandae reiciendis eveniet. Explicabo.</p>
+<div class="pagination">
+<?php
+// Pagination
+$big = 999999999; // need an unlikely integer
+
+echo paginate_links( array(
+  'base'    => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+  'format'  => '?paged=%#%',
+  'current' => max( 1, get_query_var('paged') ),
+  'total'   => $query->max_num_pages
+) );
+
+// Reset post data
+wp_reset_postdata();
+?>
+</div>
+</div>
 <?php get_footer(); ?>
