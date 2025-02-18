@@ -6,6 +6,12 @@ function enqueue_theme_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_theme_styles');
 
+// Add the main JavaScript file to the theme
+function enqueue_theme_scripts() {
+  wp_enqueue_script( 'main-js', get_template_directory_uri() . '/build/index.js', array(), wp_get_theme()->get('Version') );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_theme_scripts');
+
 // Add post thumbail support to the theme
 add_theme_support('post-thumbnails');
 

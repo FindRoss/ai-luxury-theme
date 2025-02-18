@@ -4,6 +4,7 @@
   --color-tertiary: #4a5568;
   --color-primary: #e4bb97;
   --color-body: #f3ccaa;
+  --color-text-muted: #535D6B;
 
   --font-family-heading: "Lexend", sans-serif;
   --font-family-body: "Catamaran", sans-serif;
@@ -27,8 +28,9 @@
 } 
 
 
-// html.light-theme {
-//   --color-primary: #272524;
-//   --color-body: #454545;
-//   --color-dark: #FFFFFF;
-// }
+html.dark-mode {
+  --color-primary: #272524;
+  --color-body: #454545;
+  --color-dark: #FFFFFF;
+  --color-text-muted: #969DAA;
+}
