@@ -33,5 +33,5 @@
      endwhile; 
     endif; ?>
 
-
+<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam modi atque accusamus esse temporibus quaerat voluptas expedita sequi placeat facere est corporis asperiores, eligendi iure impedit repudiandae reiciendis eveniet. Explicabo.</p>
 <?php get_footer(); ?>

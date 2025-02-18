@@ -1,18 +1,20 @@
 {
-  "name": "custom-theme",
+  "name": "ai-luxury-theme",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
+  "devDependencies": {},
   "scripts": {
-    "build": "wp-scripts build",
-    "start": "wp-scripts start",
-    "dev": "wp-scripts start",
-    "devFast": "wp-scripts start",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FindRoss/ai-luxury-theme.git"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@wordpress/scripts": "^30.11.0"
-  }
+  "bugs": {
+    "url": "https://github.com/FindRoss/ai-luxury-theme/issues"
+  },
+  "homepage": "https://github.com/FindRoss/ai-luxury-theme#readme",
+  "description": ""
 }
