@@ -12,7 +12,8 @@ header {
     display: none; 
     visibility: hidden;
 
-    @media screen and (min-width: var(--breakpoint-medium)) {
+   @media screen and (min-width: 768px) { 
+      visibility: visible;
       display: flex;
       flex-direction: row;
       gap: 1rem;
@@ -22,7 +23,7 @@ header {
     } 
   }
 
-  // This is global for dekstop and mobile menu;
+  // This is global for desktop and mobile menu;
   a {
     color: #000;
     text-decoration: none;
