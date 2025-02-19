@@ -9,6 +9,19 @@
   gap: 1rem;
 }
 
+.category-grid > * {
+  transition:
+    transform 0.4s,
+    opacity 0.4s;
+  box-shadow: 20px 1rem 1rem 0px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-primary);
+}
+
+.category-grid > *:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
 .category-heading {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -23,10 +36,20 @@
   justify-content: center;
   gap: 1rem;
   margin-top: 3rem;
+  font-family: var(--font-family-link);
+  font-weight: 500;
+  font-size: var(--size-400);
+  font-weight: bold;
 }
 
 .pagination a:active,
 .pagination a:link {
+  display: flex;
   color: #000;
   text-decoration: none;
+}
+
+.pagination a:hover {
+  transform: scale(1.1);
+  transition: all 0.1s;
 }
