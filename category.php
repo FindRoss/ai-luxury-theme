@@ -23,15 +23,22 @@
 
 
 <?php 
+
+$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+
        $args = array(
         'post_type'      => 'post', 
         'posts_per_page' => 3,
+        'paged'          => $paged,
         'category'       => $category_id,
         
       );
 
+      if ($paged == 1) {
+       
+      }
     $query = new WP_Query($args);
-echo '<div class="category-grid">';
+echo '<div class="card-grid">';
     if ($query->have_posts()) : 
       while ($query->have_posts()) : $query->the_post(); 
 
