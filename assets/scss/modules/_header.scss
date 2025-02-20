@@ -9,6 +9,13 @@ header {
     gap: 1rem;
     position: relative;
 
+    .site-logo {
+      a {
+        display: flex;
+      }
+
+    }
+
     .main-navigation {
       height: 100%;
       display: flex;
@@ -68,11 +75,12 @@ header {
       top: 100%;
       left: 0;
       width: 100%;
+      border-bottom: 5px solid #000;
         
       /* Adjust as needed */
       z-index: 1000;
       background: var(--color-primary);
-      padding: var(--size-600) var(--size-400);
+      padding: var(--size-900) var(--size-400);
       gap: var(--size-400);
 
       grid-template-columns: repeat(2, 1fr);
@@ -86,7 +94,7 @@ header {
       }
 
       li {
-        line-height: 0.9;
+        line-height: 1.2;
         a {
           font-size: var(--size-400);
           color: var(--color-dark);
@@ -98,14 +106,27 @@ header {
       }
     }
 
-    // .sub-menu.show-sub-menu {
-    //   display: block;
-    // }
   }
 
   // This is global for desktop and mobile menu;
   a {
     color: #000;
     text-decoration: none;
+  }
+}
+
+
+.svg-logo {
+  &__stars,
+  &__box {
+    fill: var(--color-accent);
+  }
+
+  &__box-text {
+    fill: #ffffff;
+  }
+
+  &__text {
+    fill: var(--color-dark);
   }
 }

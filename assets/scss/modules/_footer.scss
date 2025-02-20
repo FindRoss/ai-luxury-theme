@@ -32,7 +32,8 @@ footer {
   @media screen and (min-width: 768px) {
     .footer-layout {
       flex-direction: row;
-      padding: var(--size-500);
+      padding-top: var(--size-500);
+      padding-bottom: var(--size-500);
     }
   }
 }
