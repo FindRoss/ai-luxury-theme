@@ -1,32 +1,50 @@
 header {
+  position: relative;
   background-color: var(--color-primary);
   
   .nav-layout {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     height: 5rem;
     gap: 1rem;
-    position: relative;
+  
+    @media screen and (min-width: 768px) {
+      justify-content: space-between;
+    }
+
+    .hamburger {
+      display: flex;
+
+      @media screen and (min-width: 768px) {
+        display: none; 
+      }
+    }
 
     .site-logo {
       a {
         display: flex;
       }
-
     }
 
-    .main-navigation {
-      height: 100%;
-      display: flex;
-      align-items: center;
+    .desktop-navigation {
+      display: none;
+      
+      @media screen and (min-width: 768px) {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    // This should be global for desktop and mobile menu;
+    a {
+      color: #000;
+      text-decoration: none;
     }
   }
 
-  ul.primary-menu {
-    display: none; 
-    visibility: hidden;
-
+  ul.desktop-menu { 
    @media screen and (min-width: 768px) { 
       height: 100%; 
       visibility: visible;
@@ -78,7 +96,7 @@ header {
       border-bottom: 5px solid #000;
         
       /* Adjust as needed */
-      z-index: 1000;
+      z-index: 999;
       background: var(--color-primary);
       padding: var(--size-900) var(--size-400);
       gap: var(--size-400);
@@ -105,16 +123,8 @@ header {
         }
       }
     }
-
-  }
-
-  // This is global for desktop and mobile menu;
-  a {
-    color: #000;
-    text-decoration: none;
   }
 }
-
 
 .svg-logo {
   &__stars,
@@ -128,5 +138,33 @@ header {
 
   &__text {
     fill: var(--color-dark);
+  }
+}
+
+// This is outside the <header>
+.mobile-navigation {
+  display: none; // Hide it while i am working on it.
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100vh;
+  background: #333;
+  color: white;
+  transition: right 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  &.active {
+    right: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  .mobile-menu {
+    background: var(--color-body);
   }
 }

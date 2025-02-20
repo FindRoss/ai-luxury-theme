@@ -18,16 +18,20 @@
 		<div class="container">
 			<div class="nav-layout">
 
+				<div class="hamburger">
+					<?php get_template_part( 'template-parts/svg/hamburger' ); ?>
+				</div>
+
 				<div class="site-logo">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<?php get_template_part( 'template-parts/svg/logo' ); ?>
 					</a>
 				</div>
 				
-				<nav class="main-navigation">
+				<nav class="desktop-navigation">
 					<?php wp_nav_menu(array(
 						'theme_location' => 'primary',
-						'menu_class' => 'primary-menu',
+						'menu_class' => 'primary-menu desktop-menu',
 						'menu_id' => 'primary-menu', 
 						'container' => false,
 					)); ?>
@@ -36,3 +40,12 @@
 			</div><!-- .nav-layout --> 
 		</div><!-- .container --> 
 	</header>
+
+	<nav class="mobile-navigation">
+		<?php wp_nav_menu(array(
+			'theme_location' => 'primary',
+			'menu_class' => 'primary-menu mobile-menu',
+			'menu_id' => 'primary-menu', 
+			'container' => false,
+		)); ?>
+	</nav>
