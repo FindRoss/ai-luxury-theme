@@ -31,8 +31,7 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
         'post_type'      => 'post', 
         'posts_per_page' => 3,
         'paged'          => $paged,
-        'category'       => $category_id,
-        
+        'cat'            => $category_id,
       );
   
     $query = new WP_Query($args);
