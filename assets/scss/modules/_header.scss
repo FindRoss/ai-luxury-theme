@@ -1,30 +1,170 @@
 header {
+  position: relative;
   background-color: var(--color-primary);
   
   .nav-layout {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    height: 6rem;
+    height: 5rem;
+    gap: 1rem;
+  
+    @media screen and (min-width: 768px) {
+      justify-content: space-between;
+    }
+
+    .hamburger {
+      display: flex;
+
+      @media screen and (min-width: 768px) {
+        display: none; 
+      }
+    }
+
+    .site-logo {
+      a {
+        display: flex;
+      }
+    }
+
+    .desktop-navigation {
+      display: none;
+      
+      @media screen and (min-width: 768px) {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    // This should be global for desktop and mobile menu;
+    a {
+      color: #000;
+      text-decoration: none;
+    }
   }
 
-  .primary {
-    display: none; 
-    visibility: hidden;
-
-    @media screen and (min-width: var(--breakpoint-medium)) {
+  ul.desktop-menu { 
+   @media screen and (min-width: 768px) { 
+      height: 100%; 
+      visibility: visible;
       display: flex;
-      flex-direction: row;
-      gap: 1rem;
+      align-items: center;
+      gap: var(--size-200);
       font-size: var(--size-500);
       font-weight: 700;
       font-family: "Lexend", sans-serif;
     } 
+
+    > li {
+      height: 100%; 
+      display: flex;
+      align-items: center;
+ 
+    }
+
+    > li > a {
+      font-size: 1rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding-left: var(--size-200);
+      padding-right: var(--size-200);
+      border-bottom: 5px solid transparent;
+      border-top: 5px solid transparent;
+      color: var(--color-dark);
+    }
+
+    > li:hover {
+      background: var(--color-body);
+    }
+
+    > li.has-sub-menu:hover > a {
+      border-bottom: 5px solid var(--color-dark);
+    }
+
+    > li.has-sub-menu:hover > .sub-menu {
+      display: grid;
+    }
+
+    .sub-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      border-bottom: 5px solid #000;
+        
+      /* Adjust as needed */
+      z-index: 999;
+      background: var(--color-primary);
+      padding: var(--size-900) var(--size-400);
+      gap: var(--size-400);
+
+      grid-template-columns: repeat(2, 1fr);
+
+      @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media screen and (min-width: 992px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      li {
+        line-height: 1.2;
+        a {
+          font-size: var(--size-400);
+          color: var(--color-dark);
+
+          &:hover {
+            color: var(--color-text-muted);
+          }
+        }
+      }
+    }
+  }
+}
+
+.svg-logo {
+  &__stars,
+  &__box {
+    fill: var(--color-accent);
   }
 
-  // This is global for dekstop and mobile menu;
-  a {
-    color: #000;
-    text-decoration: none;
+  &__box-text {
+    fill: #ffffff;
+  }
+
+  &__text {
+    fill: var(--color-dark);
+  }
+}
+
+// This is outside the <header>
+.mobile-navigation {
+  display: none; // Hide it while i am working on it.
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100vh;
+  background: #333;
+  color: white;
+  transition: right 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  &.active {
+    right: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  .mobile-menu {
+    background: var(--color-body);
   }
 }
