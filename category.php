@@ -3,11 +3,12 @@
   <?php
    // Get the current page for pagination, defaulting to 1 if not set
   $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+
+  // Breadcrumbs
   get_template_part( 'template-parts/breadcrumbs/breadcrumbs' );
 
   // Get the current category object
   $category = get_queried_object(); 
-
 
   $category_id          = $category->term_id;   
   $category_name        = $category->name;  
@@ -33,10 +34,7 @@ $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
         'category'       => $category_id,
         
       );
-
-      if ($paged == 1) {
-       
-      }
+  
     $query = new WP_Query($args);
 echo '<div class="card-grid">';
     if ($query->have_posts()) : 
