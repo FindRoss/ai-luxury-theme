@@ -1,5 +1,5 @@
-<footer class="footer">
-  <div class="footer-container" >
+<footer>
+  <div class="container" >
     <div class="footer-layout">
       
       <!-- Logo -->
