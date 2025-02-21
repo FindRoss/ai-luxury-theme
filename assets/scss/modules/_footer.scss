@@ -1,6 +1,26 @@
 footer {
   padding-top: var(--size-500);
   padding-bottom: var(--size-500);
+}
+
+.footer-info {
+  color: #000;
+  font-family: sans-serif;
+  font-size: var(--size-500);
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.footer-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: var(--size-500);
   background-color: var(--color-primary);
 
   .footer-info {
@@ -28,6 +48,7 @@ footer {
     color: var(--color-dark);
     text-decoration: none;
   }
+}
   
   @media screen and (min-width: 768px) {
     .footer-layout {
@@ -37,4 +58,3 @@ footer {
     }
   }
 }
-

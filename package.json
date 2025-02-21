@@ -1,7 +1,7 @@
 {
   "name": "custom-theme",
   "version": "1.0.0",
-  "description": "",
+  "description": "A custom WordPress theme",
   "main": "index.js",
   "scripts": {
     "build": "wp-scripts build",
@@ -9,7 +9,7 @@
     "dev": "wp-scripts start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Your Name",
   "license": "ISC",
   "dependencies": {
     "@wordpress/scripts": "^30.11.0"

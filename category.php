@@ -1,4 +1,8 @@
-<?php get_header();
+<?php get_header();?>
+<div class="category-container">
+  <?php
+   // Get the current page for pagination, defaulting to 1 if not set
+  $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
   // Breadcrumbs
   get_template_part( 'template-parts/breadcrumbs/breadcrumbs' );
@@ -16,21 +20,47 @@
   <p><?php echo $category_description; ?></p>
 </div>
   
-<?php 
-    $args = array(
-      'post_type'      => 'post', 
-      'posts_per_page' => -1,
-      'category'       => $category_id
-    );
-    $query = new WP_Query($args);
 
+
+
+<?php 
+
+$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+
+       $args = array(
+        'post_type'      => 'post', 
+        'posts_per_page' => 3,
+        'paged'          => $paged,
+        'category'       => $category_id,
+        
+      );
+  
+    $query = new WP_Query($args);
+echo '<div class="card-grid">';
     if ($query->have_posts()) : 
       while ($query->have_posts()) : $query->the_post(); 
 
         get_template_part( 'template-parts/card/card' );
-  
-     endwhile; 
+      endwhile; 
+      echo '</div>';
     endif; ?>
 
+<div class="pagination">
+<?php
+// Pagination
+$big = 999999999; // need an unlikely integer
 
+
+echo paginate_links( array(
+  'base'    => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+  'format'  => '?paged=%#%',
+  'current' => max( 1, get_query_var('paged') ),
+  'total'   => $query->max_num_pages
+) );
+
+// Reset post data
+wp_reset_postdata();
+?>
+</div>
+</div>
 <?php get_footer(); ?>
