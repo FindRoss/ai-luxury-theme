@@ -1,6 +1,6 @@
 header {
   position: relative;
-  background-color: var(--color-primary);
+  background-color: var(--color-light);
   
   .nav-layout {
     display: flex;
@@ -77,10 +77,6 @@ header {
 
     > li:hover {
       background: var(--color-body);
-    }
-
-    > li.has-sub-menu:hover > a {
-      border-bottom: 5px solid var(--color-dark);
     }
 
     > li.has-sub-menu:hover > .sub-menu {

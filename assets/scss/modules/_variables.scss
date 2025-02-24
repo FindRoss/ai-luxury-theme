@@ -1,13 +1,21 @@
 // No changes needed if this file only contains variable definitions
 :root {
+  // Alt / Beige / Sand color scheme
+  // --color-dark: #000000;
+  // --color-light: #ffffff;
+  // --color-primary: #e4bb97;
+  // --color-body: #f3ccaa;
+  // --color-text-muted: #535D6B;
+  // --color-accent: #1D4ED8;
+
   --color-dark: #000000;
-  --color-tertiary: #4a5568;
-  --color-primary: #e4bb97;
-  --color-body: #f3ccaa;
+  --color-light: #ffffff;
+  --color-primary: #F9F9F9;
+  --color-body: #F9F9F9;
+  --color-accent: #1D4ED8;
+  --color-link: #1941B7;
   --color-text-muted: #535D6B;
   
-  --color-light: #ffffff;
-  --color-accent: #1D4ED8;
 
   --font-family-heading: "Lexend", sans-serif;
   --font-family-body: "Catamaran", sans-serif;
@@ -31,10 +39,11 @@
 } 
 
 html.dark-mode {
+  --color-dark: #FFFFFF;
+  --color-light: #000000;
   --color-primary: #272524;
   --color-body: #454545;
-  --color-dark: #FFFFFF;
-  --color-text-muted: #969DAA;
   --color-accent: #3B82F6;
-  --color-light: #000000;
+  --color-link: #4C77E6;
+  --color-text-muted: #969DAA;
 }
