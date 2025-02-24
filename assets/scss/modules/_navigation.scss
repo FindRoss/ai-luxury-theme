@@ -1,0 +1,28 @@
+
+
+.mobile-nav-drawer {
+  position: fixed;
+  top: 5rem;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background: var(--color-body);
+  transform: translateX(-100%);
+
+  &.open {
+    transform: translateX(0);
+    visibility: unset;
+  }
+
+  // .mobile-nav {}
+}
+
+.admin-bar .mobile-nav-drawer {
+  top: 46px;
+}
+
+// body.no-scroll {
+// overflow: hidden; 
+// }
