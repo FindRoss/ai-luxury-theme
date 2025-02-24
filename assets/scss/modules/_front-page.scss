@@ -1,0 +1,49 @@
+.camera-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 2fr;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.camera-posts h3 {
+  border-top: 5px solid #000;
+  margin-right: 3rem;
+}
+
+.camera-posts a,
+h4 {
+  margin-top: 2rem;
+}
+
+.camera-posts a {
+  color: #000;
+  text-decoration: none;
+}
+
+.deals {
+  border-top: 5px solid #000;
+  margin-left: 3rem;
+}
+
+.home-section {
+  border-top: 8px solid #000;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.home-section h1 {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.security {
+  border-top: 8px solid #000;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.security H1 {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
