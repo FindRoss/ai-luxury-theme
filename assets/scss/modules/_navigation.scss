@@ -1,9 +1,11 @@
+
+
 body.no-scroll {
   overflow: hidden;
 }
 
 .mobile-nav-drawer {
-  background-color: var(--color-body);
+  background-color: var(--color-light);
   position: fixed;
   left: 0;
   top: 0;
@@ -25,58 +27,61 @@ body.no-scroll {
 
     .hamburger {
       display: flex;
+
+      svg path {
+          fill: var(--color-dark);
+        }
     }
   }
 
-    .mobile-menu {
-      &>li {
+  .mobile-menu {
+    &>li {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-top: var(--size-300);
+      gap: var(--size-300);
+
+      &>a {
+        flex: 5 1 0%; // Grow 5x, shrink, and auto-basis
+        font-size: var(--size-600);
+      }
+
+      .chevron {
+        flex: 1 1 0%; // Takes up remaining space, same shrink behavior
+        cursor: pointer;
         display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        padding-top: var(--size-300);
-        gap: var(--size-300);
-  
-        &>a {
-          flex: 5 1 0%; // Grow 5x, shrink, and auto-basis
-          font-size: var(--size-600);
+        justify-content: flex-end;
+        svg {
+          transform: rotate(0deg);
+          path {
+            fill: var(--color-dark);
+          }
         }
-  
-        .chevron {
-          flex: 1 1 0%; // Takes up remaining space, same shrink behavior
-          cursor: pointer;
-          display: flex;
-          justify-content: flex-end;
+
+        &.rotated {
           svg {
-            
-            transform: rotate(0deg);
-          }
-  
-          &.rotated {
-            svg {
-              transform: rotate(180deg);
-            }
-          }
-        }
-  
-        .sub-menu {
-          flex: 1 1 100%; // Forces full width while keeping flex rules
-          max-height: 0;
-          overflow: hidden;
-          padding-left: var(--size-300);
-  
-   
-      
-  
-          &.open {
-            max-height: 500px; // Adjust this value based on your content
-          }
-  
-          a {
-            font-size: var(--size-400);
+            transform: rotate(180deg);
           }
         }
       }
+
+      .sub-menu {
+        flex: 1 1 100%; // Forces full width while keeping flex rules
+        max-height: 0;
+        overflow: hidden;
+        padding-left: var(--size-300);
+
+
+    
+
+        &.open {
+          max-height: 500px; // Adjust this value based on your content
+        }
+
+      }
     }
+  }
 }
 
 .admin-bar .mobile-nav-drawer {

@@ -17,8 +17,8 @@ header {
       display: flex;
       cursor: pointer;
 
-      svg {
-        color: var(--color-dark);
+      svg path {
+        fill: var(--color-dark);
       }
       
 
@@ -50,17 +50,7 @@ header {
     }
   }
 
-  ul.primary-menu {
-    font-weight: 700;
-    font-family: "Lexend", sans-serif;
-
-    li {
-      a {
-        width: 100%;
-        color: var(--color-dark);
-      }
-    }
-  }
+  
 
   ul.desktop-menu { 
    @media screen and (min-width: 768px) { 
@@ -99,15 +89,13 @@ header {
     }
 
     .sub-menu {
+      z-index: 999;
       display: none;
       position: absolute;
       top: 100%;
       left: 0;
       width: 100%;
       border-bottom: 5px solid #000;
-        
-      /* Adjust as needed */
-      z-index: 999;
       background: var(--color-primary);
       padding: var(--size-900) var(--size-400);
       gap: var(--size-400);
@@ -121,18 +109,6 @@ header {
       @media screen and (min-width: 992px) {
         grid-template-columns: repeat(4, 1fr);
       }
-
-      li {
-        line-height: 1.2;
-        a {
-          font-size: var(--size-400);
-          color: var(--color-dark);
-
-          &:hover {
-            color: var(--color-text-muted);
-          }
-        }
-      }
     }
   }
 }
@@ -144,7 +120,7 @@ header {
   }
 
   &__box-text {
-    fill: #ffffff;
+    fill: var(--color-light);
   }
 
   &__text {
@@ -177,5 +153,34 @@ header {
 
   .mobile-menu {
     background: var(--color-body);
+  }
+}
+
+ul.primary-menu {
+  font-weight: 700;
+  // font-family: "Lexend", sans-serif;
+  font-family: sans-serif;
+
+  li {
+    a {
+      width: 100%;
+      color: var(--color-dark);
+    }
+  }
+
+  .sub-menu li {
+    margin-top: var(--size-200);
+    line-height: 1.3;
+
+    a {
+      font-size: var(--size-500);
+      color: var(--color-dark);
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        color: var(--color-text-muted);
+      }
+    }
   }
 }
