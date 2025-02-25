@@ -18,7 +18,7 @@
 		<div class="container">
 			<div class="nav-layout">
 
-				<div class="hamburger" id="hamburger">
+				<div class="hamburger nav-hamburger">
 					<?php get_template_part( 'template-parts/svg/hamburger' ); ?>
 				</div>
 
@@ -42,10 +42,12 @@
 	</header>
 
 	<div class="mobile-nav-drawer" id="nav-drawer">
-		<div class="container" style="height: 100%;">
+		<div class="container">
 			<div class="mobile-nav-layout">
-				<div class="hamburger">
-					<?php get_template_part( 'template-parts/svg/hamburger' ); ?>
+				<div class="mobile-nav-header">
+					<div class="hamburger nav-hamburger">
+						<?php get_template_part( 'template-parts/svg/hamburger' ); ?>
+					</div>
 				</div>
 				<nav class="mobile-nav">
 					<?php wp_nav_menu(array(

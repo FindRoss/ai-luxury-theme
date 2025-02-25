@@ -21,3 +21,13 @@ register_nav_menus(array(
   'footer_one' => 'Footer Menu One',
   'footer_two' => 'Footer Menu Two',
 ));
+
+// Add chevron to menu items with sub-menus in mobile menu only
+function add_chevron_to_menu_items($item_output, $item, $depth, $args) {
+  if (in_array('menu-item-has-children', $item->classes) && strpos($args->menu_class, 'mobile-menu') !== false) {
+    $chevron = '<div class="chevron">' . file_get_contents(get_template_directory() . '/template-parts/svg/chevron-down.php') . '</div>';
+    $item_output = str_replace('</a>', '</a>' . $chevron, $item_output);
+  }
+  return $item_output;
+}
+add_filter('walker_nav_menu_start_el', 'add_chevron_to_menu_items', 10, 4);
