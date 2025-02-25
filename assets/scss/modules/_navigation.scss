@@ -28,54 +28,55 @@ body.no-scroll {
     }
   }
 
-  .mobile-nav {
-    overflow-y: auto; // Ensure the nav itself can scroll
-    padding-top: var(--size-400);
-    padding-bottom: var(--size-600);
-
     .mobile-menu {
-      & > li {  
+      &>li {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
         padding-top: var(--size-300);
         gap: var(--size-300);
-
-        & > a {
-          flex: 1;
+  
+        &>a {
+          flex: 5 1 0%; // Grow 5x, shrink, and auto-basis
           font-size: var(--size-600);
         }
-
+  
         .chevron {
-          display: inline-block;
+          flex: 1 1 0%; // Takes up remaining space, same shrink behavior
           cursor: pointer;
-          padding-left: var(--size-400);
-          padding-right: var(--size-400);
-          transform: rotate(0deg);
-          transition: rotate 0.3s ease-out;
-
+          display: flex;
+          justify-content: flex-end;
+          svg {
+            
+            transform: rotate(0deg);
+          }
+  
           &.rotated {
-            transform: rotate(180deg);
+            svg {
+              transform: rotate(180deg);
+            }
           }
         }
-
+  
         .sub-menu {
-          flex-basis: 100%;
+          flex: 1 1 100%; // Forces full width while keeping flex rules
           max-height: 0;
           overflow: hidden;
-          transition: max-height 0.3s ease-out;
-          
+          padding-left: var(--size-300);
+  
+   
+      
+  
           &.open {
             max-height: 500px; // Adjust this value based on your content
           }
-
+  
           a {
             font-size: var(--size-400);
           }
         }
       }
     }
-  }
 }
 
 .admin-bar .mobile-nav-drawer {
