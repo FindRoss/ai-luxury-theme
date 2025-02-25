@@ -13,6 +13,7 @@
 <div class="camera-section">
   <div class="camera-posts">
   <h3>Latest Articles</h3>
+  
     <?php
       if ($query->have_posts()) : 
 
@@ -28,6 +29,9 @@
       endif; 
     ?>
     </div>
+<!-- CAMERA POSTS -->
+
+
 
 <div class="cameras">
    
@@ -72,7 +76,7 @@
 
 </div>
 
-    </div>
+    
    
 </div>
 <!-- HOME GRID -->
@@ -114,9 +118,10 @@
   
   </div>
 
-  </div>
-<!-- CONTAINER -->
-
-
-
-<?php get_footer(); ?>
+  
+</div>
+  <!-- CONTAINER -->
+  
+  
+  
+  <?php get_footer(); ?>

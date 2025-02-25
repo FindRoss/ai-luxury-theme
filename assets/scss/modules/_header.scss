@@ -1,14 +1,14 @@
 header {
   position: relative;
-  background-color: var(--color-light);
-  
+  background-color: var(--color-dark);
+
   .nav-layout {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     height: 5rem;
     gap: 1rem;
-  
+
     @media screen and (min-width: 768px) {
       justify-content: space-between;
     }
@@ -17,7 +17,7 @@ header {
       display: flex;
 
       @media screen and (min-width: 768px) {
-        display: none; 
+        display: none;
       }
     }
 
@@ -29,7 +29,7 @@ header {
 
     .desktop-navigation {
       display: none;
-      
+
       @media screen and (min-width: 768px) {
         height: 100%;
         display: flex;
@@ -44,9 +44,9 @@ header {
     }
   }
 
-  ul.desktop-menu { 
-   @media screen and (min-width: 768px) { 
-      height: 100%; 
+  ul.desktop-menu {
+    @media screen and (min-width: 768px) {
+      height: 100%;
       visibility: visible;
       display: flex;
       align-items: center;
@@ -54,13 +54,12 @@ header {
       font-size: var(--size-500);
       font-weight: 700;
       font-family: "Lexend", sans-serif;
-    } 
+    }
 
     > li {
-      height: 100%; 
+      height: 100%;
       display: flex;
       align-items: center;
- 
     }
 
     > li > a {
@@ -90,7 +89,7 @@ header {
       left: 0;
       width: 100%;
       border-bottom: 5px solid #000;
-        
+
       /* Adjust as needed */
       z-index: 999;
       background: var(--color-primary);
@@ -125,7 +124,7 @@ header {
 .svg-logo {
   &__stars,
   &__box {
-    fill: var(--color-accent);
+    fill: var(--color-primary);
   }
 
   &__box-text {
@@ -133,7 +132,7 @@ header {
   }
 
   &__text {
-    fill: var(--color-dark);
+    fill: var(--color-light);
   }
 }
 
