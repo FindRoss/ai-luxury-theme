@@ -60,17 +60,14 @@
 
 <div class="home-grid">
 
-<div class="home-grid-left">
 <?php
-        get_template_part( 'template-parts/card/card' );?>
-</div>
+        get_template_part( 'template-parts/card/card' );
+?>
+<?php
+        get_template_part( 'template-parts/card/long-card' );
+     ?>
 
-<div class="home-grid-right">
-<?php get_template_part( 'template-parts/card/long-card' );  ?>
-<?php get_template_part( 'template-parts/card/long-card' );  ?>
-<?php get_template_part( 'template-parts/card/long-card' );  ?>
 
-</div>
 
     </div>
    

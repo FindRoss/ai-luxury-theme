@@ -6,19 +6,21 @@
   margin-bottom: 6rem;
 }
 
-.camera-posts h3 {
-  border-top: 5px solid #000;
-  margin-right: 3rem;
-}
+.camera-posts {
+  h4 {
+    margin-top: 2rem;
+  }
 
-.camera-posts a,
-h4 {
-  margin-top: 2rem;
-}
+  h3 {
+    border-top: 5px solid #000;
+    margin-right: 3rem;
+  }
 
-.camera-posts a {
-  color: #000;
-  text-decoration: none;
+  a {
+    color: #000;
+    text-decoration: none;
+    margin-top: 2rem;
+  }
 }
 
 .deals {
@@ -32,18 +34,61 @@ h4 {
   margin-bottom: 5rem;
 }
 
-.home-section h1 {
+.home-section {
+  h1 {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
   margin-bottom: 2rem;
   margin-top: 1rem;
 }
 
 .security {
+  H1 {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
   border-top: 8px solid #000;
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
 
-.security H1 {
-  margin-bottom: 2rem;
-  margin-top: 1rem;
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  .home-grid-left {
+    margin-top: 5rem;
+
+    height: auto;
+    width: 100%;
+  }
+
+  .home-grid-right {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    height: auto;
+    width: 60%;
+    margin-left: auto;
+    margin-right: 4rem;
+  }
+}
+
+.home-grid-right {
+  .card {
+    display: flex;
+    align-items: flex-start; // Align items to the top
+    gap: 1rem; // Add space between the image and content
+    width: 130%;
+
+    .card__image {
+      flex: 1; // Allow the image to take up one part of the available space
+      width: 400px;
+    }
+
+    .card__content {
+      flex: 2; // Allow the content to take up two parts of the available space
+    }
+  }
 }
