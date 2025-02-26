@@ -1,0 +1,25 @@
+// ADDING
+// full-width class to the container
+// Should be go beside the container class in the files?
+.full-width {
+  margin-left: -1rem;
+  margin-right: -1rem;
+
+  @media screen and (min-width: 768px) {
+    margin-left: inherit;
+    margin-right: inherit;
+
+  }
+
+  figcaption.wp-element-caption {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @media screen and (min-width: 768px) {
+      padding-left: inherit;
+      padding-right: inherit;
+    }
+
+  }
+}
+
