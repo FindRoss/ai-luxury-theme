@@ -1,105 +1,179 @@
+// CAMERA SECTION
 .camera-section {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 2fr;
+  display: flex;
+  flex-direction: column;
   margin-top: 6rem;
   margin-bottom: 6rem;
-}
 
-.camera-posts {
-  h4 {
-    margin-top: 2rem;
+  .camera-posts {
+    order: -1; // Change the order of .camera-posts
+    margin-bottom: 3rem;
+
+    h2 {
+      border-top: 5px solid #000;
+    }
+
+    a {
+      color: #000;
+      text-decoration: none;
+      margin-top: 2rem;
+    }
+
+    .card {
+      border: none;
+    }
   }
 
-  h3 {
+  .cameras {
+    order: -2; // Change the order of .cameras
+    margin-bottom: 3rem;
+  }
+
+  .deals {
     border-top: 5px solid #000;
-    margin-right: 3rem;
-  }
-
-  a {
-    color: #000;
-    text-decoration: none;
-    margin-top: 2rem;
   }
 }
 
-// .camera-posts {
+// DESKTOP SECTION
+@media screen and (min-width: 768px) {
+  .camera-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+
+    .camera-posts {
+      order: 0; // Reset the order of .camera-posts
+
+      h2 {
+        border-top: 5px solid #000;
+        margin-right: 3rem;
+      }
+
+      a {
+        color: #000;
+        text-decoration: none;
+        margin-top: 2rem;
+      }
+
+      .card {
+        border: none;
+      }
+    }
+
+    .cameras {
+      order: 0; // Reset the order of .cameras
+    }
+
+    .deals {
+      border-top: 5px solid #000;
+      margin-left: 3rem;
+    }
+  }
+}
+
+// @media screen and (min-width: 576px) {
+//   .camera-section {
+//     display: grid;
+//     grid-template-columns: 1fr 2fr 1fr;
+//     grid-template-rows: 2fr;
+//     margin-top: 6rem;
+//     margin-bottom: 6rem;
+//   }
 // }
 
-.deals {
-  border-top: 5px solid #000;
-  margin-left: 3rem;
-}
-
+// HOME SECTION
 .home-section {
   border-top: 8px solid #000;
   margin-top: 5rem;
   margin-bottom: 5rem;
-}
 
-.home-section {
-  h1 {
+  h2 {
     margin-bottom: 2rem;
     margin-top: 1rem;
   }
-  margin-bottom: 2rem;
-  margin-top: 1rem;
 }
 
-.security {
-  H1 {
-    margin-bottom: 2rem;
-    margin-top: 1rem;
+@media screen and (min-width: 768px) {
+  .home-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    gap: 3rem;
   }
-  border-top: 8px solid #000;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
 }
+
+// @media screen and (min-width: 576px) {
+//   .home-grid {
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     margin-top: 4rem;
+//     margin-bottom: 5rem;
+//     gap: 3rem;
+//   }
+// }
 
 .home-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr, 1fr;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+  gap: 3rem;
 
   .card {
+    border-radius: 10px;
     border: none;
     transition:
       transform 0.3s ease,
       box-shadow 0.3s ease;
     background-color: var(--color-primary);
-    border-top: 6px solid #000;
+
     &:hover {
       transform: scale(1.05);
       opacity: 0.9;
-
       box-shadow: 20px 1rem 1rem 0px rgba(0, 0, 0, 0.1);
     }
-  }
-  .home-grid-left {
-    margin-top: 3rem;
-
-    height: auto;
-    width: 100%;
-  }
-
-  .home-grid-right {
-    margin-top: 3rem;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    height: auto;
-    width: 80%;
-    margin-left: auto;
-    margin-right: 4rem;
   }
 }
 
 .home-grid-right {
-  .card {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 
-    .card img {
-      width: 400px;
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-right: 6px solid #000;
+
+    &:first-child {
+      margin-bottom: 0rem;
     }
+
+    & img {
+      border-radius: 10px 0px 0px 10px;
+    }
+  }
+}
+
+.home-grid-left {
+  .card {
+    border-bottom: 6px solid #000;
+
+    & img {
+      border-radius: 10px 10px 0px 0px;
+    }
+  }
+}
+
+// SECURITY SECTION
+.security {
+  border-top: 8px solid #000;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+
+  H2 {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
   }
 }
