@@ -7,7 +7,7 @@
   <article>
 
     <!-- Heading -->
-    <section class="heading full-width">
+    <section class="heading">
       <div class="heading__content">
         <h1><?php the_title(); ?></h1>
         <div class="date">Updated Jan 25</div>
