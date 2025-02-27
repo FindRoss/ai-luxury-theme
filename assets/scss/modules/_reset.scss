@@ -54,6 +54,8 @@ a:not([class]) {
 img {
   max-width: 100%;
   display: block;
+  width: 100%; // New
+  height: auto; // New
 }
 
 /* Natural flow and rhythm in articles by default

@@ -1,0 +1,89 @@
+
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.mobile-nav-drawer {
+  background-color: var(--color-light);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background: var(--color-body);
+  transform: translateX(-100%);
+
+  &.open {
+    transform: translateX(0);
+    visibility: unset;
+  }
+
+  .mobile-nav-header {  
+    display: flex; 
+    height: 5rem;
+    align-items: center;
+
+    .hamburger {
+      display: flex;
+
+      svg path {
+          fill: var(--color-dark);
+        }
+    }
+  }
+
+  .mobile-menu {
+    &>li {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-top: var(--size-300);
+      gap: var(--size-300);
+
+      &>a {
+        flex: 5 1 0%; // Grow 5x, shrink, and auto-basis
+        font-size: var(--size-600);
+      }
+
+      .chevron {
+        flex: 1 1 0%; // Takes up remaining space, same shrink behavior
+        cursor: pointer;
+        display: flex;
+        justify-content: flex-end;
+        svg {
+          transform: rotate(0deg);
+          path {
+            fill: var(--color-dark);
+          }
+        }
+
+        &.rotated {
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      .sub-menu {
+        flex: 1 1 100%; // Forces full width while keeping flex rules
+        max-height: 0;
+        overflow: hidden;
+        padding-left: var(--size-300);
+
+
+    
+
+        &.open {
+          max-height: 500px; // Adjust this value based on your content
+        }
+
+      }
+    }
+  }
+}
+
+.admin-bar .mobile-nav-drawer {
+  top: 46px;
+}
