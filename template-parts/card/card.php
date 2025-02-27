@@ -5,6 +5,10 @@
 <!-- Note: For both SEO and accessibility, it’s generally better to have the heading inside the link -->
 <!-- <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2> -->
 
+  
+
+
+
 <div class="card">
   
 
