@@ -34,25 +34,33 @@
   // margin-top: var(--size-500);
 
   border-bottom: 6px solid #000;
-
+  p {
+    color: var(--color-dark);
+  }
   .card__content {
     // padding: var(--size-200);
     padding: 1rem 1rem 2rem 1rem;
 
     a {
       color: #000;
+      // color: var(--color-card-heading);
       text-decoration: none;
       font-size: 1.5rem;
 
       h3 {
         font-size: var(--size-600);
+        color: var(--color-card-heading);
       }
+
+      // p {
+      //   color: var(--color-card-text);
+      // }
     }
 
     .date {
       display: inline-block;
       margin-top: var(--size-200);
-      color: var(--color-dark);
+      color: var(--color-card-date);
       font-family: var(--font-family-heading);
       font-size: 1.25rem;
     }
