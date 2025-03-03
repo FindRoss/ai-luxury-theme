@@ -1,0 +1,59 @@
+ul.desktop-menu {
+  @media screen and (min-width: 768px) {
+    height: 100%;
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    font-size: var(--size-500);
+    font-weight: 700;
+    font-family: "Lexend", sans-serif;
+  }
+
+  >li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  >li>a {
+    font-size: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: var(--size-500);
+    padding-right: var(--size-500);
+    // border-bottom: 5px solid transparent;
+    // border-top: 5px solid transparent;
+  }
+
+  >li:hover {
+    background: var(--color-body);
+  }
+
+  .sub-menu-wrapper {
+    z-index: 999;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    max-height: 0px;
+    border-bottom: 5px solid #000;
+    background: var(--color-primary);
+    visibility: hidden;
+  
+    &.open {
+      visibility: visible;
+      max-height: 1000px;
+    }
+  }
+
+
+  .sub-menu {
+    display: grid;
+    padding: var(--size-900) 1rem;
+    gap: var(--size-400);
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
