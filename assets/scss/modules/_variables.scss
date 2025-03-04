@@ -3,13 +3,15 @@
   // Alt / Beige / Sand color scheme
   --color-dark: #000000;
   --color-light: #ffffff;
-  --color-primary: #e4bb97;
-  --color-body: #f3ccaa;
+  --color-primary: #dbb797;
+  --color-body: #c4a182;
   --color-text-muted: #535d6b;
   --color-accent: #1d4ed8;
-  --color-card-text: #000000;
-  --color-card-heading: #000000;
-  --color-card-date: #000000;
+  --color-article-heading: #1a1919;
+  --color-article-text: #1a1919;
+  --color-card-text: #1a1919;
+  --color-card-heading: #1a1919;
+  --color-card-date: #1a1919;
   --color-footer-heading: #ffffff;
   --color-footer-lists: #ffffff;
   --color-header-heading: #ffffff;
@@ -21,6 +23,14 @@
   // --color-accent: #1d4ed8;
   // --color-link: #1941b7;
   // --color-text-muted: #535d6b;
+  // --color-article-heading: #000000;
+  // --color-article-text: #000000;
+  // --color-card-text: #000000;
+  // --color-card-heading: #000000;
+  // --color-card-date: #000000;
+  // --color-footer-heading: #ffffff;
+  // --color-footer-lists: #ffffff;
+  // --color-header-heading: #ffffff;
 
   --font-family-heading: "Lexend", sans-serif;
   --font-family-body: "Catamaran", sans-serif;
@@ -46,12 +56,14 @@
 html.dark-mode {
   --color-dark: #d1d0d0;
   --color-light: #000000;
-  --color-primary: #272524;
-  --color-body: #454545;
+  --color-primary: #3d3d3d;
+  --color-body: #272524;
   --color-text-muted: #969daa;
   --color-accent: #3b82f6;
   --color-link: #4c77e6;
-  --color-card-text: #d1d0d0;
+  --color-article-text: #c7c7c7;
+  --color-article-heading: #d1d0d0;
+  --color-card-text: #c7c7c7;
   --color-card-heading: #d1d0d0;
   --color-card-date: #d1d0d0;
   --color-footer-heading: #272524;
