@@ -115,7 +115,7 @@ header {
         grid-area: button;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
   
         &:hover {
           background-color: var(--color-muted-100);
@@ -142,7 +142,6 @@ header {
         max-height: 0px;
         list-style-type: none;
         padding: 0;
-        background: #ccc;
   
         &.open {
           visibility: visible;
