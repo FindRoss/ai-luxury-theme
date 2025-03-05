@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<?php get_template_part( 'template-parts/banner/background-image' ); ?>
+
   <?php 
     $args = array(
       'post_type' => 'post',
