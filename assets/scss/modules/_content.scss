@@ -1,0 +1,36 @@
+.content {
+
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 700px) 1fr;
+
+  > * {
+    grid-column: 2;
+    /* Default: content stays in the center column */
+  }
+
+ .full-width {
+    grid-column: 1 / -1;
+    margin-inline: -1rem;
+    /* Full width spans across all columns */
+  }
+
+  // & > * {
+  //   max-width: 800px;
+  //   margin-left: auto;
+  //   margin-right: auto;
+
+  //   &.full-width {
+  //     max-width: 100%;
+  //   }
+  // }
+  
+  & > * + * {
+    margin-top: var(--size-600);
+  }
+
+  .wp-block-group__inner-container {
+    & > * + * {
+      margin-top: var(--size-600);
+    }
+  }
+}
