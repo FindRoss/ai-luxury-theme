@@ -1,3 +1,22 @@
+.background-image-banner {
+  background-image: url("../images/banner.jpg");
+  background-size: cover;
+  height: 120vh;
+
+  h2 {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.banner-link {
+  a:active,
+  a:link {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
 // CAMERA SECTION
 .camera-section {
   display: flex;
@@ -16,7 +35,7 @@
     // }
 
     a {
-      color: #000;
+      // color: var(--color-card-heading);
       text-decoration: none;
       margin-top: 2rem;
       font-weight: 700;
@@ -42,10 +61,12 @@
 
     p {
       font-size: 1.125rem;
+      color: var(--color-article-text);
     }
 
     h2 {
       font-size: 2.625rem;
+      color: var(--color-article-heading);
     }
   }
 
@@ -76,7 +97,7 @@
           padding: 1rem 2rem 2rem 0rem;
 
           a {
-            color: #000;
+            // color: #000;
             text-decoration: none;
             margin-top: 2rem;
             font-size: 1rem;
@@ -235,7 +256,7 @@
   .card {
     margin-top: 2rem;
   }
-  H2 {
+  h2 {
     margin-bottom: 2rem;
     margin-top: 1rem;
     font-size: 3.25rem;

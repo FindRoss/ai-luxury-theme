@@ -2,7 +2,7 @@ footer {
   padding-top: var(--size-800);
   padding-bottom: var(--size-800);
   margin-top: var(--size-500);
-  background-color: var(--color-light);
+  background-color: var(--color-dark);
 
   .footer-layout {
     display: flex;
@@ -16,7 +16,7 @@ footer {
     }
 
     .footer-info {
-      color: var(--color-dark);
+      color: var(--color-footer-heading);
       font-family: sans-serif;
       font-size: var(--size-500);
     }
@@ -43,7 +43,7 @@ footer {
     }
 
     .footer-links a {
-      color: var(--color-dark);
+      color: var(--color-footer-lists);
       text-decoration: none;
     }
   }
