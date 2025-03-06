@@ -1,7 +1,7 @@
 <?php 
   // This should be ID of the post where you have stored the background image. 
   // This is the one thing we need to display everything: image, title, excerpt.
-  $postID = 20;
+  $postID = 82;
 
   // This 'gets' the image but will not output it.
   $background_image = get_field('background_image', $postID); 
