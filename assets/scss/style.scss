@@ -8,7 +8,9 @@
 @use "modules/_footer";
 @use "modules/_cards";
 @use "modules/_category";
+@use "modules/_desktop-menu";
 @use "modules/_darkmode";
 @use "modules/_navigation";
 @use "modules/_full-width";
-@use "modules/front-page";
+@use "modules/_front-page";
+@use "modules/_content";

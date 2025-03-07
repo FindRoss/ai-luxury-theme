@@ -34,6 +34,7 @@
 						'menu_class' => 'primary-menu desktop-menu',
 						'menu_id' => 'primary-menu', 
 						'container' => false,
+						'walker'          => new Custom_Walker_Nav_Menu(), // Use the custom walker
 					)); ?>
 				</nav>
 				

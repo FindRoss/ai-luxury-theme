@@ -4,6 +4,14 @@ body.no-scroll {
   overflow: hidden;
 }
 
+.nav-hamburger {
+  cursor: pointer;
+        
+  svg path {
+    fill: var(--color-dark);
+  }
+}
+
 .mobile-nav-drawer {
   background-color: var(--color-light);
   position: fixed;
@@ -34,54 +42,20 @@ body.no-scroll {
     }
   }
 
-  .mobile-menu {
-    &>li {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      padding-top: var(--size-300);
-      gap: var(--size-300);
+  // .mobile-menu {
+    // &>li {
+    //   display: flex;
+    //   align-items: center;
+    //   flex-wrap: wrap;
+    //   padding-top: var(--size-300);
+    //   gap: var(--size-300);
 
-      &>a {
-        flex: 5 1 0%; // Grow 5x, shrink, and auto-basis
-        font-size: var(--size-600);
-      }
-
-      .chevron {
-        flex: 1 1 0%; // Takes up remaining space, same shrink behavior
-        cursor: pointer;
-        display: flex;
-        justify-content: flex-end;
-        svg {
-          transform: rotate(0deg);
-          path {
-            fill: var(--color-dark);
-          }
-        }
-
-        &.rotated {
-          svg {
-            transform: rotate(180deg);
-          }
-        }
-      }
-
-      .sub-menu {
-        flex: 1 1 100%; // Forces full width while keeping flex rules
-        max-height: 0;
-        overflow: hidden;
-        padding-left: var(--size-300);
-
-
-    
-
-        &.open {
-          max-height: 500px; // Adjust this value based on your content
-        }
-
-      }
-    }
-  }
+    //   &>a {
+    //     flex: 5 1 0%; // Grow 5x, shrink, and auto-basis
+    //     font-size: var(--size-600);
+    //   }
+    // }
+  // }
 }
 
 .admin-bar .mobile-nav-drawer {

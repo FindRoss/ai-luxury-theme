@@ -1,7 +1,8 @@
 import "../assets/scss/style.scss";
 
 import { themeMode, applyTheme, getSystemTheme } from './js/theme-mode';
-import { mobileMenu } from "./js/mobile-menu";
+import MobileMenu from "./js/mobile-menu";
+import { desktopMenu } from "./js/desktop-menu";
 
 const localStorageTheme = localStorage.getItem('theme');
 if (localStorageTheme) {
@@ -13,5 +14,6 @@ if (localStorageTheme) {
 
 document.addEventListener('DOMContentLoaded', () => {
   themeMode();
-  mobileMenu();
+  desktopMenu();
+  const mobileMenu = new MobileMenu();
 });
