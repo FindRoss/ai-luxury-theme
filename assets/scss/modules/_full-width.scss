@@ -6,21 +6,21 @@
 // }
 
 // Define variables at the top
-$spacing: 1rem;
+// $spacing: 1rem;
 
-.full-width {
-  margin-inline: -$spacing;
+// .full-width {
+//   margin-inline: -$spacing;
   
-  @media screen and (min-width: 768px) {
-    margin-inline: 0;  // More explicit than 'inherit'
-  }
+//   @media screen and (min-width: 768px) {
+//     margin-inline: 0;  // More explicit than 'inherit'
+//   }
   
-  .wp-element-caption {  // Simplified selector
-    padding-inline: $spacing;
+//   .wp-element-caption {  // Simplified selector
+//     padding-inline: $spacing;
     
-    @media screen and (min-width: 768px) {
-      padding-inline: 0;
-    }
-  }
-}
+//     @media screen and (min-width: 768px) {
+//       padding-inline: 0;
+//     }
+//   }
+// }
 
