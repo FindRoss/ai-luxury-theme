@@ -14,7 +14,7 @@ export function desktopMenu() {
       const subMenuWrapper = menuItem.querySelector('.sub-menu-wrapper');
       closeAllMenus();
       if (subMenuWrapper) {
-        subMenuWrapper.classList.remove('foobar');
+        subMenuWrapper.classList.remove('open');
       }
     });
 
