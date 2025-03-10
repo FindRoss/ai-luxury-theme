@@ -37,6 +37,7 @@
 
     a {
       // color: var(--color-card-heading);
+      // color: var(--color-card-heading);
       text-decoration: none;
       margin-top: 2rem;
       font-weight: 700;
@@ -63,10 +64,12 @@
     p {
       font-size: 1.125rem;
       color: var(--color-article-text);
+      color: var(--color-article-text);
     }
 
     h2 {
       font-size: 2.625rem;
+      color: var(--color-article-heading);
       color: var(--color-article-heading);
     }
   }
@@ -98,6 +101,7 @@
           padding: 1rem 2rem 2rem 0rem;
 
           a {
+            // color: #000;
             // color: #000;
             text-decoration: none;
             margin-top: 2rem;

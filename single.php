@@ -1,8 +1,9 @@
 <?php get_header(); ?>
+<?php get_template_part( 'template-parts/banner/background-image' ); ?>
 
 <?php get_template_part( 'template-parts/breadcrumbs/breadcrumbs' ); ?>
 
-<div class="container">
+<div class="container"> 
 
   <article>
 

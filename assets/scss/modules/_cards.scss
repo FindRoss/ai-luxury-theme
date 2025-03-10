@@ -46,13 +46,20 @@
     a {
       color: var(--color-card-heading);
       // color: var(--color-card-heading);
+      color: var(--color-card-heading);
+      // color: var(--color-card-heading);
       text-decoration: none;
       font-size: 1.5rem;
 
       h3 {
         font-size: var(--size-600);
         color: var(--color-card-heading);
+        color: var(--color-card-heading);
       }
+
+      // p {
+      //   color: var(--color-card-text);
+      // }
 
       // p {
       //   color: var(--color-card-text);
@@ -62,6 +69,7 @@
     .date {
       display: inline-block;
       margin-top: var(--size-200);
+      color: var(--color-card-date);
       color: var(--color-card-date);
       font-family: var(--font-family-heading);
       font-size: 1.25rem;
