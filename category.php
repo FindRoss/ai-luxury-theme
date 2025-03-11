@@ -1,5 +1,5 @@
 <?php get_header();?>
-<div class="category-container">
+<div class="container">
   <?php
    // Get the current page for pagination, defaulting to 1 if not set
   $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;

@@ -58,17 +58,26 @@
   --color-footer-heading: #ffffff;
   --color-footer-lists: #ffffff;
   --color-header-heading: #ffffff;
-  // adding
+  // adding...
   --color-text-muted: var(--slate-600);
   --background-color-header: #ffffff; 
   --color-header-link: var(--slate-600);
   --color-header-link-active: var(--slate-900);
   --background-color-footer: #000000;
+  --background-color-button-primary: #000000;
+  --background-color-button-primary-active: #000000;
+  --color-button-primary-text: #ffffff;
+  --background-color-button-outline: #ffffff;
+  --background-color-button-outline-active: #f1f1f1; 
+  --color-button-primary-outline-text: #000000;
 
+
+  // Fonts
   --font-family-heading: "Lexend", sans-serif;
   --font-family-body: "Catamaran", sans-serif;
   --font-family-link: "outfit", sans-serif;
 
+  // Sizes
   --size-100: 0.579rem;
   --size-200: 0.694rem;
   --size-300: 0.833rem;
