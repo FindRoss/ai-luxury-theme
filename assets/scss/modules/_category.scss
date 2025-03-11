@@ -1,3 +1,5 @@
+@use "breakpoints" as *;
+
 .category-container {
   margin-left: 3rem;
   margin-right: 3rem;
@@ -9,7 +11,7 @@
   gap: 1rem;
 }
 
-@media screen and (min-width: 768px) {
+@include breakpoint(medium) {
   .card-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -36,7 +38,7 @@
   margin-top: 3rem;
 }
 
-@media screen and (min-width: 768px) {
+@include breakpoint(medium) {
   .category-heading {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

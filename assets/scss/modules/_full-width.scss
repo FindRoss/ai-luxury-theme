@@ -1,26 +1,12 @@
-// ADDING 
+@use "breakpoints" as *;
 
 
-// body {
-// overflow-x: hidden;
-// }
+.full-width {
+  margin-left: -1rem;
+  margin-right: -1rem;
 
-// Define variables at the top
-// $spacing: 1rem;
-
-// .full-width {
-//   margin-inline: -$spacing;
-  
-//   @media screen and (min-width: 768px) {
-//     margin-inline: 0;  // More explicit than 'inherit'
-//   }
-  
-//   .wp-element-caption {  // Simplified selector
-//     padding-inline: $spacing;
-    
-//     @media screen and (min-width: 768px) {
-//       padding-inline: 0;
-//     }
-//   }
-// }
-
+  @include breakpoint(medium) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+} 

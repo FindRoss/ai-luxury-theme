@@ -1,6 +1,22 @@
+@use "breakpoints" as *;
+
+.menu-item {
+  a {
+    color: var(--color-header-link);
+    text-decoration: none;
+    font-family: sans-serif;
+    // font-family: "Lexend", sans-serif;
+      
+    &:hover,
+    &:active {
+      color: var(--color-header-link-active);
+    }
+  }
+}
+
 header {
   position: relative;
-  background-color: var(--color-dark);
+  background-color: var(--background-color-header);
 
   .nav-layout {
     display: flex;
@@ -9,7 +25,7 @@ header {
     height: 5rem;
     gap: 1rem;
 
-    @media screen and (min-width: 768px) {
+    @include breakpoint(medium) {
       justify-content: space-between;
     }
 
@@ -21,7 +37,7 @@ header {
         fill: var(--color-dark);
       }
 
-      @media screen and (min-width: 768px) {
+      @include breakpoint(medium) {
         display: none;
       }
     }
@@ -35,22 +51,16 @@ header {
     .desktop-navigation {
       display: none;
 
-      @media screen and (min-width: 768px) {
+      @include breakpoint(medium) {
         height: 100%;
         display: flex;
         align-items: center;
       }
     }
-
-    // This should be global for desktop and mobile menu;
-    a {
-      color: var(--color-header-heading);
-      text-decoration: none;
-    }
   }
 
   ul.desktop-menu {
-    @media screen and (min-width: 768px) {
+    @include breakpoint(medium) {
       height: 100%;
       visibility: visible;
       display: flex;
@@ -74,8 +84,6 @@ header {
       align-items: center;
       padding-left: var(--size-200);
       padding-right: var(--size-200);
-      border-bottom: 5px solid transparent;
-      border-top: 5px solid transparent;
     }
 
     > li:hover {
@@ -100,11 +108,11 @@ header {
 
       grid-template-columns: repeat(2, 1fr);
 
-      @media screen and (min-width: 768px) {
+      @include breakpoint(medium) {
         grid-template-columns: repeat(3, 1fr);
       }
-
-      @media screen and (min-width: 992px) {
+      
+      @include breakpoint(large){
         grid-template-columns: repeat(4, 1fr);
       }
     }
@@ -118,11 +126,11 @@ header {
   }
 
   &__box-text {
-    fill: var(--color-dark);
+    fill: var(--color-light);
   }
 
   &__text {
-    fill: var(--color-light);
+    fill: var(--color-dark);
   }
 }
 
@@ -146,7 +154,7 @@ header {
     right: 0;
   }
   
-  @media screen and (min-width: 768px) {
+  @include breakpoint(medium) {
     display: none;
   }
 
@@ -224,13 +232,10 @@ header {
 
 ul.primary-menu {
   font-weight: 700;
-  // font-family: "Lexend", sans-serif;
-  font-family: sans-serif;
 
   li {
     a {
       width: 100%;
-      color: var(--color-dark);
     }
   }
 

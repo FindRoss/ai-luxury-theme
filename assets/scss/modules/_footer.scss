@@ -1,3 +1,5 @@
+@use "breakpoints" as *;
+
 footer {
   padding-top: var(--size-800);
   padding-bottom: var(--size-800);
@@ -11,7 +13,7 @@ footer {
     gap: 1rem;
     padding-bottom: var(--size-500);
 
-    @media screen and (min-width: 768px) {
+    @include breakpoint(medium) {
       flex-direction: row;
     }
 
@@ -35,7 +37,7 @@ footer {
       padding-top: var(--size-400);
       padding-bottom: var(--size-400);
 
-      @media screen and (min-width: 768px) {
+      @include breakpoint(medium) {
         flex-direction: row;
         padding-top: var(--size-500);
         padding-bottom: var(--size-500);

@@ -1,5 +1,7 @@
+@use "breakpoints" as *;
+
 ul.desktop-menu {
-  @media screen and (min-width: 768px) {
+  @include breakpoint(medium) {
     height: 100%;
     visibility: visible;
     display: flex;

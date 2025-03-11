@@ -9,12 +9,12 @@
   <article>
 
     <!-- Heading -->
-    <section class="heading">
-      <div class="heading__content">
+    <section class="heading full-width">
+      <div class="heading__content ">
         <h1><?php the_title(); ?></h1>
         <div class="date">Updated Jan 25</div>
       </div>
-      <div class="heading__image">
+      <div class="heading__image ">
         <?php if (has_post_thumbnail()): ?>
           <img src="<?php echo get_the_post_thumbnail_url(null, 'large'); ?>" />
         <?php endif; ?>

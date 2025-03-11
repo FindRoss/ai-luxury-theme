@@ -1,6 +1,30 @@
 // No changes needed if this file only contains variable definitions
 :root {
-  // Alt / Beige / Sand color scheme
+  // Colors 
+  --blue-50: #EFF6FF; 
+  --blue-100: #DBEAFE; 
+  --blue-200: #BFDBFE; 
+  --blue-300: #93C5FD;
+  --blue-400: #60A5FA;
+  --blue-500: #3B82F6;
+  --blue-600: #2563EB;
+  --blue-700: #1D4ED8;
+  --blue-800: #1E40AF;
+  --blue-900: #1E3A8A;
+
+  --slate-50: #F8FAFC; 
+  --slate-100: #F1F5F9; 
+  --slate-200: #E2E8F0; 
+  --slate-300: #CAD6E2;
+  --slate-400: #90A1B9; 
+  --slate-500: #62748E; 
+  --slate-600: #45556D;
+  --slate-700: #314158; 
+  --slate-800: #1D283D; 
+  --slate-900: #0F172C;
+  --slate-950: #020618;
+
+  // Themes
   // --color-dark: #000000;
   // --color-light: #ffffff;
   // --color-primary: #dbb797;
@@ -18,19 +42,28 @@
 
   --color-dark: #000000;
   --color-light: #ffffff;
-  --color-primary: #f9f9f9;
-  --color-body: #f9f9f9;
-  --color-accent: #1d4ed8;
-  --color-link: #1941b7;
-  --color-text-muted: #535d6b;
+  --color-primary: var(--blue-500);
+  --color-body: var(--slate-50);
+  --color-accent: var(--blue-600);
+  --color-link: var(--blue-600);
+  --color-link-active: var(--blue-800); // adding
+  --color-text-muted: var(--slate-500);
   --color-article-heading: #000000;
   --color-article-text: #000000;
+  --color-nav-links: var(--slate-800);
   --color-card-text: #000000;
   --color-card-heading: #000000;
-  --color-card-date: #000000;
+  --color-card-date: var(--blue-800);
+  --color-card-border: var(--slate-200); // adding
   --color-footer-heading: #ffffff;
   --color-footer-lists: #ffffff;
   --color-header-heading: #ffffff;
+  // adding
+  --color-text-muted: var(--slate-600);
+  --background-color-header: #ffffff; 
+  --color-header-link: var(--slate-600);
+  --color-header-link-active: var(--slate-900);
+  --background-color-footer: #000000;
 
   --font-family-heading: "Lexend", sans-serif;
   --font-family-body: "Catamaran", sans-serif;
@@ -45,12 +78,6 @@
   --size-700: 2.074rem;
   --size-800: 2.488rem;
   --size-900: 2.986rem;
-
-  --breakpoint-small: 576px;
-  --breakpoint-medium: 768px;
-  --breakpoint-large: 992px;
-  --breakpoint-xl: 1200px;
-  --breakpoint-xxl: 1400px;
 }
 
 html.dark-mode {

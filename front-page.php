@@ -27,7 +27,6 @@
 
 
       <h2 class="deals">Deals</h2>
-
     </div>
 
 
