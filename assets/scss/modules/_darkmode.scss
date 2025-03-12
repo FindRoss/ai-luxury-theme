@@ -5,7 +5,7 @@
   gap: var(--size-200);
   align-items: center;
   padding: 0.2rem;
-  background-color: var(--color-body);
+  background-color: var(--background-color-theme-toggle);
   border-radius: 25px;
 
   &__option {
@@ -29,13 +29,13 @@
         height: 100%;
         
         path {
-          stroke: var(--color-dark);
+          stroke: var(--stroke-color-theme-toggle);
         }
       }
     }
 
     input[type="radio"]:checked + label {
-      background: var(--color-primary);
+      background: var(--background-color-theme-toggle-active);
     }
 
     input[type="radio"] {

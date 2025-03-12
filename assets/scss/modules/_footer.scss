@@ -48,5 +48,21 @@ footer {
       color: var(--color-footer-lists);
       text-decoration: none;
     }
+
+    .svg-logo {
+
+      &__stars,
+      &__box {
+        fill: var(--color-primary);
+      }
+
+      &__box-text {
+        fill: var(--color-light);
+      }
+
+      &__text {
+        fill: var(--color-light);
+      }
+    }
   }
 }

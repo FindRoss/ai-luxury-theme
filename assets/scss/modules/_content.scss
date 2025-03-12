@@ -1,8 +1,18 @@
 @use "breakpoints" as *;
 
 .content {
+  margin-top: 3rem;
+
   display: flex;
   flex-direction: column;
+
+  p, ul, ol, blockquote {
+    color: var(--color-article-text);
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    color: var(--color-article-heading);
+  }
 
   @include breakpoint(large) {
     display: grid;

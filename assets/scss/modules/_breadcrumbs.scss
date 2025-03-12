@@ -1,8 +1,7 @@
 .breadcrumbs {
   margin-top: 1rem; 
   margin-bottom: 1rem;
-  font-size: var(--size-400);
-  
+  font-size: var(--size-500);
 
   &__layout {
     display: flex;
@@ -10,13 +9,13 @@
     align-items: center;
 
     &--item {
-        color: var(--color-link);
-      }
+      text-decoration: none;
+      font-family: var(--font-family-heading);
+    }
     
     &--spacer {
       color: var(--color-text-muted);
       font-size: var(--size-500);
-
     }
   }
 }

@@ -30,7 +30,7 @@
 
   .camera-posts {
     order: -1; // Change the order of .camera-posts
-    border-top: 5px solid #000;
+    border-top: 5px solid var(--color-section-separator);
   }
 
   .cameras {
@@ -38,7 +38,7 @@
   }
 
   .deals {
-    border-top: 5px solid #000;
+    border-top: 5px solid var(--color-section-separator);
 
     @include breakpoint(medium) {
       h2 {
@@ -81,7 +81,7 @@
 
 // HOME SECTION
 .home-section {
-  border-top: 8px solid #000;
+  border-top: 8px solid var(--color-section-separator);
   margin-top: 5rem;
   margin-bottom: 5rem;
 
@@ -117,7 +117,7 @@
 
 // SECURITY SECTION
 .security {
-  border-top: 8px solid #000;
+  border-top: 8px solid var(--color-section-separator);
   margin-top: 5rem;
   margin-bottom: 5rem;
 

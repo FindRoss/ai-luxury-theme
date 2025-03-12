@@ -27,18 +27,17 @@
 
 $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
-       $args = array(
-        'post_type'      => 'post', 
-        'posts_per_page' => 3,
-        'paged'          => $paged,
-        'cat'            => $category_id,
-      );
-  
-    $query = new WP_Query($args);
-echo '<div class="card-grid">';
-    if ($query->have_posts()) : 
-      while ($query->have_posts()) : $query->the_post(); 
+    $args = array(
+      'post_type'      => 'post', 
+      'posts_per_page' => 3,
+      'paged'          => $paged,
+      'cat'            => $category_id,
+    );
 
+    $query = new WP_Query($args);
+    if ($query->have_posts()) : 
+      echo '<div class="card-grid">'; 
+      while ($query->have_posts()) : $query->the_post(); 
         get_template_part( 'template-parts/card/osaka-card' );
       endwhile; 
       echo '</div>';
@@ -55,7 +54,7 @@ echo paginate_links( array(
   'format'  => '?paged=%#%',
   'current' => max( 1, get_query_var('paged') ),
   'total'   => $query->max_num_pages
-) );
+));
 
 // Reset post data
 wp_reset_postdata();

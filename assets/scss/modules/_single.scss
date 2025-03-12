@@ -3,7 +3,7 @@
 .heading {
   display: flex;
   flex-direction: column;
-  border-top: 10px solid #000;
+  border-top: 10px solid var(--color-section-separator);
   gap: 1rem;
 
   &__content {
@@ -14,7 +14,6 @@
     }
 
     h1 {
-      color: var(--color-article-heading);
       color: var(--color-article-heading);
       font-size: var(--size-700);
       line-height: 1.4;
@@ -27,13 +26,10 @@
     .date {
       margin-top: var(--size-300);
       font-size: var(--size-500);
-      color: var(--color-card-date);
-      color: var(--color-card-date);
+      color: var(--color-article-date);
       font-family: var(--font-family-heading);
     }
   }
-
-
 }
 
 
@@ -48,15 +44,3 @@
     flex: 1;
   }
 }
-
-/* Content */
-.content {
-  margin-top: 3rem;
-  color: var(--color-dark);
-}
-
-// @include breakpoint(medium) {
-//   .content {
-//     max-width: 800px;
-//   }
-// }

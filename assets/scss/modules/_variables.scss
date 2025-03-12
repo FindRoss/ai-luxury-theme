@@ -1,6 +1,8 @@
 // No changes needed if this file only contains variable definitions
 :root {
-  // Colors 
+  /* Design System */
+   
+  /* Colors */
   --blue-50: #EFF6FF; 
   --blue-100: #DBEAFE; 
   --blue-200: #BFDBFE; 
@@ -24,7 +26,19 @@
   --slate-900: #0F172C;
   --slate-950: #020618;
 
-  // Themes
+  --stone-50: #FAFAF9;
+  --stone-100: #F5F5F4;
+  --stone-200: #E7E5E4;
+  --stone-300: #D6D3D1;
+  --stone-400: #A8A29E;
+  --stone-500: #78716C;
+  --stone-600: #57534E;
+  --stone-700: #44403C;
+  --stone-800: #292524;
+  --stone-900: #1C1917;
+  --stone-950: #0C0A09;
+
+  /*  Themes */ 
   // --color-dark: #000000;
   // --color-light: #ffffff;
   // --color-primary: #dbb797;
@@ -38,7 +52,7 @@
   // --color-card-date: #1a1919;
   // --color-footer-heading: #ffffff;
   // --color-footer-lists: #ffffff;
-  // --color-header-heading: #ffffff;
+
 
   --color-dark: #000000;
   --color-light: #ffffff;
@@ -48,36 +62,59 @@
   --color-link: var(--blue-600);
   --color-link-active: var(--blue-800); // adding
   --color-text-muted: var(--slate-500);
-  --color-article-heading: #000000;
-  --color-article-text: #000000;
-  --color-nav-links: var(--slate-800);
-  --color-card-text: #000000;
-  --color-card-heading: #000000;
+
+  /* Article */
+  --color-article-heading: var(--slate-900);
+  --color-article-text: var(--slate-800);
+  --color-article-date: var(--slate-600); 
+
+  /* Card */
+  --color-card-text: var(--slate-600);
+  --color-card-heading: var(--slate-900);
   --color-card-date: var(--blue-800);
   --color-card-border: var(--slate-200); // adding
+  --background-color-card: #ffffff; // adding
   --color-footer-heading: #ffffff;
+
+  /* Footer */
   --color-footer-lists: #ffffff;
-  --color-header-heading: #ffffff;
+
+  --color-section-separator: var(--slate-900); // adding
   // adding...
-  --color-text-muted: var(--slate-600);
-  --background-color-header: #ffffff; 
+  --background-50: #ffffff; // Example of general purpose token
+  --background-100: var(--slate-50);
+  --background-200: var(--slate-100);
+  --background-300: var(--slate-200);
+  --background-400: var(--slate-300);
+
+  /* Icon */
+  --color-icon: var(--slate-600);
+  --color-icon-active: var(--blue-800);
+  
+  /* Header */
+  --background-color-header: #FFFFFF; // Example of semantic token
+  --background-color-desktop-sub-menu: var(--slate-50);
+
   --color-header-link: var(--slate-600);
   --color-header-link-active: var(--slate-900);
-  --background-color-footer: #000000;
-  --background-color-button-primary: #000000;
-  --background-color-button-primary-active: #000000;
+  --background-color-footer: var(--slate-900);
+  --background-color-button-primary: var(--slate-900);
+  --background-color-button-primary-active: var(--slate-900);
   --color-button-primary-text: #ffffff;
   --background-color-button-outline: #ffffff;
   --background-color-button-outline-active: #f1f1f1; 
   --color-button-primary-outline-text: #000000;
+  --background-color-theme-toggle: var(--slate-200);
+  --background-color-theme-toggle-active: var(--slate-300);
+  --stroke-color-theme-toggle: var(--slate-900);
 
 
-  // Fonts
+  /* Fonts */ 
   --font-family-heading: "Lexend", sans-serif;
   --font-family-body: "Catamaran", sans-serif;
   --font-family-link: "outfit", sans-serif;
 
-  // Sizes
+  /* Sizes */ 
   --size-100: 0.579rem;
   --size-200: 0.694rem;
   --size-300: 0.833rem;
@@ -90,19 +127,63 @@
 }
 
 html.dark-mode {
-  --color-dark: #d1d0d0;
-  --color-light: #000000;
-  --color-primary: #3d3d3d;
-  --color-body: #272524;
+  --color-dark: var(--stone-300); // #d1d0d0;
+  --color-light: var(--stone-900);
+  --color-primary: var(--blue-600);
+  --color-body: var(--stone-900);
   --color-text-muted: #969daa;
-  --color-accent: #3b82f6;
-  --color-link: #4c77e6;
+  --color-accent: var(--blue-600);
+  --color-link: var(--blue-600);
+  --color-link-active: var(--blue-800); // adding
   --color-article-text: #c7c7c7;
   --color-article-heading: #d1d0d0;
   --color-card-text: #c7c7c7;
   --color-card-heading: #d1d0d0;
   --color-card-date: #d1d0d0;
+  --background-color-card: var(--stone-800);
+  --color-card-border: var(--stone-950);
   --color-footer-heading: #272524;
   --color-footer-lists: #272524;
-  --color-header-heading: #272624;
+
+  /* Header */
+  --color-header-link: var(--stone-200);
+  --color-header-link-active: var(--stone-300);
+  --background-color-header: var(--stone-800);
+  --background-color-desktop-sub-menu: var(--stone-700);
+
+  /* Article */
+  --color-article-heading: var(--stone-100);
+  --color-article-text: var(--stone-200);
+  --color-article-date: var(--stone-400);
+
+  /* Icon */
+  --color-icon: var(--stone-50);
+  --color-icon-active: var(--stone-200);
+
+
+  --color-section-separator: var(--stone-950);
+
+  /* General-purpose background tokens */
+  // --background-50: 
+  // --background-100: 
+  // --background-200: 
+  // --background-300: 
+  // --background-400: 
+
+
+
+
+
+  // --background-color-footer: // add appropriate color;
+  // --background-color-button-primary: // add appropriate color;
+  // --background-color-button-primary-active: // add appropriate color;
+  // --color-button-primary-text: // add appropriate color;
+  // --background-color-button-outline: // add appropriate color;
+  // --background-color-button-outline-active: // add appropriate color;
+  // --color-button-primary-outline-text: // add appropriate color;
+
+  /* Theme toggle colors */
+  // --background-color-theme-toggle: // add appropriate color;
+  // --background-color-theme-toggle-active: // add appropriate color;
+  // --stroke-color-theme-toggle: // add appropriate color;
 }
