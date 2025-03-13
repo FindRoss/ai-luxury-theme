@@ -1,92 +1,137 @@
+@use "breakpoints" as *;
+
 .card-grid {
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr;
-  // margin-left: 3rem;
-  // margin-right: 3rem;
 }
 
-.card-grid>* {
-  transition:
-    transform 0.4s,
-    opacity 0.4s;
-  box-shadow: 20px 1rem 1rem 0px rgba(0, 0, 0, 0.1);
-  background-color: var(--color-primary);
-  border-radius: 10px;
-
-  & img {
-    border-radius: 10px;
-  }
-}
-
-.card-grid>*:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
-}
-
-@media screen and (min-width: 768px) {
+@include breakpoint(medium) {
   .card-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .card {
-  // margin-top: var(--size-500);
+  text-decoration: none;
+  transition: 0.3s ease;
 
-  border-bottom: 6px solid #000;
-
-  p {
-    color: var(--color-card-text);
-  }
-
-  .card__content {
-    // padding: var(--size-200);
-    padding: 1rem 1rem 2rem 1rem;
-
+  &__content {
     a {
       color: var(--color-card-heading);
-      // color: var(--color-card-heading);
-      color: var(--color-card-heading);
-      // color: var(--color-card-heading);
       text-decoration: none;
-      font-size: 1.5rem;
-
-      h3 {
-        font-size: var(--size-600);
-        color: var(--color-card-heading);
-        color: var(--color-card-heading);
-      }
-
-      // p {
-      //   color: var(--color-card-text);
-      // }
-
-      // p {
-      //   color: var(--color-card-text);
-      // }
+      font-size: var(--size-600);
     }
 
     .date {
       display: inline-block;
       margin-top: var(--size-200);
       color: var(--color-card-date);
-      color: var(--color-card-date);
       font-family: var(--font-family-heading);
-      font-size: 1.25rem;
+      font-size: 1rem;
     }
 
     .excerpt {
+      color: var(--color-card-text);
       margin-top: var(--size-400);
       font-size: 1.125rem;
     }
   }
 }
 
-.card--long {
-  .card__image {
+.kyoto-card,
+.osaka-card {
+  // box-shadow: 20px 1rem 1rem 0px rgba(0, 0, 0, 0.1);
+  background-color: var(--background-color-card);
+
+  &:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+    box-shadow: 0.2rem 0.35rem 0.35rem 0 rgba(0, 0, 0, 0.05);
+  }
+}
+
+.osaka-card {
+  // border-top: 5px solid var(--color-card-border);
+
+  .card__content {
+    padding: 1rem;
+
+    a {
+      font-size: 1.75rem;
+    }
+
+    // .date {
+    //   font-size: 1.25rem;
+    // }
+
+    .excerpt {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.kyoto-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--size-200);
+  margin-top: 2rem;
+  // border-top: 5px solid var(--color-card-border);
+
+  @include breakpoint(medium) { 
+    gap: var(--size-400);
+  }
+
+  .card__media {
     background-size: cover;
     background-position: center;
-    // height: 200px;
-    border-radius: 10px 0 0 10px;
+  }
+
+  .card__content {
+    padding: var(--size-200) var(--size-200) var(--size-200) 0;
+
+    @include breakpoint(medium) {
+      padding: var(--size-400) var(--size-400) var(--size-400) 0;
+    }
+
+    a {
+      font-size: 1.5rem;
+    }
+  }
+
+  &:first-child {
+    margin-top: 0rem;
+  }
+}
+
+.kanazawa-card {
+  margin-top: var(--size-600);
+
+  .card__content {
+    a {
+      text-decoration: none;
+      margin-top: 2rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.tokyo-card {
+  display: flex; 
+  flex-direction: column;
+  gap: 1rem;
+
+  .card__content { 
+    p {
+      font-size: var(--size-500);
+    }
+
+    a {
+      font-size: var(--size-600);
+
+      @include breakpoint(medium) {
+        font-size: var(--size-800);
+      }
+    }
   }
 }

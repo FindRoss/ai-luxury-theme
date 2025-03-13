@@ -1,76 +1,46 @@
-/* Single.php */
+@use "breakpoints" as *;
 
 .heading {
   display: flex;
   flex-direction: column;
-  border-top: 10px solid #000;
+  border-top: 10px solid var(--color-section-separator);
   gap: 1rem;
-  background-color: var(--color-primary);
-}
 
-.heading__content {
-  padding: var(--size-200);
-}
+  &__content {
+    padding: var(--size-200) 1rem;
 
-.heading__content h1 {
-  color: var(--color-article-heading);
-  color: var(--color-article-heading);
-  font-size: var(--size-700);
-  line-height: 1.4;
+    @include breakpoint(medium) {
+      padding: var(--size-200) 0;
+    }
 
-  @media screen and (min-width: var(--breakpoint-small)) {
-    font-size: var(--size-900);
+    h1 {
+      color: var(--color-article-heading);
+      font-size: var(--size-700);
+      line-height: 1.4;
+  
+      @include breakpoint(medium) {
+        font-size: var(--size-900);
+      }
+    }
+
+    .date {
+      margin-top: var(--size-300);
+      font-size: var(--size-500);
+      color: var(--color-article-date);
+      font-family: var(--font-family-heading);
+    }
   }
 }
 
-.heading__content .date {
-  margin-top: var(--size-300);
-  font-size: var(--size-500);
-  color: var(--color-card-date);
-  color: var(--color-card-date);
-  font-family: var(--font-family-heading);
-}
-
-.heading__image {
-  margin-left: -1rem;
-  margin-right: -1rem;
-}
-
-.heading__image img {
-  width: 100%;
-  height: auto;
-}
 
 /* DESKTOP */
-@media screen and (min-width: 768px) {
+@include breakpoint(medium) {
+  .heading {
+    flex-direction: row;
+  }
+
   .heading__content,
   .heading__image {
     flex: 1;
   }
-
-  .heading__image {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .heading {
-    flex-direction: row;
-  }
 }
-
-/* Content */
-.content {
-  // max-width: 100%;
-  margin-top: 3rem;
-  // display: flex;
-  // flex-direction: column;
-  // margin-left: auto;
-  // margin-right: auto;
-  color: var(--color-dark);
-}
-
-// @media screen and (min-width: 768px) {
-//   .content {
-//     max-width: 800px;
-//   }
-// }

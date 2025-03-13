@@ -1,9 +1,11 @@
+@use "breakpoints" as *;
+
 .theme-toggle {
   display: inline-flex;
   gap: var(--size-200);
   align-items: center;
   padding: 0.2rem;
-  background-color: var(--color-body);
+  background-color: var(--background-color-theme-toggle);
   border-radius: 25px;
 
   &__option {
@@ -27,13 +29,13 @@
         height: 100%;
         
         path {
-          stroke: var(--color-dark);
+          stroke: var(--stroke-color-theme-toggle);
         }
       }
     }
 
     input[type="radio"]:checked + label {
-      background: var(--color-primary);
+      background: var(--background-color-theme-toggle-active);
     }
 
     input[type="radio"] {
@@ -51,7 +53,7 @@
   flex-direction: column;
   gap: 1rem;
 
-  @media screen and (min-width: 768px) {
+  @include breakpoint(medium) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;

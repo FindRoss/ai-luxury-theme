@@ -1,41 +1,17 @@
 // No changes needed if this file only contains variable definitions
 :root {
-  // Alt / Beige / Sand color scheme
-  --color-dark: #000000;
-  --color-light: #ffffff;
-  --color-primary: #dbb797;
-  --color-body: #c4a182;
-  --color-text-muted: #535d6b;
-  --color-accent: #1d4ed8;
-  --color-article-heading: #1a1919;
-  --color-article-text: #1a1919;
-  --color-card-text: #1a1919;
-  --color-card-heading: #1a1919;
-  --color-card-date: #1a1919;
-  --color-footer-heading: #ffffff;
-  --color-footer-lists: #ffffff;
-  --color-header-heading: #ffffff;
+  /*
+  * 
+  * Design System
+  *
+  */
 
-  // --color-dark: #000000;
-  // --color-light: #ffffff;
-  // --color-primary: #f9f9f9;
-  // --color-body: #f9f9f9;
-  // --color-accent: #1d4ed8;
-  // --color-link: #1941b7;
-  // --color-text-muted: #535d6b;
-  // --color-article-heading: #000000;
-  // --color-article-text: #000000;
-  // --color-card-text: #000000;
-  // --color-card-heading: #000000;
-  // --color-card-date: #000000;
-  // --color-footer-heading: #ffffff;
-  // --color-footer-lists: #ffffff;
-  // --color-header-heading: #ffffff;
-
+  /* Fonts */
   --font-family-heading: "Lexend", sans-serif;
   --font-family-body: "Catamaran", sans-serif;
   --font-family-link: "outfit", sans-serif;
-
+    
+  /* Sizes */
   --size-100: 0.579rem;
   --size-200: 0.694rem;
   --size-300: 0.833rem;
@@ -45,28 +21,206 @@
   --size-700: 2.074rem;
   --size-800: 2.488rem;
   --size-900: 2.986rem;
+   
+  /* Colors */
+  --blue-50: #EFF6FF; 
+  --blue-100: #DBEAFE; 
+  --blue-200: #BFDBFE; 
+  --blue-300: #93C5FD;
+  --blue-400: #60A5FA;
+  --blue-500: #3B82F6;
+  --blue-600: #2563EB;
+  --blue-700: #1D4ED8;
+  --blue-800: #1E40AF;
+  --blue-900: #1E3A8A;
 
-  --breakpoint-small: 576px;
-  --breakpoint-medium: 768px;
-  --breakpoint-large: 992px;
-  --breakpoint-xl: 1200px;
-  --breakpoint-xxl: 1400px;
+  --slate-50: #F8FAFC; 
+  --slate-100: #F1F5F9; 
+  --slate-200: #E2E8F0; 
+  --slate-300: #CAD6E2;
+  --slate-400: #90A1B9; 
+  --slate-500: #62748E; 
+  --slate-600: #45556D;
+  --slate-700: #314158; 
+  --slate-800: #1D283D; 
+  --slate-900: #0F172C;
+  --slate-950: #020618;
+
+  --stone-50: #FAFAF9;
+  --stone-100: #F5F5F4;
+  --stone-200: #E7E5E4;
+  --stone-300: #D6D3D1;
+  --stone-400: #A8A29E;
+  --stone-500: #78716C;
+  --stone-600: #57534E;
+  --stone-700: #44403C;
+  --stone-800: #292524;
+  --stone-900: #1C1917;
+  --stone-950: #0C0A09;
+
+  /*  Themes */ 
+  // --color-dark: #000000;
+  // --color-light: #ffffff;
+  // --color-primary: #dbb797;
+  // --color-body: #c4a182;
+  // --color-text-muted: #535d6b;
+  // --color-accent: #1d4ed8;
+  // --color-article-heading: #1a1919;
+  // --color-article-text: #1a1919;
+  // --color-card-text: #1a1919;
+  // --color-card-heading: #1a1919;
+  // --color-card-date: #1a1919;
+  // --color-footer-heading: #ffffff;
+  // --color-footer-lists: #ffffff;
+
+
+  /*
+  * Plain light theme
+  */
+  // General purpose tokens
+  --color-dark: #000000; 
+  --color-light: #ffffff;
+  --color-primary: var(--blue-500);
+  --color-body: var(--slate-50);
+  --color-accent: var(--blue-600);
+  --color-text-muted: var(--slate-500);
+  --color-heading: var(--slate-900);
+  --color-text: var(--slate-800);
+  --background-50: #ffffff;
+  --background-100: var(--slate-50);
+  --background-200: var(--slate-100);
+  --background-300: var(--slate-200);
+  --background-400: var(--slate-300);
+
+  // Semantic tokens
+  /* Links */
+  --color-link: var(--blue-600);
+  --color-link-active: var(--blue-800);
+
+  /* Header */
+  --background-color-header: #FFFFFF;
+  --background-color-desktop-sub-menu: var(--slate-50);
+  --color-header-link: var(--slate-600);
+  --color-header-link-active: var(--slate-900);
+  --color-header-svg-box-stars: var(--blue-500);
+  --color-header-svg-text: var(--slate-800);
+  --color-header-svg-box-text: var(--slate-50);
+
+  /* Footer */
+  --background-color-footer: var(--slate-900);
+  --color-footer-heading: var(--slate-50);
+  --color-footer-link: var(--slate-300);
+  --color-footer-link-active: var(--slate-100);
+  --color-footer-copyright: var(--slate-400);
+  --color-footer-svg-box-stars: var(--blue-500);
+  --color-footer-svg-box-text: var(--slate-50);
+  --color-footer-svg-text: var(--slate-50);
+
+
+  /* Separator */
+  --color-section-separator: var(--slate-900); // adding
+
+  /* Article */
+  --color-article-heading: var(--slate-900);
+  --color-article-text: var(--slate-800);
+  --color-article-date: var(--slate-600);
+
+  /* Card */
+  --color-card-heading: var(--slate-900);
+  --color-card-text: var(--slate-600);
+  --color-card-date: var(--blue-800);
+  --color-card-border: var(--slate-200); 
+  --background-color-card: #ffffff;
+
+  /* Icon */
+  --color-icon: var(--slate-600);
+  --color-icon-active: var(--blue-800);
+
+  /* Buttons */
+  --background-color-button-primary: var(--blue-500);
+  --background-color-button-primary-active: var(--blue-700);
+  --color-button-primary-text: var(--slate-50);
+  --background-color-button-outline: #ffffff;
+  --background-color-button-outline-active: #f1f1f1; 
+  --color-button-primary-outline-text: #000000;
+
+  /* Light/Dark theme toggle */
+  --background-color-theme-toggle: var(--slate-200);
+  --background-color-theme-toggle-active: var(--slate-300);
+  --stroke-color-theme-toggle: var(--slate-900);
 }
 
 html.dark-mode {
-  --color-dark: #d1d0d0;
-  --color-light: #000000;
-  --color-primary: #3d3d3d;
-  --color-body: #272524;
+/* Base Colors */
+  --color-dark: var(--stone-300);
+  /* #d1d0d0 */
+  --color-light: var(--stone-900);
+  --color-primary: var(--blue-600);
+  --color-body: var(--stone-900);
+  --color-accent: var(--blue-600);
   --color-text-muted: #969daa;
-  --color-accent: #3b82f6;
-  --color-link: #4c77e6;
-  --color-article-text: #c7c7c7;
-  --color-article-heading: #d1d0d0;
-  --color-card-text: #c7c7c7;
-  --color-card-heading: #d1d0d0;
-  --color-card-date: #d1d0d0;
-  --color-footer-heading: #272524;
-  --color-footer-lists: #272524;
-  --color-header-heading: #272624;
+  --color-heading: var(--stone-50);
+  --color-text: var(--stone-100);
+
+  /* Links */
+  --color-link: var(--blue-600);
+  --color-link-active: var(--blue-800);
+
+  /* Article */
+  --color-article-heading: var(--stone-100);
+  --color-article-text: var(--stone-200);
+  --color-article-date: var(--stone-400);
+
+  /* Card */
+  --color-card-heading: var(--stone-100);
+  --color-card-text: var(--stone-200);
+  --color-card-date: var(--stone-400);
+  --background-color-card: var(--stone-800);
+  --color-card-border: var(--stone-700);
+
+  /* Header */
+  --background-color-header: var(--stone-800);
+  --background-color-desktop-sub-menu: var(--stone-700);
+  --color-header-link: var(--stone-200);
+  --color-header-link-active: var(--stone-300);
+  --color-header-svg-box-stars: var(--blue-500);
+  --color-header-svg-text: var(--stone-100);
+  --color-header-svg-box-text: var(--stone-50);
+
+  /* Footer */
+  --background-color-footer: var(--stone-950);
+  --color-footer-heading: var(--stone-100);
+  --color-footer-link: var(--stone-400);
+  --color-footer-link-active: var(--stone-300);
+  --color-footer-copyright: var(--stone-500);
+  --color-footer-svg-box-stars: var(--blue-500);
+  --color-footer-svg-box-text: var(--stone-50);
+  --color-footer-svg-text: var(--stone-50);
+
+  /* Separator */
+  --color-section-separator: var(--stone-800);
+
+  /* Icon */
+  --color-icon: var(--stone-50);
+  --color-icon-active: var(--stone-200);
+
+  /* Buttons */
+  --background-color-button-primary: var(--blue-700);
+  --background-color-button-primary-active: var(--blue-800);
+  --color-button-primary-text: var(--slate-100);
+  --background-color-button-outline: var(--stone-800);
+  --background-color-button-outline-active: var(--stone-700);
+  --color-button-primary-outline-text: var(--stone-200);
+
+  /* Light/Dark Theme Toggle */
+  --background-color-theme-toggle: var(--stone-700);
+  --background-color-theme-toggle-active: var(--stone-600);
+  --stroke-color-theme-toggle: var(--stone-100);
+
+  /* General-purpose Background Tokens */
+  --background-50: var(--stone-900);
+  --background-100: var(--stone-800);
+  --background-200: var(--stone-700);
+  --background-300: var(--stone-600);
+  --background-400: var(--stone-500);
 }

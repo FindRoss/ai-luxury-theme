@@ -1,3 +1,5 @@
+@use "breakpoints" as *;
+
 // .background-image-banner {
 //   background-image: url("../images/banner.jpg");
 //   background-size: cover;
@@ -21,113 +23,55 @@
 // CAMERA SECTION
 .camera-section {
   display: flex;
+  gap: 3rem;
   flex-direction: column;
-  margin-top: 6rem;
+  margin-top: 3rem;
   margin-bottom: 6rem;
 
   .camera-posts {
     order: -1; // Change the order of .camera-posts
-    margin-bottom: 3rem;
-    border-top: 5px solid #000;
-    margin-right: 3rem;
-
-    // h2 {
-    //   border-top: 5px solid #000;
-    // }
-
-    a {
-      // color: var(--color-card-heading);
-      // color: var(--color-card-heading);
-      text-decoration: none;
-      margin-top: 2rem;
-      font-weight: 700;
-    }
-
-    .card {
-      border: none;
-
-      .card__content {
-        padding: 1rem 1rem 2rem 0rem;
-      }
-    }
+    padding-top: 1rem;
+    border-top: 5px solid var(--color-section-separator);
   }
 
   .cameras {
     order: -2; // Change the order of .cameras
-    margin-bottom: 3rem;
-
-    p,
-    h2 {
-      margin-top: 1rem;
-    }
-
-    p {
-      font-size: 1.125rem;
-      color: var(--color-article-text);
-      color: var(--color-article-text);
-    }
-
-    h2 {
-      font-size: 2.625rem;
-      color: var(--color-article-heading);
-      color: var(--color-article-heading);
-    }
   }
 
   .deals {
-    border-top: 5px solid #000;
+    padding-top: 1rem;
+    border-top: 5px solid var(--color-section-separator);
+
+    @include breakpoint(medium) {
+      h2 {
+        font-size: 2rem;
+      }
+    }
   }
 }
 
 // DESKTOP SECTION
-@media screen and (min-width: 768px) {
+@include breakpoint(medium) {
   .camera-section {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
 
     .camera-posts {
-      order: 0; // Reset the order of .camera-posts
-      border-top: 5px solid #000;
-      margin-right: 3rem;
+      order: 0; 
 
       h2 {
         font-size: 2rem;
-      }
-
-      .card {
-        border: none;
-
-        .card__content {
-          padding: 1rem 2rem 2rem 0rem;
-
-          a {
-            // color: #000;
-            // color: #000;
-            text-decoration: none;
-            margin-top: 2rem;
-            font-size: 1rem;
-          }
-
-          .date {
-            font-size: 0.875rem;
-          }
-        }
       }
     }
 
     .cameras {
       order: 0; // Reset the order of .cameras
     }
-
-    .deals {
-      border-top: 5px solid #000;
-      margin-left: 3rem;
-      font-size: 2rem;
-    }
   }
 }
 
-// @media screen and (min-width: 576px) {
+
+// @include breakpoint(small){
 //   .camera-section {
 //     display: grid;
 //     grid-template-columns: 1fr 2fr 1fr;
@@ -139,7 +83,7 @@
 
 // HOME SECTION
 .home-section {
-  border-top: 8px solid #000;
+  border-top: 8px solid var(--color-section-separator);
   margin-top: 5rem;
   margin-bottom: 5rem;
 
@@ -150,7 +94,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@include breakpoint(medium) {
   .home-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -166,85 +110,16 @@
   margin-top: 4rem;
   margin-bottom: 5rem;
   gap: 3rem;
-
-  .card {
-    border-radius: 10px;
-    border: none;
-    transition:
-      transform 0.3s ease,
-      box-shadow 0.3s ease;
-    background-color: var(--color-primary);
-
-    &:hover {
-      transform: scale(1.05);
-      opacity: 0.9;
-      box-shadow: 20px 1rem 1rem 0px rgba(0, 0, 0, 0.1);
-    }
-  }
 }
 
 .home-grid-right {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-
-  .card {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin-top: 2rem;
-    border-right: 6px solid #000;
-
-    .card__content {
-      padding: 1rem 0rem 0rem 0rem;
-
-      a {
-        font-size: 1.5rem;
-      }
-    }
-
-    .date {
-      font-size: 1.25rem;
-    }
-
-    &:first-child {
-      margin-top: 0rem;
-    }
-
-    & img {
-      border-radius: 10px 0px 0px 10px;
-    }
-  }
-}
-
-.home-grid-left {
-  .card {
-    border-bottom: 6px solid #000;
-
-    & img {
-      border-radius: 10px 10px 0px 0px;
-    }
-
-    .card__content {
-      padding: 1rem 0rem 2rem 1rem;
-
-      a {
-        font-size: 1.75rem;
-      }
-
-      .date {
-        font-size: 1.25rem;
-      }
-
-      .excerpt {
-        font-size: 1.125rem;
-      }
-    }
-  }
 }
 
 // SECURITY SECTION
 .security {
-  border-top: 8px solid #000;
+  border-top: 8px solid var(--color-section-separator);
   margin-top: 5rem;
   margin-bottom: 5rem;
 
