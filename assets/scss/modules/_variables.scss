@@ -84,6 +84,8 @@
   --color-body: var(--slate-50);
   --color-accent: var(--blue-600);
   --color-text-muted: var(--slate-500);
+  --color-heading: var(--slate-900);
+  --color-text: var(--slate-800);
   --background-50: #ffffff;
   --background-100: var(--slate-50);
   --background-200: var(--slate-100);
@@ -100,12 +102,20 @@
   --background-color-desktop-sub-menu: var(--slate-50);
   --color-header-link: var(--slate-600);
   --color-header-link-active: var(--slate-900);
-  
+  --color-header-svg-box-stars: var(--blue-500);
+  --color-header-svg-text: var(--slate-800);
+  --color-header-svg-box-text: var(--slate-50);
+
   /* Footer */
   --background-color-footer: var(--slate-900);
   --color-footer-heading: var(--slate-50);
-  --color-footer-link: var(--slate-400);
-  --color-footer-link-active: var(--slate-200);
+  --color-footer-link: var(--slate-300);
+  --color-footer-link-active: var(--slate-100);
+  --color-footer-copyright: var(--slate-400);
+  --color-footer-svg-box-stars: var(--blue-500);
+  --color-footer-svg-box-text: var(--slate-50);
+  --color-footer-svg-text: var(--slate-50);
+
 
   /* Separator */
   --color-section-separator: var(--slate-900); // adding
@@ -147,8 +157,10 @@ html.dark-mode {
   --color-light: var(--stone-900);
   --color-primary: var(--blue-600);
   --color-body: var(--stone-900);
-  --color-text-muted: #969daa;
   --color-accent: var(--blue-600);
+  --color-text-muted: #969daa;
+  --color-heading: var(--stone-50);
+  --color-text: var(--stone-100);
 
   /* Links */
   --color-link: var(--blue-600);
@@ -171,6 +183,9 @@ html.dark-mode {
   --background-color-desktop-sub-menu: var(--stone-700);
   --color-header-link: var(--stone-200);
   --color-header-link-active: var(--stone-300);
+  --color-header-svg-box-stars: var(--blue-500);
+  --color-header-svg-text: var(--stone-100);
+  --color-header-svg-box-text: var(--stone-50);
 
   /* Footer */
   --background-color-footer: var(--stone-950);
@@ -178,6 +193,9 @@ html.dark-mode {
   --color-footer-link: var(--stone-400);
   --color-footer-link-active: var(--stone-300);
   --color-footer-copyright: var(--stone-500);
+  --color-footer-svg-box-stars: var(--blue-500);
+  --color-footer-svg-box-text: var(--stone-50);
+  --color-footer-svg-text: var(--stone-50);
 
   /* Separator */
   --color-section-separator: var(--stone-800);

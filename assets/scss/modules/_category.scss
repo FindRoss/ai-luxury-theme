@@ -1,6 +1,6 @@
 @use "breakpoints" as *;
 
-.category-heading {
+.category-header {
   display: flex;
   flex-direction: column;
   border-top: 10px solid var(--color-section-separator);
@@ -38,29 +38,3 @@
   transform: scale(1.1);
   transition: all 0.1s;
 }
-
-// .category-grid {
-//   display: grid;
-//   grid-template-columns: repeat(3, 1fr);
-//   gap: 1rem;
-// }
-
-// @include breakpoint(medium) {
-//   .card-grid {
-//     grid-template-columns: repeat(3, 1fr);
-//   }
-// }
-
-// .category-grid>* {
-//   transition:
-//     transform 0.4s,
-//     opacity 0.4s;
-//   box-shadow: 20px 1rem 1rem 0px rgba(0, 0, 0, 0.1);
-//   background-color: var(--color-primary);
-// }
-
-// .category-grid>*:hover {
-//   transform: scale(1.05);
-//   opacity: 0.9;
-// }
-

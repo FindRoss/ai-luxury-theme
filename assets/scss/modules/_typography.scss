@@ -23,15 +23,19 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--color-dark);
+  color: var(--color-heading);
   font-family: var(--font-family-heading);
   line-height: 1.1;
 }
 
 p,
 ul,
-ol {
+ol,
+blockquote,
+figure,
+figcaption {
   font-family: var(--font-family-body);
+  color: var(--color-text);
   font-size: var(--size-500);
 }
 

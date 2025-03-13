@@ -64,15 +64,15 @@ header {
 .svg-logo {
   &__stars,
   &__box {
-    fill: var(--color-primary);
+    fill: var(--color-header-svg-box-stars); 
   }
 
   &__box-text {
-    fill: var(--color-light);
+    fill: var(--color-header-svg-box-text);
   }
-
+  
   &__text {
-    fill: var(--color-dark);
+    fill: var(--color-header-svg-text);
   }
 }
 

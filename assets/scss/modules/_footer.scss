@@ -59,15 +59,15 @@ footer {
 
       &__stars,
       &__box {
-        fill: var(--color-primary);
+        fill: var(--color-footer-svg-box-stars);
       }
 
       &__box-text {
-        fill: var(--color-light);
+        fill: var(--color-footer-svg-box-text);
       }
 
       &__text {
-        fill: var(--color-light);
+        fill: var(--color-footer-svg-text);
       }
     }
   }
