@@ -52,7 +52,7 @@
 }
 
 .osaka-card {
-  border-top: 5px solid var(--color-card-border);
+  // border-top: 5px solid var(--color-card-border);
 
   .card__content {
     padding: 1rem;
@@ -76,7 +76,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: var(--size-200);
   margin-top: 2rem;
-  border-top: 5px solid var(--color-card-border);
+  // border-top: 5px solid var(--color-card-border);
 
   @include breakpoint(medium) { 
     gap: var(--size-400);

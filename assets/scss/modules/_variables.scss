@@ -1,6 +1,26 @@
 // No changes needed if this file only contains variable definitions
 :root {
-  /* Design System */
+  /*
+  * 
+  * Design System
+  *
+  */
+
+  /* Fonts */
+  --font-family-heading: "Lexend", sans-serif;
+  --font-family-body: "Catamaran", sans-serif;
+  --font-family-link: "outfit", sans-serif;
+    
+  /* Sizes */
+  --size-100: 0.579rem;
+  --size-200: 0.694rem;
+  --size-300: 0.833rem;
+  --size-400: 1rem;
+  --size-500: 1.44rem;
+  --size-600: 1.728rem;
+  --size-700: 2.074rem;
+  --size-800: 2.488rem;
+  --size-900: 2.986rem;
    
   /* Colors */
   --blue-50: #EFF6FF; 
@@ -54,136 +74,135 @@
   // --color-footer-lists: #ffffff;
 
 
-  --color-dark: #000000;
+  /*
+  * Plain light theme
+  */
+  // General purpose tokens
+  --color-dark: #000000; 
   --color-light: #ffffff;
   --color-primary: var(--blue-500);
   --color-body: var(--slate-50);
   --color-accent: var(--blue-600);
-  --color-link: var(--blue-600);
-  --color-link-active: var(--blue-800); // adding
   --color-text-muted: var(--slate-500);
-
-  /* Article */
-  --color-article-heading: var(--slate-900);
-  --color-article-text: var(--slate-800);
-  --color-article-date: var(--slate-600); 
-
-  /* Card */
-  --color-card-text: var(--slate-600);
-  --color-card-heading: var(--slate-900);
-  --color-card-date: var(--blue-800);
-  --color-card-border: var(--slate-200); // adding
-  --background-color-card: #ffffff; // adding
-  --color-footer-heading: #ffffff;
-
-  /* Footer */
-  --color-footer-lists: #ffffff;
-
-  --color-section-separator: var(--slate-900); // adding
-  // adding...
-  --background-50: #ffffff; // Example of general purpose token
+  --background-50: #ffffff;
   --background-100: var(--slate-50);
   --background-200: var(--slate-100);
   --background-300: var(--slate-200);
   --background-400: var(--slate-300);
 
+  // Semantic tokens
+  /* Links */
+  --color-link: var(--blue-600);
+  --color-link-active: var(--blue-800);
+
+  /* Header */
+  --background-color-header: #FFFFFF;
+  --background-color-desktop-sub-menu: var(--slate-50);
+  --color-header-link: var(--slate-600);
+  --color-header-link-active: var(--slate-900);
+  
+  /* Footer */
+  --background-color-footer: var(--slate-900);
+  --color-footer-heading: var(--slate-50);
+  --color-footer-link: var(--slate-400);
+  --color-footer-link-active: var(--slate-200);
+
+  /* Separator */
+  --color-section-separator: var(--slate-900); // adding
+
+  /* Article */
+  --color-article-heading: var(--slate-900);
+  --color-article-text: var(--slate-800);
+  --color-article-date: var(--slate-600);
+
+  /* Card */
+  --color-card-heading: var(--slate-900);
+  --color-card-text: var(--slate-600);
+  --color-card-date: var(--blue-800);
+  --color-card-border: var(--slate-200); 
+  --background-color-card: #ffffff;
+
   /* Icon */
   --color-icon: var(--slate-600);
   --color-icon-active: var(--blue-800);
-  
-  /* Header */
-  --background-color-header: #FFFFFF; // Example of semantic token
-  --background-color-desktop-sub-menu: var(--slate-50);
 
-  --color-header-link: var(--slate-600);
-  --color-header-link-active: var(--slate-900);
-  --background-color-footer: var(--slate-900);
-  --background-color-button-primary: var(--slate-900);
-  --background-color-button-primary-active: var(--slate-900);
-  --color-button-primary-text: #ffffff;
+  /* Buttons */
+  --background-color-button-primary: var(--blue-500);
+  --background-color-button-primary-active: var(--blue-700);
+  --color-button-primary-text: var(--slate-50);
   --background-color-button-outline: #ffffff;
   --background-color-button-outline-active: #f1f1f1; 
   --color-button-primary-outline-text: #000000;
+
+  /* Light/Dark theme toggle */
   --background-color-theme-toggle: var(--slate-200);
   --background-color-theme-toggle-active: var(--slate-300);
   --stroke-color-theme-toggle: var(--slate-900);
-
-
-  /* Fonts */ 
-  --font-family-heading: "Lexend", sans-serif;
-  --font-family-body: "Catamaran", sans-serif;
-  --font-family-link: "outfit", sans-serif;
-
-  /* Sizes */ 
-  --size-100: 0.579rem;
-  --size-200: 0.694rem;
-  --size-300: 0.833rem;
-  --size-400: 1rem;
-  --size-500: 1.44rem;
-  --size-600: 1.728rem;
-  --size-700: 2.074rem;
-  --size-800: 2.488rem;
-  --size-900: 2.986rem;
 }
 
 html.dark-mode {
-  --color-dark: var(--stone-300); // #d1d0d0;
+/* Base Colors */
+  --color-dark: var(--stone-300);
+  /* #d1d0d0 */
   --color-light: var(--stone-900);
   --color-primary: var(--blue-600);
   --color-body: var(--stone-900);
   --color-text-muted: #969daa;
   --color-accent: var(--blue-600);
-  --color-link: var(--blue-600);
-  --color-link-active: var(--blue-800); // adding
-  --color-article-text: #c7c7c7;
-  --color-article-heading: #d1d0d0;
-  --color-card-text: #c7c7c7;
-  --color-card-heading: #d1d0d0;
-  --color-card-date: #d1d0d0;
-  --background-color-card: var(--stone-800);
-  --color-card-border: var(--stone-950);
-  --color-footer-heading: #272524;
-  --color-footer-lists: #272524;
 
-  /* Header */
-  --color-header-link: var(--stone-200);
-  --color-header-link-active: var(--stone-300);
-  --background-color-header: var(--stone-800);
-  --background-color-desktop-sub-menu: var(--stone-700);
+  /* Links */
+  --color-link: var(--blue-600);
+  --color-link-active: var(--blue-800);
 
   /* Article */
   --color-article-heading: var(--stone-100);
   --color-article-text: var(--stone-200);
   --color-article-date: var(--stone-400);
 
+  /* Card */
+  --color-card-heading: var(--stone-100);
+  --color-card-text: var(--stone-200);
+  --color-card-date: var(--stone-400);
+  --background-color-card: var(--stone-800);
+  --color-card-border: var(--stone-700);
+
+  /* Header */
+  --background-color-header: var(--stone-800);
+  --background-color-desktop-sub-menu: var(--stone-700);
+  --color-header-link: var(--stone-200);
+  --color-header-link-active: var(--stone-300);
+
+  /* Footer */
+  --background-color-footer: var(--stone-950);
+  --color-footer-heading: var(--stone-100);
+  --color-footer-link: var(--stone-400);
+  --color-footer-link-active: var(--stone-300);
+  --color-footer-copyright: var(--stone-500);
+
+  /* Separator */
+  --color-section-separator: var(--stone-800);
+
   /* Icon */
   --color-icon: var(--stone-50);
   --color-icon-active: var(--stone-200);
 
+  /* Buttons */
+  --background-color-button-primary: var(--blue-700);
+  --background-color-button-primary-active: var(--blue-800);
+  --color-button-primary-text: var(--slate-100);
+  --background-color-button-outline: var(--stone-800);
+  --background-color-button-outline-active: var(--stone-700);
+  --color-button-primary-outline-text: var(--stone-200);
 
-  --color-section-separator: var(--stone-950);
+  /* Light/Dark Theme Toggle */
+  --background-color-theme-toggle: var(--stone-700);
+  --background-color-theme-toggle-active: var(--stone-600);
+  --stroke-color-theme-toggle: var(--stone-100);
 
-  /* General-purpose background tokens */
-  // --background-50: 
-  // --background-100: 
-  // --background-200: 
-  // --background-300: 
-  // --background-400: 
-
-
-
-
-
-  // --background-color-footer: // add appropriate color;
-  // --background-color-button-primary: // add appropriate color;
-  // --background-color-button-primary-active: // add appropriate color;
-  // --color-button-primary-text: // add appropriate color;
-  // --background-color-button-outline: // add appropriate color;
-  // --background-color-button-outline-active: // add appropriate color;
-  // --color-button-primary-outline-text: // add appropriate color;
-
-  /* Theme toggle colors */
-  // --background-color-theme-toggle: // add appropriate color;
-  // --background-color-theme-toggle-active: // add appropriate color;
-  // --stroke-color-theme-toggle: // add appropriate color;
+  /* General-purpose Background Tokens */
+  --background-50: var(--stone-900);
+  --background-100: var(--stone-800);
+  --background-200: var(--stone-700);
+  --background-300: var(--stone-600);
+  --background-400: var(--stone-500);
 }

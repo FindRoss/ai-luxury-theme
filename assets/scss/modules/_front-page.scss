@@ -30,6 +30,7 @@
 
   .camera-posts {
     order: -1; // Change the order of .camera-posts
+    padding-top: 1rem;
     border-top: 5px solid var(--color-section-separator);
   }
 
@@ -38,6 +39,7 @@
   }
 
   .deals {
+    padding-top: 1rem;
     border-top: 5px solid var(--color-section-separator);
 
     @include breakpoint(medium) {
