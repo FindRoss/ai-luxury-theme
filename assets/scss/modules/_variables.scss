@@ -1,4 +1,3 @@
-// No changes needed if this file only contains variable definitions
 :root {
   /*
   * 
@@ -58,27 +57,86 @@
   --stone-900: #1C1917;
   --stone-950: #0C0A09;
 
-  /*  Themes */ 
+  /**** Themes ****/
+  /**
+  *  Alt Light Mode
+  */
   // --color-dark: #000000;
   // --color-light: #ffffff;
   // --color-primary: #dbb797;
   // --color-body: #c4a182;
-  // --color-text-muted: #535d6b;
   // --color-accent: #1d4ed8;
-  // --color-article-heading: #1a1919;
-  // --color-article-text: #1a1919;
-  // --color-card-text: #1a1919;
-  // --color-card-heading: #1a1919;
-  // --color-card-date: #1a1919;
-  // --color-footer-heading: #ffffff;
-  // --color-footer-lists: #ffffff;
+  // --color-text-muted: #535d6b;
+  // --color-heading: 
+  // --color-text: 
 
+  /* General-purpose Background Tokens */
+  // --background-50:
+  // --background-100:
+  // --background-200:
+  // --background-300:
+  // --background-400:
 
-  /*
-  * Plain light theme
+  /* Links */
+  // --color-link: 
+  // --color-link-active: 
+
+  /* Header */
+  // --background-color-header:
+  // --background-color-desktop-sub-menu: 
+  // --color-header-link: 
+  // --color-header-link-active: 
+  // --color-header-svg-box-stars: 
+  // --color-header-svg-text: 
+  // --color-header-svg-box-text: 
+
+  /* Footer */
+  // --background-color-footer:
+  --color-footer-heading: #fff;
+  --color-footer-link: #fff;
+  --color-footer-link-active: #fff;
+  // --color-footer-copyright:
+  // --color-footer-svg-box-stars:
+  // --color-footer-svg-box-text:
+  // --color-footer-svg-text:
+
+  /* Separator */
+  // --color-section-separator: 
+
+  /* Article */
+  --color-article-heading:#1a1919;
+  --color-article-text: #1a1919;
+  // --color-article-date:
+
+  /* Card */
+  --color-card-heading: #1a1919;
+  --color-card-text: #1a1919;
+  --color-card-date: #1a1919;
+  // --color-card-border: 
+  // --background-color-card:
+
+  /* Buttons */
+  // --background-color-button-primary:
+  // --background-color-button-primary-active:
+  // --color-button-primary-text:
+  // --background-color-button-outline:
+  // --background-color-button-outline-active:
+  // --color-button-primary-outline-text:
+
+  /* Icon */
+  // --color-icon:
+  // --color-icon-active:
+
+  /* Light/Dark theme toggle */
+  // --background-color-theme-toggle:
+  // --background-color-theme-toggle-active:
+  // --stroke-color-theme-toggle:
+
+  /**
+  *  Light Mode
   */
-  // General purpose tokens
-  --color-dark: #000000; 
+  /* General-purpose Tokens */
+  --color-dark: #000000; // General purpose tokens
   --color-light: #ffffff;
   --color-primary: var(--blue-500);
   --color-body: var(--slate-50);
@@ -86,15 +144,16 @@
   --color-text-muted: var(--slate-500);
   --color-heading: var(--slate-900);
   --color-text: var(--slate-800);
+
+  /* General-purpose Background Tokens */
   --background-50: #ffffff;
   --background-100: var(--slate-50);
   --background-200: var(--slate-100);
   --background-300: var(--slate-200);
   --background-400: var(--slate-300);
 
-  // Semantic tokens
   /* Links */
-  --color-link: var(--blue-600);
+  --color-link: var(--blue-600); // Semantic tokens
   --color-link-active: var(--blue-800);
 
   /* Header */
@@ -116,9 +175,8 @@
   --color-footer-svg-box-text: var(--slate-50);
   --color-footer-svg-text: var(--slate-50);
 
-
   /* Separator */
-  --color-section-separator: var(--slate-900); // adding
+  --color-section-separator: var(--slate-900);
 
   /* Article */
   --color-article-heading: var(--slate-900);
@@ -132,10 +190,6 @@
   --color-card-border: var(--slate-200); 
   --background-color-card: #ffffff;
 
-  /* Icon */
-  --color-icon: var(--slate-600);
-  --color-icon-active: var(--blue-800);
-
   /* Buttons */
   --background-color-button-primary: var(--blue-500);
   --background-color-button-primary-active: var(--blue-700);
@@ -144,16 +198,21 @@
   --background-color-button-outline-active: #f1f1f1; 
   --color-button-primary-outline-text: #000000;
 
+  /* Icon */
+  --color-icon: var(--slate-600);
+  --color-icon-active: var(--blue-800);
+
   /* Light/Dark theme toggle */
   --background-color-theme-toggle: var(--slate-200);
   --background-color-theme-toggle-active: var(--slate-300);
   --stroke-color-theme-toggle: var(--slate-900);
 }
 
+/**
+ * Dark Mode
+ */
 html.dark-mode {
-/* Base Colors */
   --color-dark: var(--stone-300);
-  /* #d1d0d0 */
   --color-light: var(--stone-900);
   --color-primary: var(--blue-600);
   --color-body: var(--stone-900);
@@ -162,21 +221,16 @@ html.dark-mode {
   --color-heading: var(--stone-50);
   --color-text: var(--stone-100);
 
+  /* General-purpose Background Tokens */
+  --background-50: var(--stone-900);
+  --background-100: var(--stone-800);
+  --background-200: var(--stone-700);
+  --background-300: var(--stone-600);
+  --background-400: var(--stone-500);
+
   /* Links */
   --color-link: var(--blue-600);
   --color-link-active: var(--blue-800);
-
-  /* Article */
-  --color-article-heading: var(--stone-100);
-  --color-article-text: var(--stone-200);
-  --color-article-date: var(--stone-400);
-
-  /* Card */
-  --color-card-heading: var(--stone-100);
-  --color-card-text: var(--stone-200);
-  --color-card-date: var(--stone-400);
-  --background-color-card: var(--stone-800);
-  --color-card-border: var(--stone-700);
 
   /* Header */
   --background-color-header: var(--stone-800);
@@ -200,9 +254,17 @@ html.dark-mode {
   /* Separator */
   --color-section-separator: var(--stone-800);
 
-  /* Icon */
-  --color-icon: var(--stone-50);
-  --color-icon-active: var(--stone-200);
+  /* Article */
+  --color-article-heading: var(--stone-100);
+  --color-article-text: var(--stone-200);
+  --color-article-date: var(--stone-400);
+
+  /* Card */
+  --color-card-heading: var(--stone-100);
+  --color-card-text: var(--stone-200);
+  --color-card-date: var(--stone-400);
+  --color-card-border: var(--stone-700);
+  --background-color-card: var(--stone-800);
 
   /* Buttons */
   --background-color-button-primary: var(--blue-700);
@@ -212,15 +274,12 @@ html.dark-mode {
   --background-color-button-outline-active: var(--stone-700);
   --color-button-primary-outline-text: var(--stone-200);
 
+  /* Icon */
+  --color-icon: var(--stone-50);
+  --color-icon-active: var(--stone-200);
+
   /* Light/Dark Theme Toggle */
   --background-color-theme-toggle: var(--stone-700);
   --background-color-theme-toggle-active: var(--stone-600);
   --stroke-color-theme-toggle: var(--stone-100);
-
-  /* General-purpose Background Tokens */
-  --background-50: var(--stone-900);
-  --background-100: var(--stone-800);
-  --background-200: var(--stone-700);
-  --background-300: var(--stone-600);
-  --background-400: var(--stone-500);
 }
