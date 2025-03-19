@@ -72,8 +72,8 @@
 
   /* General-purpose Background Tokens */
   --background-50: --background-100: --background-200: --background-300:
-    --background-400: /* Links */ --color-link: #1a1919;
-  --color-link-active: #1a1919;
+    --background-400: /* Links */ --color-link: #3f3e3e;
+  --color-link-active: #3f3e3e;
 
   /* Header */
   --background-color-header: #000000;
@@ -81,7 +81,7 @@
   --color-header-link: #fff --color-header-link-active: #fff
     --color-header-svg-box-stars: #dbb797;
   --color-header-svg-text: #dbb797;
-  --color-header-svg-box-text: #000000;
+  --color-header-svg-box-text: #fff;
 
   /* Footer */
   --background-color-footer: #000000;
@@ -89,9 +89,9 @@
   --color-footer-link: #fff;
   --color-footer-link-active: #fff;
   --color-footer-copyright: #fff;
-  --color-header-svg-box-stars: #dbb797;
-  --color-header-svg-text: #dbb797;
-  --color-header-svg-box-text: #000000;
+  --color-footer-svg-box-stars: #dbb797;
+  --color-footer-svg-text: #dbb797;
+  --color-footer-svg-box-text: #000000;
 
   /* Separator */
   --color-section-separator: #000000;
@@ -99,7 +99,7 @@
   /* Article */
   --color-article-heading: #1a1919;
   --color-article-text: #1a1919;
-  // --color-article-date:
+  --color-article-date: #1a1919;
 
   /* Card */
   --color-card-heading: #1a1919;
@@ -108,15 +108,25 @@
   --color-card-border: #1a1919;
   --background-color-card: #dbb797;
   /* Buttons */
-  --background-color-button-primary: #1a1919;
-  --background-color-button-primary-active: #1a1919;
-  --color-button-primary-text: #1a1919;
+  --background-color-button-primary: #fff;
+  --background-color-button-primary-active: #fff;
+  --color-button-primary-text: #fff;
+
   --background-color-button-outline: #1a1919;
   --background-color-button-outline-active: #1a1919;
-  --color-button-primary-outline-text: #1a1919; /* Icon */ // --color-icon:
-  // --color-icon-active:
-  /* Light/Dark theme toggle */ // --background-color-theme-toggle:
-  --background-color-theme-toggle-active: #1a1919;
+  --color-button-primary-outline-text: #1a1919;
+
+  /* Pagination */
+
+  --color-pagination: #1a1919;
+  --color-pagination-active: #1a1919;
+
+  /* Icon */
+  --color-icon: #dbb797;
+  --color-icon-active: #dbb797;
+  /* Light/Dark theme toggle */
+  --background-color-theme-toggle: var(--color-primary);
+  --background-color-theme-toggle-active: var(--color-body);
   --stroke-color-theme-toggle: #1a1919;
   /**
   *  Light Mode
@@ -239,6 +249,11 @@
     --background-color-button-outline: var(--stone-800);
     --background-color-button-outline-active: var(--stone-700);
     --color-button-primary-outline-text: var(--stone-200);
+
+    /* Pagination */
+    --color-pagination: var(--stone-100);
+    --color-pagination-active: var(--stone-100);
+
     /* Icon */
     --color-icon: var(--stone-50);
     --color-icon-active: var(--stone-200);
