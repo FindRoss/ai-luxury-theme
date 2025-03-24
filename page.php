@@ -2,6 +2,7 @@
 
 <?php get_template_part( 'template-parts/breadcrumbs/breadcrumbs' ); ?>
 
+<?php get_template_part( 'template-parts/search/search' ); ?>
 
 <div class="container"> 
 
