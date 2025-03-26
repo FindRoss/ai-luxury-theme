@@ -8,21 +8,27 @@
 get_header(); ?>
 
 <div class="container">
-  <section class="error-404 not-found">
-    <header class="page-header">
-      <h1 class="page-title"><?php esc_html_e( 'Oops! That page can’t be found.', 'ai-luxury-theme' ); ?></h1>
-    </header><!-- .page-header -->
+  <section class="error-content">
+    
+      <h1 class="error-header"><?php esc_html_e( 'Oops! That page can’t be found.', 'ai-luxury-theme' ); ?></h1>
 
-    <div class="page-content">
+
+  
+<div class="not-found">
       <p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'ai-luxury-theme' ); ?></p>
+</div>
 
+
+<div class="search-bar">
       <?php get_search_form(); ?>
+</div>
 
+<div class="return-home">
       <p><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="button">
         <?php esc_html_e( 'Return to Homepage', 'ai-luxury-theme' ); ?>
       </a></p>
-    </div><!-- .page-content -->
-  </section><!-- .error-404 -->
+  </div>
+  </section><!-- .error-content -->
 </div><!-- .container -->
 
 <?php

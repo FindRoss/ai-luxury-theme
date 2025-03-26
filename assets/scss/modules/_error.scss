@@ -1,0 +1,43 @@
+
+.error-header {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    padding-top: 4rem;
+  font-size: 4rem;
+}
+
+.not-found {
+    display: flex;
+    justify-content: center;
+    padding-top: 4rem;
+    p{ 
+        font-weight: 400; 
+        font-size: var(--size-600);
+    }
+  
+}
+
+.return-home {
+    display: flex;
+    justify-content: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+ p{
+    font-weight: bold; 
+    font-size: var(--size-600); 
+
+a:link ,a:active  {
+    text-decoration: none;
+    color: var(--color-link);
+}
+ 
+ }
+
+}
+
+.return-home p:hover {
+    transform: scale(1.1);
+    transition: all 0.1s;
+}

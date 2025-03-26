@@ -25,7 +25,7 @@
 
   $args = array(
     'post_type'      => 'post', 
-    'posts_per_page' => 15,
+    'posts_per_page' => 6,
     'paged'          => $paged,
     'cat'            => $category_id,
   );
