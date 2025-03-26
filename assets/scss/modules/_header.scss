@@ -7,7 +7,7 @@
     font-family: sans-serif;
     font-size: 1rem;
     font-weight: 700;
-      
+
     &:hover,
     &:active {
       color: var(--color-header-link-active);
@@ -64,13 +64,13 @@ header {
 .svg-logo {
   &__stars,
   &__box {
-    fill: var(--color-header-svg-box-stars); 
+    fill: var(--color-header-svg-box-stars);
   }
 
   &__box-text {
     fill: var(--color-header-svg-box-text);
   }
-  
+
   &__text {
     fill: var(--color-header-svg-text);
   }
@@ -95,7 +95,7 @@ header {
   &.open {
     right: 0;
   }
-  
+
   @include breakpoint(medium) {
     display: none;
   }
@@ -121,22 +121,22 @@ header {
       grid-template-areas:
         "link button"
         "submenu submenu";
-  
-      &>a {
+
+      & > a {
         grid-area: link;
       }
-  
+
       .chevron-wrapper {
         height: 100%;
         grid-area: button;
         display: flex;
         align-items: center;
         justify-content: flex-end;
-  
+
         &:hover {
           background-color: var(--color-muted-100);
         }
-  
+
         .chevron {
           width: 50px;
           height: 24px;
@@ -146,11 +146,11 @@ header {
           path {
             fill: var(--color-icon);
           }
-  
+
           &.rotate {
             transform: rotate(180deg);
           }
-          
+
           &:hover,
           &:active {
             path {
@@ -159,14 +159,14 @@ header {
           }
         }
       }
-  
+
       .sub-menu {
         grid-area: submenu;
         visibility: hidden;
         max-height: 0px;
         list-style-type: none;
         padding: 0;
-  
+
         &.open {
           visibility: visible;
           max-height: 1000px;
