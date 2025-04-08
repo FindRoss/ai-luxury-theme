@@ -1,0 +1,78 @@
+  :root {
+  
+  /**** Themes ****/
+  /**
+  *  Alt Light Mode
+  */
+  --color-dark: #000000;
+  --color-light: #ffffff;
+  --color-primary: #9eac8e;
+  --color-body: #7e8873;
+  --color-accent: #1d4ed8;
+  --color-text-muted: #535d6b;
+  --color-heading: #1a1919;
+  --color-text: #1a1919;
+
+  /* Links */
+  --color-link: #3f3e3e;
+  --color-link-active: #3f3e3e;
+
+  /* Header */
+  --background-color-header: #000000; 
+  --background-color-desktop-sub-menu: #000000;
+  --color-header-link: #9eac8e; 
+  --color-header-link-active: #9eac8e; 
+  --color-header-svg-box-stars: #7e8873;
+  --color-header-svg-text: #7e8873;
+  --color-header-svg-box-text: #000000;
+
+  /* Footer */
+  --background-color-footer: #000000;
+  --color-footer-heading: #9eac8e;
+  --color-footer-link: #9eac8e;
+  --color-footer-link-active: #9eac8e;
+  --color-footer-copyright: #9eac8e;
+  --color-footer-svg-box-stars: #7e8873;
+  --color-footer-svg-text: #7e8873;
+  --color-footer-svg-box-text: #000000;
+
+  /* Separator */
+  --color-section-separator: #000000;
+
+  /* Article */
+  --color-article-heading: #1a1919;
+  --color-article-text: #1a1919;
+  --color-article-date: #1a1919;
+
+  /* Card */
+  --color-card-heading: #1a1919;
+  --color-card-text: #1a1919;
+  --color-card-date: #1a1919;
+  --color-card-border: #1a1919;
+  --background-color-card: #9eac8e;
+  /* Buttons */
+  --background-color-button-primary: #fff;
+  --background-color-button-primary-active: #fff;
+  --color-button-primary-text: #fff;
+
+  --background-color-button-outline: #1a1919;
+  --background-color-button-outline-active: #1a1919;
+  --color-button-primary-outline-text: #1a1919;
+
+  /* Pagination */
+
+  --color-pagination: #1a1919;
+  --color-pagination-active: #1a1919;
+
+ /* Search Bar */
+  --color-search-bar-background: #1a1919;
+  --color-search-bar-text: #fff;
+
+  /* Icon */
+  --color-icon: #9eac8e;
+  --color-icon-active: #9eac8e;
+  /* Light/Dark theme toggle */
+  --background-color-theme-toggle: var(--color-primary);
+  --background-color-theme-toggle-active: var(--color-body);
+  --stroke-color-theme-toggle: #1a1919;
+  }

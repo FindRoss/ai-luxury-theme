@@ -1,0 +1,79 @@
+  :root {
+  
+  /**** Themes ****/
+  /**
+  *  Alt Light Mode
+  */
+  --color-dark: #000000;
+  --color-light: #ffffff;
+  --color-primary: #fcecd4;
+  --color-body: #DFD1BC;
+  --color-accent: #1d4ed8;
+  --color-text-muted: #535d6b;
+  --color-heading: #332720;
+  --color-text: #332720;
+
+  /* Links */
+  --color-link: #3f3e3e;
+  --color-link-active: #3f3e3e;
+
+  /* Header */
+  --background-color-header: #000000; 
+  --background-color-desktop-sub-menu: #000000;
+  --color-header-link: #fcecd4; 
+  --color-header-link-active: #fcecd4; 
+  --color-header-svg-box-stars: #DFD1BC;
+  --color-header-svg-text: #DFD1BC;
+  --color-header-svg-box-text: #000000;
+
+  /* Footer */
+  --background-color-footer: #000000;
+  --color-footer-heading: #fcecd4;
+  --color-footer-link: #fcecd4;
+  --color-footer-link-active: #DFD1BC;
+  --color-footer-copyright: #DFD1BC;
+  --color-footer-svg-box-stars: #DFD1BC;
+  --color-footer-svg-text: #DFD1BC;
+  --color-footer-svg-box-text: #000000;
+
+  /* Separator */
+  --color-section-separator: #000000;
+
+  /* Article */
+  --color-article-heading: #332720;
+  --color-article-text: #332720;
+  --color-article-date: #332720;
+
+  /* Card */
+  --color-card-heading: #332720;
+  --color-card-text: #332720;
+  --color-card-date: #332720;
+  --color-card-border: #332720;
+  --background-color-card: #dfceb5;
+  /* Buttons */
+  --background-color-button-primary: #fff;
+  --background-color-button-primary-active: #fff;
+  --color-button-primary-text: #fff;
+
+  --background-color-button-outline: #332720;
+  --background-color-button-outline-active: #332720;
+  --color-button-primary-outline-text: #332720;
+
+  /* Pagination */
+
+  --color-pagination: #332720;
+  --color-pagination-active: #332720;
+
+ /* Search Bar */
+  --color-search-bar-background: #1a1919;
+  --color-search-bar-text: #fff;
+
+  /* Icon */
+  --color-icon: #DFD1BC;
+  --color-icon-active: #DFD1BC;
+  /* Light/Dark theme toggle */
+  --background-color-theme-toggle: var(--color-primary);
+  --background-color-theme-toggle-active: var(--color-body);
+  --stroke-color-theme-toggle: #332720;
+
+  }
