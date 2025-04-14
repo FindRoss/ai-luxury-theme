@@ -57,6 +57,27 @@
   </div> <!-- .home-section -->
 
 
+<!-- Buttons -->
+<div class="home-section">
+  <h2>Offers</h2>
+  <div class="card-grid">
+    <div class="product-item">
+      <img src="http://ailb.local/wp-content/uploads/2025/03/Tissot__900x600.jpg" alt="">
+      <h2 class="title">CITIZEN Attesa Satellite Wave&nbsp;</h2>
+      <a href="#">Buy on Amazon</a>
+    </div>
+    <div class="product-item">
+      <img src="http://ailb.local/wp-content/uploads/2025/03/Tissot__900x600.jpg" alt="">
+      <h2 class="title">CITIZEN Attesa Satellite Wave&nbsp;</h2>
+      <a href="#">Buy on Amazon</a>
+    </div>
+    <div class="product-item">
+      <img src="http://ailb.local/wp-content/uploads/2025/03/Tissot__900x600.jpg" alt="">
+      <h2 class="title">CITIZEN Attesa Satellite Wave&nbsp;</h2>
+      <a href="#">Buy on Amazon</a>
+    </div>
+  </div>
+</div>
 
 <div class="security">
   <h2>Security</h2>
