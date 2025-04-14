@@ -51,9 +51,9 @@
   --color-card-border: #1a1919;
   --background-color-card: #9eac8e;
   /* Buttons */
-  --background-color-button-primary: #fff;
-  --background-color-button-primary-active: #fff;
-  --color-button-primary-text: #fff;
+  --background-color-button-primary: #1a1919;
+  --background-color-button-primary-active: #1a1919;
+  --color-button-primary-text: #9eac8e;
 
   --background-color-button-outline: #1a1919;
   --background-color-button-outline-active: #1a1919;
@@ -75,4 +75,11 @@
   --background-color-theme-toggle: var(--color-primary);
   --background-color-theme-toggle-active: var(--color-body);
   --stroke-color-theme-toggle: #1a1919;
+
+/*  Product  */
+
+--color-product-background: #9eac8e;
+--color-product-text: #1a1919;
+--color-product-border: #1a1919;
+ 
   }

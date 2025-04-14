@@ -1,5 +1,5 @@
 :root {
-  /**** Themes ****/
+   /**** Themes ****/
   /**
   *  Alt Light Mode
   */
@@ -50,9 +50,9 @@
   --color-card-border: #e7e7e7;
   --background-color-card: #334a68;
   /* Buttons */
-  --background-color-button-primary: #fff;
-  --background-color-button-primary-active: #fff;
-  --color-button-primary-text: #fff;
+  --background-color-button-primary: #1F2B3E;
+  --background-color-button-primary-active: #1F2B3E;
+  --color-button-primary-text: #e7e7e7;
 
   --background-color-button-outline: #332720;
   --background-color-button-outline-active: #332720;
@@ -74,5 +74,12 @@
   --background-color-theme-toggle: var(--color-primary);
   --background-color-theme-toggle-active: var(--color-body);
   --stroke-color-theme-toggle: #332720;
+
+
+/*  Product  */
+
+--color-product-background: #334a68;
+--color-product-text: #e7e7e7;
+--color-product-border: #e7e7e7;
 
 }

@@ -5,7 +5,7 @@
   */
   --color-dark: #000000;
   --color-light: #ffffff;
-  --color-primary: #bba15e;
+  --color-primary: #395aa7;
   --color-body: #081F53;
   --color-accent: #1d4ed8;
   --color-text-muted: #535d6b;
@@ -50,9 +50,9 @@
   --color-card-border: #bba15e;
   --background-color-card: #493f24;
   /* Buttons */
-  --background-color-button-primary: #fff;
-  --background-color-button-primary-active: #fff;
-  --color-button-primary-text: #fff;
+  --background-color-button-primary: #bba15e;
+  --background-color-button-primary-active: #bba15e;
+  --color-button-primary-text: #493f24;
 
   --background-color-button-outline: #fff;
   --background-color-button-outline-active: #fff;
@@ -73,6 +73,13 @@
   /* Light/Dark theme toggle */
   --background-color-theme-toggle: var(--color-primary);
   --background-color-theme-toggle-active: var(--color-body);
-  --stroke-color-theme-toggle: #1a1919;
+  --stroke-color-theme-toggle: #bba15e;
+
+  /*  Product  */
+
+--color-product-background: #493f24;
+--color-product-text: #bba15e;
+--color-product-border: #bba15e;
+
 
 }
