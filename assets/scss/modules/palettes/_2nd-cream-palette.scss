@@ -1,0 +1,83 @@
+:root {
+    /**
+    *  2nd Cream Palette
+    */
+    --color-dark: #000000;
+    --color-light: #ffffff;
+    --color-primary: #bba15e;
+    --color-body: #f1e8da;
+    --color-accent: #1d4ed8;
+    --color-text-muted: #535d6b;
+    --color-heading: #bba15e;
+    --color-text: #bba15e;
+  
+    /* Links */
+    --color-link: #3f3e3e;
+    --color-link-active: #3f3e3e;
+  
+    /* Header */
+    --background-color-header: #000000; 
+    --background-color-desktop-sub-menu: #000000;
+    --color-header-link: #dfceb5; 
+    --color-header-link-active: #dfceb5; 
+    --color-header-svg-box-stars: #dfceb5;
+    --color-header-svg-text: #dfceb5;
+    --color-header-svg-box-text: #000000;
+  
+    /* Footer */
+    --background-color-footer: #000000;
+    --color-footer-heading: #dfceb5;
+    --color-footer-link: #dfceb5;
+    --color-footer-link-active: #dfceb5;
+    --color-footer-copyright: #dfceb5;
+    --color-footer-svg-box-stars: #dfceb5;
+    --color-footer-svg-text: #dfceb5;
+    --color-footer-svg-box-text: #000000;
+  
+    /* Separator */
+    --color-section-separator: #000000;
+  
+    /* Article */
+    --color-article-heading: #bba15e;
+    --color-article-text: #bba15e;
+    --color-article-date: #bba15e;
+  
+    /* Card */
+    --color-card-heading: #352e1d;
+    --color-card-text: #352e1d;
+    --color-card-date: #352e1d;
+    --color-card-border: #352e1d;
+    --background-color-card: #dfceb5;
+    /* Buttons */
+    --background-color-button-primary: #352e1d;
+    --background-color-button-primary-active: #352e1d;
+    --color-button-primary-text: #dfceb5;
+  
+    --background-color-button-outline: #332720;
+    --background-color-button-outline-active: #332720;
+    --color-button-primary-outline-text: #332720;
+  
+    /* Pagination */
+  
+    --color-pagination: #332720;
+    --color-pagination-active: #332720;
+  
+   /* Search Bar */
+    --color-search-bar-background: #1a1919;
+    --color-search-bar-text: #fff;
+  
+    /* Icon */
+    --color-icon: #DFD1BC;
+    --color-icon-active: #DFD1BC;
+    /* Light/Dark theme toggle */
+    --background-color-theme-toggle: var(--color-primary);
+    --background-color-theme-toggle-active: var(--color-body);
+    --stroke-color-theme-toggle: #332720;
+  
+  /*  Product  */
+  
+  --color-product-background: #dfceb5;
+  --color-product-text: #352e1d;
+  --color-product-border: #352e1d;
+  
+  }

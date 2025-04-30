@@ -1,0 +1,84 @@
+:root {
+   /**
+   *  Blue Palette
+   */
+   --color-dark: #000000;
+   --color-light: #ffffff;
+   --color-primary: #395aa7;
+   --color-body: #081F53;
+   --color-accent: #1d4ed8;
+   --color-text-muted: #535d6b;
+   --color-heading: #bba15e;
+   --color-text: #bba15e;
+ 
+   /* Links */
+   --color-link: #bba15e;
+   --color-link-active: #bba15e;
+ 
+   /* Header */
+   --background-color-header: #000000; 
+   --background-color-desktop-sub-menu: #000000;
+   --color-header-link: #bba15e;
+   --color-header-link-active: #bba15e; 
+   --color-header-svg-box-stars: #a38c50;
+   --color-header-svg-text: #a38c50;
+   --color-header-svg-box-text: #fff;
+ 
+   /* Footer */
+   --background-color-footer: #000000;
+   --color-footer-heading: #bba15e;
+   --color-footer-link: #bba15e;
+   --color-footer-link-active: #bba15e;
+   --color-footer-copyright: #bba15e;
+   --color-footer-svg-box-stars: #a38c50;
+   --color-footer-svg-text: #a38c50;
+   --color-footer-svg-box-text: #000000;
+ 
+   /* Separator */
+   --color-section-separator: #000000;
+ 
+   /* Article */
+   --color-article-heading: #bba15e;
+   --color-article-text: #bba15e;
+   --color-article-date: #bba15e;
+ 
+   /* Card */
+   --color-card-heading: #bba15e;
+   --color-card-text: #bba15e;
+   --color-card-date: #bba15e;
+   --color-card-border: #bba15e;
+   --background-color-card: #493f24;
+   /* Buttons */
+   --background-color-button-primary: #bba15e;
+   --background-color-button-primary-active: #bba15e;
+   --color-button-primary-text: #493f24;
+ 
+   --background-color-button-outline: #fff;
+   --background-color-button-outline-active: #fff;
+   --color-button-primary-outline-text: #fff;
+ 
+   /* Pagination */
+ 
+   --color-pagination: #1a1919;
+   --color-pagination-active: #1a1919;
+ 
+  /* Search Bar */
+   --color-search-bar-background: #1a1919;
+   --color-search-bar-text: #fff;
+ 
+   /* Icon */
+   --color-icon: #a38c50;
+   --color-icon-active: #a38c50;
+   /* Light/Dark theme toggle */
+   --background-color-theme-toggle: var(--color-primary);
+   --background-color-theme-toggle-active: var(--color-body);
+   --stroke-color-theme-toggle: #bba15e;
+ 
+   /*  Product  */
+ 
+ --color-product-background: #493f24;
+ --color-product-text: #bba15e;
+ --color-product-border: #bba15e;
+ 
+ 
+ }

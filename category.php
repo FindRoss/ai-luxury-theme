@@ -13,12 +13,18 @@
   $category_id          = $category->term_id;   
   $category_name        = $category->name;  
   $category_description = $category->description;
+
+  $image = get_field('image', $category); 
+  
 ?>
+
+  <img src="<?php echo $image; ?>" />
 
   <div class="category-header">
     <h1 class="category-header__heading"><?php echo $category_name; ?></h1>
     <p class="category-header__text"><?php echo $category_description; ?></p>
   </div>
+
 
 <?php 
   $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
