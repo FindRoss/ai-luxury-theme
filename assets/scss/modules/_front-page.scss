@@ -133,3 +133,18 @@
     font-size: 3.25rem;
   }
 }
+
+.category-icon {
+  width: 200px; /* Set the desired width */
+  height: auto; /* Maintain the aspect ratio */
+  display: inline-block; /* Ensure proper alignment */
+}
+
+.category-button {
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(4, 1fr); /* Create 4 equal-width columns */
+  grid-template-rows: repeat(2, auto); /* Create 2 rows with automatic height */
+  gap: 1rem; /* Add spacing between items */
+  justify-items: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}

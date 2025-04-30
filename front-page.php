@@ -79,6 +79,68 @@
   </div>
 </div>
 
+
+<!-- <div class="category-button"> 
+<a href="#" >
+  <img src="https://media.discordapp.net/attachments/1143480815653748746/1361283735173206117/Tissot__900x600.jpg?ex=6812a105&is=68114f85&hm=7c3c4bea8f5440154a86fdaa8ad57292e8d2ad3421c3de341e9c00d6ef1e78d6&=&format=webp" alt="Icon" class="category-icon"> Sports
+</a>
+<a href="#" >
+  <img src="https://media.discordapp.net/attachments/1143480815653748746/1361283735173206117/Tissot__900x600.jpg?ex=6812a105&is=68114f85&hm=7c3c4bea8f5440154a86fdaa8ad57292e8d2ad3421c3de341e9c00d6ef1e78d6&=&format=webp" alt="Icon" class="category-icon"> Sports
+</a>
+<a href="#" >
+  <img src="https://media.discordapp.net/attachments/1143480815653748746/1361283735173206117/Tissot__900x600.jpg?ex=6812a105&is=68114f85&hm=7c3c4bea8f5440154a86fdaa8ad57292e8d2ad3421c3de341e9c00d6ef1e78d6&=&format=webp" alt="Icon" class="category-icon"> Sports
+</a>
+<a href="#" >
+  <img src="https://media.discordapp.net/attachments/1143480815653748746/1361283735173206117/Tissot__900x600.jpg?ex=6812a105&is=68114f85&hm=7c3c4bea8f5440154a86fdaa8ad57292e8d2ad3421c3de341e9c00d6ef1e78d6&=&format=webp" alt="Icon" class="category-icon"> Sports
+</a>
+<a href="#" >
+  <img src="https://media.discordapp.net/attachments/1143480815653748746/1361283735173206117/Tissot__900x600.jpg?ex=6812a105&is=68114f85&hm=7c3c4bea8f5440154a86fdaa8ad57292e8d2ad3421c3de341e9c00d6ef1e78d6&=&format=webp" alt="Icon" class="category-icon"> Sports
+</a>
+<a href="#" >
+  <img src="https://media.discordapp.net/attachments/1143480815653748746/1361283735173206117/Tissot__900x600.jpg?ex=6812a105&is=68114f85&hm=7c3c4bea8f5440154a86fdaa8ad57292e8d2ad3421c3de341e9c00d6ef1e78d6&=&format=webp" alt="Icon" class="category-icon"> Sports
+</a>
+<a href="#" >
+  <img src="https://media.discordapp.net/attachments/1143480815653748746/1361283735173206117/Tissot__900x600.jpg?ex=6812a105&is=68114f85&hm=7c3c4bea8f5440154a86fdaa8ad57292e8d2ad3421c3de341e9c00d6ef1e78d6&=&format=webp" alt="Icon" class="category-icon"> Sports
+</a>
+<a href="#" >
+  <img src="https://media.discordapp.net/attachments/1143480815653748746/1361283735173206117/Tissot__900x600.jpg?ex=6812a105&is=68114f85&hm=7c3c4bea8f5440154a86fdaa8ad57292e8d2ad3421c3de341e9c00d6ef1e78d6&=&format=webp" alt="Icon" class="category-icon"> Sports
+</a>
+  </div> -->
+
+
+  <?php 
+
+// ACF IMAGE FIELD
+   // Get the categories
+   $categories = get_categories();
+   
+   /* Adding */
+   // Test if & how the categories are returned
+   print_r('Checking what categories are returned');
+   print_r($categories);
+
+   // Add a parent container for the flex or grid 
+
+   // Loop through through all the categories
+   foreach ($categories as $category) { 
+
+    /* Adding */
+    // 'image' is the name of the ACF field. must match the name set on ACF.
+    $image = get_field('image', $category);
+    print_r('Checking if the image is returned correctly');
+    print_r($image); 
+     ?>
+
+     <!-- Echo your card. Can do as a template-part here. -->
+     <div class="background-image-card" style="background-image: url(<?php echo $image; ?>);">
+       <h3><?php echo $category->name; ?></h3>
+     </div>
+
+   <?php } ?>
+
+
+
+
 <div class="security">
   <h2>Security</h2>
 

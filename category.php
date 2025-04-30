@@ -13,19 +13,27 @@
   $category_id          = $category->term_id;   
   $category_name        = $category->name;  
   $category_description = $category->description;
+
+
+  // Get ACF FIELD
+  $image = get_field('image', $category); 
+  
 ?>
+
+  <!-- ECHO ACF FIELD -->
+  <img src="<?php echo $image; ?>" />
 
   <div class="category-header">
     <h1 class="category-header__heading"><?php echo $category_name; ?></h1>
     <p class="category-header__text"><?php echo $category_description; ?></p>
   </div>
 
+
 <?php 
   $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
   $args = array(
     'post_type'      => 'post', 
-    'posts_per_page' => 6,
     'paged'          => $paged,
     'cat'            => $category_id,
   );
