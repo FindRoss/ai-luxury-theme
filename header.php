@@ -34,15 +34,17 @@
 					</a>
 				</div>
 				
+				<?php if (has_nav_menu('primary')) : ?>
 				<nav class="desktop-navigation">
 					<?php wp_nav_menu(array(
 						'theme_location' => 'primary',
-						'menu_class' => 'primary-menu desktop-menu',
-						'menu_id' => 'primary-menu', 
-						'container' => false,
-						'walker'          => new Custom_Walker_Nav_Menu(), // Use the custom walker
+						'menu_class'     => 'primary-menu desktop-menu',
+						'menu_id'        => 'primary-menu', 
+						'container'      => false,
+						'walker'         => new Custom_Walker_Nav_Menu(), // Use the custom walker
 					)); ?>
 				</nav>
+				<?php endif; ?>
 				
 			</div><!-- .nav-layout --> 
 		</div><!-- .container --> 

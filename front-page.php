@@ -3,7 +3,7 @@
 
 <div class="container">
   <div class="frontpage-placeholder">
-    <h1>AI Luxury Boutique is Coming Soon</h1>
+    <h1>AI Luxury Boutique is coming soon</h1>
   </div>
 </div>
   

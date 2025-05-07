@@ -10,21 +10,25 @@
       <!-- Links -->
       <div class="footer-menus">
         <div>
-          <h3 class="footer-info">Sections</h3>
-          <?php wp_nav_menu(array(
-              'theme_location' => 'footer_one',
-              'menu_class' => 'footer-list',
-              'container' => false,
-          )); ?>
+          <?php if (has_nav_menu('footer_one')) : ?>
+            <h3 class="footer-info">Sections</h3>
+            <?php wp_nav_menu(array(
+                'theme_location' => 'footer_one',
+                'menu_class' => 'footer-list',
+                'container' => false,
+            )); ?>
+          <?php endif; ?>
         </div>
 
         <div>
-          <h3 class="footer-info">Company</h3>
-          <?php wp_nav_menu(array(
-              'theme_location' => 'footer_two',
-              'menu_class' => 'footer-list',
-              'container' => false,
-          )); ?>
+          <?php if (has_nav_menu('footer_two')) : ?>
+            <h3 class="footer-info">Company</h3>
+            <?php wp_nav_menu(array(
+                'theme_location' => 'footer_two',
+                'menu_class' => 'footer-list',
+                'container' => false,
+            )); ?>
+          <?php endif; ?>
         </div>
 
       </div>
