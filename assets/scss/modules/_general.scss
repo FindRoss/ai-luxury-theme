@@ -1,5 +1,17 @@
 @use "breakpoints" as *;
 
+.frontpage-placeholder {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: var(--color-body);
+  color: var(--color-text);
+} 
+
 html {
   font-size: 16px;
 }

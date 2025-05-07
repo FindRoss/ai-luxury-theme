@@ -6,6 +6,12 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
 
+	<?php if (is_front_page()) {
+		echo '<meta name="fo-verify" content="8761238d-c673-4c81-a972-903a5d32e4ce" />';
+	}; ?>
+	
+	<script type="text/javascript" src="https://s.skimresources.com/js/284292X1770733.skimlinks.js"></script>
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>	
 	<link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Lexend:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
