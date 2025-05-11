@@ -108,38 +108,33 @@
   </div> -->
 
 
-  <?php 
+  <section class="background-image-cards">
+    <?php 
+    // Get all categories, including empty ones
+    $categories = get_categories(array(
+        'hide_empty' => false, // Include categories with no posts
+    ));
 
-// ACF IMAGE FIELD
-   // Get the categories
-   $categories = get_categories();
-   
-   /* Adding */
-   // Test if & how the categories are returned
-   print_r('Checking what categories are returned');
-   print_r($categories);
+    // Loop through all categories
+    foreach ($categories as $category) { 
+        // Get the category name, ID, and link
+        $category_name = $category->name;
+        $category_id = $category->term_id;
+        $category_link = get_category_link($category_id);
 
-   // Add a parent container for the flex or grid 
+        // Get the ACF field for the category
+        $image = get_field('image', 'category_' . $category_id); // Use 'category_' prefix with term ID
+        ?>
 
-   // Loop through through all the categories
-   foreach ($categories as $category) { 
+        <!-- Echo your card -->
+        <div class="background-image-card" style="background-image: url(<?php echo esc_url($image); ?>);">
+            <a href="<?php echo esc_url($category_link); ?>" class="background-image-card-link">
+                <h3><?php echo esc_html($category_name); ?></h3>
+            </a>
+        </div>
 
-    /* Adding */
-    // 'image' is the name of the ACF field. must match the name set on ACF.
-    $image = get_field('image', $category);
-    print_r('Checking if the image is returned correctly');
-    print_r($image); 
-     ?>
-
-     <!-- Echo your card. Can do as a template-part here. -->
-     <div class="background-image-card" style="background-image: url(<?php echo $image; ?>);">
-       <h3><?php echo $category->name; ?></h3>
-     </div>
-
-   <?php } ?>
-
-
-
+    <?php } ?>
+</section>
 
 <div class="security">
   <h2>Security</h2>
