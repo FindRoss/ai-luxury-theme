@@ -13,22 +13,33 @@
 }
 
 .card {
-  text-decoration: none;
-  transition: 0.3s ease;
-
+  border: 1px solid var(--color-card-border);
+  padding: 0.5rem;
+  margin-top: var(--size-500);
+  
+  @include breakpoint(medium) { 
+    padding: 1rem; 
+  }
+  
   &__content {
-    a {
-      color: var(--color-card-heading);
+    a:not(.button) {
       text-decoration: none;
+      color: var(--color-card-heading);
       font-size: var(--size-600);
+    }
+
+    .title {
+      line-height: 1.2;
     }
 
     .date {
       display: inline-block;
       margin-top: var(--size-200);
       color: var(--color-card-date);
-      font-family: var(--font-family-heading);
-      font-size: 1rem;
+      font-family: var(--font-family-body);
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: var(--size-300);
     }
 
     .excerpt {
@@ -39,26 +50,21 @@
   }
 }
 
-.kyoto-card,
-.osaka-card {
-  // box-shadow: 20px 1rem 1rem 0px rgba(0, 0, 0, 0.1);
-  background-color: var(--background-color-card);
+.tokyo-card {
+  padding: 0; 
 
-  &:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
-    box-shadow: 0.2rem 0.35rem 0.35rem 0 rgba(0, 0, 0, 0.05);
+  .card__content {
+    padding: 1rem;
   }
 }
 
-.osaka-card {
-  // border-top: 5px solid var(--color-card-border);
 
+.osaka-card {
   .card__content {
     padding: 1rem;
 
     a {
-      font-size: 1.75rem;
+      font-size: 2.5rem;
     }
 
     // .date {
@@ -74,38 +80,16 @@
 .kyoto-card {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--size-200);
-  margin-top: 2rem;
-  // border-top: 5px solid var(--color-card-border);
-
-  @include breakpoint(medium) { 
-    gap: var(--size-400);
-  }
-
-  .card__media {
-    background-size: cover;
-    background-position: center;
-  }
+  gap: var(--size-400);
 
   .card__content {
-    padding: var(--size-200) var(--size-200) var(--size-200) 0;
-
-    @include breakpoint(medium) {
-      padding: var(--size-400) var(--size-400) var(--size-400) 0;
-    }
-
     a {
       font-size: 1.5rem;
     }
   }
-
-  &:first-child {
-    margin-top: 0rem;
-  }
 }
 
 .kanazawa-card {
-  margin-top: var(--size-600);
 
   .card__content {
     a {
@@ -117,6 +101,7 @@
 }
 
 .tokyo-card {
+  margin-top: 0;
   display: flex; 
   flex-direction: column;
   gap: 1rem;
@@ -138,45 +123,30 @@
 
 
 /* Product Cards */
-.product-item {
-  background-color:var(--color-product-background);
-  border: 1px solid var(--color-product-border);
-  padding: 1rem;
+.product-card {  
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  min-width: 300px; 
-  flex: 0 0 300px; 
-  scroll-snap-align: start; 
- 
-  h2 {
-    color: var(--color-product-text);
-  }
+
   .title {
-    font-size: 20px; 
+    font-size: 22px; 
     flex-grow: 1;
   }
+}
 
-  .excerpt {
-    font-size: 16px;
-  }
+.button {
+  margin-top: 1rem;
+  display: block;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  font-family: var(--font-family-heading);
 
-  img {
-    width: 100%;
-    height: auto;
-  }
-
-  a {
-    margin-top: 1rem;
-    display: block;
+  &__primary {
     background: var(--background-color-button-primary);
     color: var(--color-button-primary-text);
-    padding: 0.5rem 1rem;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 16px;
-    letter-spacing: 1.5px;
-    font-family: var(--font-family-heading);
   }
 }

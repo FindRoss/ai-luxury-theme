@@ -6,9 +6,8 @@
   */
 
   /* Fonts */
-  --font-family-heading: "Lexend", sans-serif;
-  --font-family-body: "Catamaran", sans-serif;
-  --font-family-link: "outfit", sans-serif;
+  --font-family-heading: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-family-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     
   /* Sizes */
   --size-100: 0.579rem;
@@ -59,19 +58,22 @@
 
 
   /**
-  *  Themes go herr
+  *  Main / Light theme 
   */
+  --background-color-body: #ffffff; 
+  --color-border: #DFDFDF;
+  --color-accent: #BFA055;
+  --color-muted: #757575;
+
   --color-dark: #000000; // General purpose tokens
   --color-light: #ffffff;
   --color-primary: var(--blue-500);
-  --color-body: var(--slate-50);
-  --color-accent: var(--blue-600);
   --color-text-muted: var(--slate-500);
   --color-heading: var(--slate-900);
   --color-text: var(--slate-800);
 
   /* General-purpose Background Tokens */
-  --background-50: #ffffff;
+  --background-50: #FFFFFF;
   --background-100: var(--slate-50);
   --background-200: var(--slate-100);
   --background-300: var(--slate-200);
@@ -84,18 +86,19 @@
   /* Header */
   --background-color-header: #FFFFFF;
   --background-color-desktop-sub-menu: var(--slate-50);
-  --color-header-link: var(--slate-600);
+  --color-header-link: #222222;
   --color-header-link-active: var(--slate-900);
   --color-header-svg-box-stars: var(--blue-500);
   --color-header-svg-text: var(--slate-800);
   --color-header-svg-box-text: var(--slate-50);
 
   /* Footer */
-  --background-color-footer: var(--slate-900);
-  --color-footer-heading: var(--slate-50);
-  --color-footer-link: var(--slate-300);
-  --color-footer-link-active: var(--slate-100);
-  --color-footer-copyright: var(--slate-400);
+  --background-color-footer: #FFFFFF;
+  --color-footer-heading: #111827;
+  --color-footer-link: #222222;
+  --color-footer-link-active: #222222;
+  --color-footer-copyright: var(--color-muted);
+
   --color-footer-svg-box-stars: var(--blue-500);
   --color-footer-svg-box-text: var(--slate-50);
   --color-footer-svg-text: var(--slate-50);
@@ -104,21 +107,21 @@
   --color-section-separator: var(--slate-900);
 
   /* Article */
-  --color-article-heading: var(--slate-900);
-  --color-article-text: var(--slate-800);
-  --color-article-date: var(--slate-600);
+  --color-article-heading: #111827;
+  --color-article-text: #222222;
+  --color-article-date: var(--color-accent);
 
   /* Card */
-  --color-card-heading: var(--slate-900);
-  --color-card-text: var(--slate-600);
-  --color-card-date: var(--blue-800);
+  --color-card-heading: #222222;
+  --color-card-text: var(--color-muted);
+  --color-card-date: var(--color-accent);
   --color-card-border: var(--slate-200); 
   --background-color-card: #ffffff;
 
   /* Buttons */
-  --background-color-button-primary: var(--blue-500);
-  --background-color-button-primary-active: var(--blue-700);
-  --color-button-primary-text: var(--slate-50);
+  --background-color-button-primary: #191919;
+  --background-color-button-primary-active: #222222;
+  --color-button-primary-text: #FFFFFF;
   
   --background-color-button-outline: #ffffff;
   --background-color-button-outline-active: #f1f1f1; 
@@ -138,10 +141,13 @@
  * Dark Mode
  */
 html.dark-mode {
+  --background-color-body: var(--stone-900);
+  --color-border: #DFDFDF;
+  --color-muted: #757575;
+
   --color-dark: var(--stone-300);
   --color-light: var(--stone-900);
   --color-primary: var(--blue-600);
-  --color-body: var(--stone-900);
   --color-accent: var(--blue-600);
   --color-text-muted: #969daa;
   --color-heading: var(--stone-50);
@@ -188,9 +194,9 @@ html.dark-mode {
   /* Card */
   --color-card-heading: var(--stone-100);
   --color-card-text: var(--stone-200);
-  --color-card-date: var(--stone-400);
-  --color-card-border: var(--stone-700);
-  --background-color-card: var(--stone-800);
+  --color-card-date: var(--color-accent);
+  --color-card-border: var(--color-border);
+  --background-color-card: #ffffff;
 
   /* Buttons */
   --background-color-button-primary: var(--blue-700);

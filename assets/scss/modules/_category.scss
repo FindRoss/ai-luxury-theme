@@ -3,15 +3,14 @@
 .category-header {
   display: flex;
   flex-direction: column;
-  border-top: 10px solid var(--color-section-separator);
   gap: 1rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
   
   @include breakpoint(medium) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding-top: 3rem;
-    margin-bottom: 7rem;
+    // padding-top: 3rem;
+    // margin-bottom: 7rem;
   }
 }
 
@@ -21,7 +20,7 @@
   justify-content: center;
   gap: 1rem;
   margin-top: 3rem;
-  font-family: var(--font-family-link);
+  font-family: var(--font-family-body);
   font-weight: 500;
   font-size: var(--size-400);
   font-weight: bold;

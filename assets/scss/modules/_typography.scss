@@ -39,11 +39,15 @@ figcaption {
   font-size: var(--size-500);
 }
 
-a {
-  color: var(--color-link);
+.section-heading {
+  padding-top: var(--size-300);
+  border-top: 1px solid var(--color-border);
 
-  &:hover,
-  &:active {
-    color: var(--color-link-active);
+  h2, h3, h4 {
+    font-size: 18px;
+    color: var(--color-heading);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
   }
 }

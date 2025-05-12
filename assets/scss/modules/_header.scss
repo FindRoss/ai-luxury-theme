@@ -4,9 +4,10 @@
   a {
     color: var(--color-header-link);
     text-decoration: none;
-    font-family: sans-serif;
     font-size: 1rem;
     font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
       
     &:hover,
     &:active {
@@ -20,6 +21,7 @@ header {
   background-color: var(--background-color-header);
 
   .nav-layout {
+    border-bottom: 1px solid var(--color-border);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -101,7 +103,7 @@ header {
   }
 
   .mobile-menu {
-    background: var(--color-body);
+    // background: var(--background-color-body);
 
     > li {
       > a {

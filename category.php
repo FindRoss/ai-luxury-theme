@@ -1,37 +1,24 @@
 <?php get_header();?>
-<div class="container">
-  <?php
+<?php
    // Get the current page for pagination, defaulting to 1 if not set
-  $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-
-  // Breadcrumbs
-  get_template_part( 'template-parts/breadcrumbs/breadcrumbs' );
-
-  // Get the current category object
-  $category = get_queried_object(); 
-
-  $category_id          = $category->term_id;   
-  $category_name        = $category->name;  
-  $category_description = $category->description;
-
-
-  // Get ACF FIELD
-  $image = get_field('image', $category); 
-  
-
-?>
-
-  <!-- ECHO ACF FIELD -->
-  <img src="<?php echo $image; ?>" />
-
-  <div class="category-header">
+   $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+   
+   // Breadcrumbs
+   get_template_part( 'template-parts/breadcrumbs/breadcrumbs' );
+   
+   // Get the current category object
+   $category = get_queried_object(); 
+   
+   $category_id          = $category->term_id;   
+   $category_name        = $category->name;  
+   $category_description = $category->description;
+?> 
+   
+<div class="container">
+  <header class="category-header">
     <h1 class="category-header__heading"><?php echo $category_name; ?></h1>
     <p class="category-header__text"><?php echo $category_description; ?></p>
-  </div>
-
-
-
-
+  </header>
 
 
 <?php 
@@ -45,11 +32,11 @@
 
   $query = new WP_Query($args);
   if ($query->have_posts()) : 
-    echo '<div class="card-grid">'; 
+    echo '<section class="card-grid">'; 
     while ($query->have_posts()) : $query->the_post(); 
       get_template_part( 'template-parts/card/osaka-card' );
     endwhile; 
-    echo '</div>';
+    echo '</section>';
   endif; ?>
 
   <div class="pagination">

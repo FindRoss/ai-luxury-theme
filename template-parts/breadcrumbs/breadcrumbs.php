@@ -1,38 +1,50 @@
 <?php 
-  $link_output = "";
+// Final output for any case
+$link_output = "";
 
-  if (is_single()) {
-    // is a post
-    $terms = get_the_terms(get_the_ID(), 'category'); 
-    if (!empty($terms) && !is_wp_error($terms)) {
-      $term_name = $terms[0]->name; 
-      $term_id   = $terms[0]->term_id;
-      $term_tax  = $terms[0]->taxonomy;
-      $term_link = get_term_link($term_id, $term_tax);
+if (is_single()) {
 
-      $link_output .= '<a href="' . esc_html($term_link) . '" class="breadcrumbs__layout--item">' . esc_html($term_name) . '</a>';
-    }
+    $categories = get_the_category();
     
-  } else if (is_tax()) {
-    // Get the current term (taxonomy term, including categories and custom taxonomies)
-    $term = get_queried_object();
+    usort($categories, function($a, $b) {
+      return $a->parent - $b->parent;
+    });
+    
+    if ($categories) {
+      foreach($categories as $category) {
+        // Get the category name, ID, and link
+        $cat_name = $category->name;
+        $cat_id   = $category->term_id;
+        $cat_link = get_category_link($cat_id);
 
-    if ($term && !is_wp_error($term)) {
-      $term_name = $term->name;
-      $term_id   = $term->term_id;
-      $term_tax  = $term->taxonomy;
-      $term_link = get_term_link($term_id, $term_tax);
+        // Add the category link to the output
+        $link_output .= '<span class="breadcrumbs__layout--item"><a href="' . esc_html($cat_link) . '">' . esc_html($cat_name) . '</a></span>';
+      }
 
-      $link_output .= '<a href="' . $term_link . '" class="breadcrumbs__layout--item">' . $term_name . '</a>';
-       
+      $title = get_the_title();
+
+      $link_output .= '<span class="breadcrumbs__layout--item">' . $title . '</span>';
     }
-  } 
+  
+  
+} else if (is_category()) {
+  $term = get_queried_object();
+
+  if ($term->parent !== 0) {
+    $category = get_category($term->parent);
+
+    $cat_name = $category->name;
+    $cat_id   = $category->term_id;
+    $cat_link = get_category_link($cat_id);
+
+    // Add the category link to the output
+    $link_output .= '<span class="breadcrumbs__layout--item"><a href="' . esc_html($cat_link) . '">' . esc_html($cat_name) . '</a></span>';
+
+    $link_output .= '<span class="breadcrumbs__layout--item">' . $term->name . '</span>';
+  }
 
 
-  // if ( function_exists('yoast_breadcrumb') ) {
-  //   yoast_breadcrumb( '<nav id="breadcrumbs">','</nav>' );
-  // };
-?>
+}; ?>
 
 
 <?php if ($link_output !== "") : ?>

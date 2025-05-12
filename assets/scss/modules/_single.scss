@@ -3,11 +3,12 @@
 .heading {
   display: flex;
   flex-direction: column;
-  border-top: 10px solid var(--color-section-separator);
-  gap: 1rem;
+
+  gap: 2rem;
 
   &__content {
-    padding: var(--size-200) 1rem;
+    padding: var(--size-200) 0;
+      border-top: 1px solid var(--color-border);
 
     @include breakpoint(medium) {
       padding: var(--size-200) 0;
@@ -15,19 +16,21 @@
 
     h1 {
       color: var(--color-article-heading);
-      font-size: var(--size-700);
+      font-size: 42px;
       line-height: 1.4;
   
       @include breakpoint(medium) {
-        font-size: var(--size-900);
+        font-size: 52px;
       }
     }
 
     .date {
       margin-top: var(--size-300);
-      font-size: var(--size-500);
+      font-size: 16px;
       color: var(--color-article-date);
-      font-family: var(--font-family-heading);
+      font-weight: 700;
+      font-family: var(--font-family-body);
+      text-transform: uppercase;
     }
   }
 }

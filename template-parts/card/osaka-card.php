@@ -3,7 +3,7 @@
 ?>
 
 <div class="card osaka-card">
-  <div class="card__image">
+  <div class="card__media">
     <a href="<?php the_permalink(); ?>">
       <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
     </a>
