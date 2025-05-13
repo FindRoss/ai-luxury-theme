@@ -32,7 +32,7 @@
 
   $query = new WP_Query($args);
   if ($query->have_posts()) : 
-    echo '<section class="card-grid">'; 
+    echo '<section class="konto-section">'; 
     while ($query->have_posts()) : $query->the_post(); 
       get_template_part( 'template-parts/card/osaka-card' );
     endwhile; 

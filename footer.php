@@ -36,7 +36,7 @@
     
     
     <div class="footer-bottom">
-      <div><?php get_template_part( 'template-parts/components/theme-mode' ); ?></div>
+      <!-- <div>get_template_part( 'template-parts/components/theme-mode' ); </div> -->
       <div class="copyright">Copyright © 2025 AI Luxury Boutique</div>
     </div><!-- footer-bottom --> 
 

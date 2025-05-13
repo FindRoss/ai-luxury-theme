@@ -36,14 +36,13 @@
     $args = array(
       'post_type'      => 'post', 
       'posts_per_page' => 3,
-      
     );
-
     $query = new WP_Query($args);
 
-    if ($query->have_posts()) :
+    echo '<div class="section-heading centered"><h2>Read More</h2></div>'; 
 
-      echo '<div class="card-grid">';
+    if ($query->have_posts()) :
+      echo '<div class="konto-section">';
         while ($query->have_posts()) : $query->the_post(); 
           get_template_part( 'template-parts/card/osaka-card' );
         endwhile; 

@@ -10,37 +10,37 @@ section {
 
 .hokkaido-section {
   display: flex;
-  gap: var(--size-500);
+  gap: var(--size-600);
   flex-direction: column;
   margin-top: 3rem;
   margin-bottom: 6rem;
 
   @include breakpoint(medium) {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
-  .col-1 {
-    order: -1; // Change the order of .camera-posts
+  // .col-1 {
+  //   order: -1; // Change the order of .camera-posts
     
-    @include breakpoint(medium) { 
-      order: 0; 
-    }
-  }
+  //   @include breakpoint(medium) { 
+  //     order: 0; 
+  //   }
+  // }
 
-  .col-2 {
-    order: -2; // Change the order of .cameras
+  // .col-2 {
+  //   order: -2; // Change the order of .cameras
 
-    @include breakpoint(medium) { 
-      order: 0; 
-    }
-  }
+  //   @include breakpoint(medium) { 
+  //     order: 0; 
+  //   }
+  // }
 }
 
 .shikoku-section {
   display: grid;
-  grid-template-columns: 1fr, 1fr;
-  gap: var(--size-500);
+  grid-template-columns: 1fr 1fr;
+  gap: var(--size-600);
 
   @include breakpoint(medium) {
     grid-template-columns: repeat(2, 1fr);
@@ -56,7 +56,7 @@ section {
 .konto-section {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--size-400);
+  gap: var(--size-600);
   
 
   @include breakpoint(medium) {

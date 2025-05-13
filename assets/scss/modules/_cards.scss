@@ -1,17 +1,5 @@
 @use "breakpoints" as *;
 
-.card-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr;
-}
-
-@include breakpoint(medium) {
-  .card-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 .card {
   border: 1px solid var(--color-card-border);
   padding: 0.5rem;
@@ -52,10 +40,11 @@
 
 .tokyo-card {
   padding: 0; 
+  border: none; 
 
-  .card__content {
-    padding: 1rem;
-  }
+  // .card__content {
+  //   padding: 1rem;
+  // }
 }
 
 
@@ -64,12 +53,8 @@
     padding: 1rem;
 
     a {
-      font-size: 2.5rem;
+      font-size: 2.25rem;
     }
-
-    // .date {
-    //   font-size: 1.25rem;
-    // }
 
     .excerpt {
       font-size: 1.125rem;
