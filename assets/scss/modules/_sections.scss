@@ -1,54 +1,40 @@
 @use "breakpoints" as *;
 
-section {
+body section:first-of-type {
   margin-top: var(--size-900);
+
+
 }
 
-// .home .hokkaido-section {
-//    margin-top: var(--size-700); 
-// }
+section {
+  padding-bottom: var(--size-600);
+  margin-bottom: var(--size-1000);
+}
 
 .hokkaido-section {
   display: flex;
   gap: var(--size-600);
   flex-direction: column;
   margin-top: 3rem;
-  margin-bottom: 6rem;
 
   @include breakpoint(medium) {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-
-  // .col-1 {
-  //   order: -1; // Change the order of .camera-posts
-    
-  //   @include breakpoint(medium) { 
-  //     order: 0; 
-  //   }
-  // }
-
-  // .col-2 {
-  //   order: -2; // Change the order of .cameras
-
-  //   @include breakpoint(medium) { 
-  //     order: 0; 
-  //   }
-  // }
 }
 
 .shikoku-section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: var(--size-600);
 
   @include breakpoint(medium) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 
-.card-column {
+.flex-column {
   display: flex;
   flex-direction: column;
 }

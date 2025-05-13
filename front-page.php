@@ -43,7 +43,7 @@
         <?php get_template_part( 'template-parts/card/osaka-card' );?>
       </div>
 
-      <div class="card-column">
+      <div class="flex-column">
         <?php get_template_part( 'template-parts/card/kyoto-card' );  ?>
         <?php get_template_part( 'template-parts/card/kyoto-card' );  ?>
         <?php get_template_part( 'template-parts/card/kyoto-card' );  ?>

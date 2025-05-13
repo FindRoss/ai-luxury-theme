@@ -1,3 +1,5 @@
+@use "breakpoints" as *;
+
 .breadcrumbs {
   margin-top: 1rem; 
   margin-bottom: 1rem;
@@ -7,6 +9,9 @@
     display: flex;
     gap: var(--size-300);
     align-items: center;
+    overflow-x: auto;   
+    overflow-y: hidden; 
+    white-space: nowrap; 
 
     &--item {
       text-decoration: none;
@@ -14,20 +19,25 @@
       font-size: 1rem;
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: #222;
+      
       font-family: var(--font-family-body);
-      color: #757575;
+      color: var(--color-muted);
 
       a {
         // color: inherit; // inherit color from parent
-        text-decoration: none; // remove underline
+        text-decoration: none;
+        text-wrap: nowrap;
+        font-size: 14px; 
+
+        @include breakpoint(medium) {
+          font-size: 16px;
+        }
       }
 
-      // Add "/" after each item except the last
       &:not(:last-child)::after {
         content: "/";
-        margin-left: var(--size-300); // optional: small gap
-        color: var(--color-text-muted); // optional: style the slash
+        margin-left: var(--size-300);
+        color: var(--color-muted);
       }
     }
     
