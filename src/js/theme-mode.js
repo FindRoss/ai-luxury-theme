@@ -8,23 +8,9 @@ export function themeMode() {
       toggle.checked = true;
     }
 
-
-
     toggle.addEventListener('change', () => {
-      const mode = toggle.value;
-
-      // if (mode == 'system') {
-      //   const systemTheme = getSystemTheme();
-      //   applyTheme(systemTheme);
-      // } else {
-      //   applyTheme(mode);
-      // }
-
-      applyTheme(mode);
-
+      applyTheme(toggle.value);
     })
-
-
   });
 };
 
@@ -32,7 +18,8 @@ export function applyTheme(mode) {
   const htmlEl = document.querySelector('html');
 
   if (mode == 'dark') {
-    localStorage.setItem('theme', 'dark');
+    // CHANGED DARK TO LIGHT SO THE MODE IS ALWAYS LIGHT
+    localStorage.setItem('theme', 'light');
     htmlEl.classList.add('dark-mode');
   } else if (mode == 'light') {
     localStorage.setItem('theme', 'light');
