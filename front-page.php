@@ -101,14 +101,19 @@
 
       // Get the ACF field for the category
       $image = get_field('image', 'category_' . $category_id); // Use 'category_' prefix with term ID
-      ?>
+      
+      // Check if the image is set
+      if ($image) {  ?>
+         <div class="background-image-card" style="background-image: url(<?php echo esc_url($image); ?>);">
+            <a href="<?php echo esc_url($category_link); ?>" class="background-image-card-link">
+              <h3><?php echo esc_html($category_name); ?></h3>
+            </a>
+          </div>
+      <?php }; ?>
+      
 
-      <!-- Echo your card -->
-      <div class="background-image-card" style="background-image: url(<?php echo esc_url($image); ?>);">
-        <a href="<?php echo esc_url($category_link); ?>" class="background-image-card-link">
-          <h3><?php echo esc_html($category_name); ?></h3>
-        </a>
-      </div>
+    
+     
 
     <?php } ?>
   </section>  
