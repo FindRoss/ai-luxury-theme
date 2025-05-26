@@ -17,11 +17,11 @@
         <h1><?php the_title(); ?></h1>
         <div class="date">Updated Jan 25</div>
       </div>
-      <div class="heading__image full-width">
-        <?php if (has_post_thumbnail()): ?>
+      <?php if (has_post_thumbnail()): ?>
+        <div class="heading__image full-width">
           <img src="<?php echo get_the_post_thumbnail_url(null, 'large'); ?>" />
-        <?php endif; ?>
-      </div>
+        </div>
+      <?php endif; ?>
     </header>
 
     <!-- Section -->
@@ -39,14 +39,13 @@
     $args = array(
       'post_type'      => 'post', 
       'posts_per_page' => 3,
-      
+      'post__not_in'   => array(get_the_ID()), // Exclude current post
     );
 
     $query = new WP_Query($args);
 
     if ($query->have_posts()) :
-
-      echo '<div class="card-grid">';
+      echo '<div class="konto-section">';
         while ($query->have_posts()) : $query->the_post(); 
           get_template_part( 'template-parts/card/osaka-card' );
         endwhile; 

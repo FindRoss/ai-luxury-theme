@@ -75,7 +75,7 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease; /* Add hover effects */
 }
 
-.background-image-card {
+.background-image-card a {
   &:hover {
     transform: scale(1.05); /* Scale up the card on hover */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
