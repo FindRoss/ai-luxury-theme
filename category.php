@@ -19,6 +19,12 @@
     <h1 class="category-header__heading"><?php echo $category_name; ?></h1>
     <p class="category-header__text"><?php echo $category_description; ?></p>
   </header>
+<?php
+  $child_categories = get_categories(array(
+    'child_of' => 5, // where '123' is your parent category
+    
+  ));
+?>
 
 
 <?php 

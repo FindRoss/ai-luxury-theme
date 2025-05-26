@@ -71,18 +71,36 @@
   font-weight: bold;
   text-align: center;
   text-decoration: none; /* Remove underline from the link */
-  border-radius: 10px; /* Optional: Rounded corners */
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Add hover effects */
+
+  position: relative; /* Ensure child elements are positioned relative to this container */
+  overflow: hidden; /* Prevent content overflow */
 }
 
 .background-image-card a {
-  &:hover {
-    transform: scale(1.05); /* Scale up the card on hover */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
-  }
-  &:active {
-    transform: scale(0.95); /* Scale down the card on click */
-  }
+  position: absolute; /* Make the link fill the parent container */
+  top: 0;
+  left: 0;
+  width: 100%; /* Fill the entire width of the card */
+  height: 100%; /* Fill the entire height of the card */
+
+  text-decoration: none; /* Remove underline from the link */
+  color: #fff; /* Inherit text color from the parent */
+  display: flex;
+  align-items: center; /* Center the text vertically */
+  justify-content: center; /* Center the text horizontally */
+  z-index: 1; /* Ensure the link is above the background */
+}
+
+.background-image-card h3 {
+  position: relative; /* Ensure the text is above the link */
+  z-index: 2; /* Ensure the text is above the link */
+  color: #BFA055; /* Set the text color */
+}
+
+.background-image-card:hover {
+ transition: 0.5s ease; /* Smooth transition for hover effects */
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
 }
 
 /* Sadok's code end */
