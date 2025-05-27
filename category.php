@@ -13,20 +13,33 @@
    $category_name        = $category->name;  
    $category_description = $category->description;
 ?> 
-   
+ 
 <div class="container">
   <header class="category-header">
     <h1 class="category-header__heading"><?php echo $category_name; ?></h1>
     <p class="category-header__text"><?php echo $category_description; ?></p>
   </header>
-<?php
-  $child_categories = get_categories(array(
-    'child_of' => 5, // where '123' is your parent category
-    
-  ));
+
+ <div class="category-sidebar">
+  <?php
+$child_categories = get_categories(array(
+  'child_of' => 5,
+  'hide_empty' => false, // Show even if no posts
+));
+
+if ( ! empty($child_categories) ) {
+    echo '<ul>';
+    foreach ( $child_categories as $category ) {
+        echo '<li>';
+        echo '<a href="' . esc_url(get_category_link($category->term_id)) . '">';
+        echo esc_html($category->name);
+        echo '</a>';
+        echo '</li>';
+    }
+    echo '</ul>';
+  }
 ?>
-
-
+</div>
 <?php 
   $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
