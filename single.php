@@ -18,7 +18,7 @@
         <div class="date">Updated Jan 25</div>
       </div>
       <?php if (has_post_thumbnail()): ?>
-        <div class="heading__image full-width">
+        <div class="heading__image">
           <img src="<?php echo get_the_post_thumbnail_url(null, 'large'); ?>" />
         </div>
       <?php endif; ?>

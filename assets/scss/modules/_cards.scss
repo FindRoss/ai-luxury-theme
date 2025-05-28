@@ -34,7 +34,7 @@
     .excerpt {
       color: var(--color-card-text);
       margin-top: var(--size-400);
-      font-size: 1.125rem;
+      font-size: 18px;
     }
   }
 }
@@ -71,9 +71,9 @@
       font-size: var(--size-800);
     }
 
-    .excerpt {
-      font-size: 1.125rem;
-    }
+    // .excerpt {
+    //   font-size: 18px !important;
+    // }
   }
 }
 
