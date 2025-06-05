@@ -1,63 +1,42 @@
-@use "breakpoints" as *;
-
-.heading {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
-  &__content {
-    padding: var(--size-200) 0;
-    max-width: 700px;
-margin: 0 auto;
-
-    @include breakpoint(medium) {
-      padding: var(--size-200) 0;
-    }
-
-    h1 {
-      color: var(--color-article-heading);
-      font-size: var(--size-800);
-      line-height: 1.2;
-  
-      @include breakpoint(medium) {
-        font-size: 4.25rem
-      }
-    }
-
-    .date {
-      margin-top: var(--size-400);
-      font-size: var(--size-400);
-      color: var(--color-article-date);
-      font-family: var(--font-family-body);
-      font-weight: 700;
-    }
-  }
-}
-
-
 /* DESKTOP */
+@use "breakpoints" as *;
 @include breakpoint(medium) {
-
   .heading {
-    display: grid;
-    grid-template-rows: auto auto; // Two rows: one for the image, one for the content
+    position: relative;
+    width: 100%;
+    height: 800px; // same height as image
+    overflow: hidden;
   }
 
   .heading__image {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    height: 800px; // adjust as needed
-    overflow: hidden;
-  
+    width: 100%;
+    height: 100%;
+
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover; // crops the image nicely
+      object-fit: cover;
       display: block;
     }
   }
 
   .heading__content {
-    grid-row: 2; // Place the content in the second row
+    position: absolute;
+    // padding:7rem;
+    padding: 7rem 7rem 7rem 3rem;
+    bottom: 0;
+    left: 0;
+    
+    background: #fff;// Optional for contrast
+    color: white; // Optional
+    z-index: 1;
+    max-width: 60%; // Optional
+
+    .date {
+      color: var(--color-accent);
+      font-size: var(--size-500);
+      font-weight: bold;
+      margin-top: 2rem;
+    }
   }
 }

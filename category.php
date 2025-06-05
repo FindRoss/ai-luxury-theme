@@ -21,10 +21,10 @@
   </header>
 
  <div class="category-sidebar">
-  <?php
+ <?php
 $child_categories = get_categories(array(
-  'child_of' => 5,
-  'hide_empty' => false, // Show even if no posts
+    'parent' => $category_id, // Get direct child categories
+    'hide_empty' => false, // Include categories with no posts
 ));
 
 if ( ! empty($child_categories) ) {
