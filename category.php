@@ -23,8 +23,8 @@
   </header>
 
  <div class="category-sidebar">
-  <?php
-  $child_categories = get_categories(array(
+  
+  <?php $child_categories = get_categories(array(
     'child_of' => $category_id,
     'hide_empty' => false, // Show even if no posts
   ));
@@ -39,7 +39,8 @@
     <ul>
   <?php  } ?>
 
-</div>
+</div><!-- .category-sidarbar --> 
+
 <?php 
   $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
@@ -63,8 +64,8 @@
     $big = 999999999; // need an unlikely integer
 
     echo paginate_links( array(
-      'base'    => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-      'format'  => '?paged=%#%',
+      // 'base'    => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+      // 'format'  => '?paged=%#%',
       'current' => max( 1, get_query_var('paged') ),
       'total'   => $query->max_num_pages
     ));

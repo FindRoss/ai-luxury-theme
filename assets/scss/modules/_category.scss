@@ -4,6 +4,10 @@
   .content {
     max-width: 800px;
   }
+
+  .konto-section {
+    margin-top: 2rem;
+  }
 }
 
 .category-header {
@@ -84,6 +88,7 @@
   position: relative;
   overflow: hidden;
 }
+
 .background-image-card a {
   position: absolute; /* Make the link fill the parent container */
   top: 0;
@@ -113,22 +118,20 @@
 
 
 .category-sidebar {
+  ul {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
 
- ul {
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
- }
-li {
-  list-style: none; 
-}
-a {
-text-decoration: none;
-color: #000;
-font-family: var(--font-family-body);
-font-weight: 400;
-}
-}
+  li {
+    list-style: none; 
+  }
 
-
-/* Sadok's code end */
+  a {
+    text-decoration: none;
+    color: #000;
+    font-family: var(--font-family-body);
+    font-weight: 400;
+  }
+}
