@@ -6,9 +6,9 @@
     $args = array(
       'post_type' => 'post',
       'posts_per_page' => 3
-    ); 
-    $query = new WP_Query($args); 
-  ?>
+      ); 
+      $query = new WP_Query($args); 
+    ?>
       
 
   <div class="container">
@@ -89,7 +89,7 @@
   // Get all categories, including empty ones
   $categories = get_categories(array(
       // Note: Dont need empty posts
-      'hide_empty' => false, // Dont include categories with no posts
+      'hide_empty' => true, // Dont include categories with no posts
   ));
 
     // Loop through all categories
