@@ -1,5 +1,11 @@
 @use "breakpoints" as *;
 
+.category {
+  .content {
+    max-width: 800px;
+  }
+}
+
 .category-header {
   display: flex;
   flex-direction: column;

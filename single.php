@@ -25,7 +25,7 @@
     </header>
 
     <!-- Section -->
-    <section class="content">  
+    <section class="content grid-content">  
       <?php the_content(); ?>
     </section>
 

@@ -12,6 +12,8 @@
    $category_id          = $category->term_id;   
    $category_name        = $category->name;  
    $category_description = $category->description;
+
+   $main_content = get_field('main_content', $category);
 ?> 
  
 <div class="container">
@@ -69,5 +71,11 @@
 
     wp_reset_postdata(); ?>
   </div>
-</div>
+
+  <?php if ($main_content) : ?>
+    <div class="content">
+      <?php echo $main_content; ?>
+    </div>
+  <?php endif; ?>
+</div><!-- .cointainer -->
 <?php get_footer(); ?>
