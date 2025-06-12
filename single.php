@@ -12,7 +12,7 @@
   <article>
 
     <!-- Heading -->
-    <header class="heading">
+    <header class="heading grid-content">
       <div class="heading__content">
         <h1><?php the_title(); ?></h1>
         <div class="date">Updated Jan 25</div>
