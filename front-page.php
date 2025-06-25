@@ -3,41 +3,24 @@
 
 
 <?php 
-    $featured_args = array(
-      'post_type' => 'post',
-      'posts_per_page' => 1
-      ); 
-      $featured_query = new WP_Query($featured_args); 
+$all_posts = new WP_Query( array(
+    'post_type'      => 'post',
+    'posts_per_page' => 24,
 
+) );
 
+$top_post = null;
+$middle_posts = array();
+$bottom_posts = array();
 
+if ( $all_posts->have_posts() ) {
+  $posts = $all_posts->posts;
+    
 
-      $latest_args = array(
-        'post_type' => 'post',
-        'posts_per_page' => 3,
-        'offset' => 1, // Skip the first post (featured post)
-        // 'posts__not_in' => $featured_args, // Exclude featured posts
-      );
-
-
-
-  
-       $latest_query = new WP_Query($latest_args); 
-
-
-
-
-
-       $rest_of_posts_args = array(
-        'post_type' => 'post',
-        'posts_per_page' => 20,
-        'offset' => 4, // Skip the first 4 posts (1 featured + 3 latest)
-        // 'posts__not_in' => $featured_args, // Exclude featured posts
-      );
-   
-       $rest_of_posts_query = new WP_Query($rest_of_posts_args); 
-
-
+  $top_post = $posts[0]; 
+  $middle_posts = array_slice( $posts, 1, 3 );
+  $bottom_posts = array_slice( $posts, 4, 20 );
+}
 
 
 ?>
@@ -46,31 +29,22 @@
     <section class="hokkaido-section"> 
 
       <div class="col-1">
-        <?php if ( $featured_query->have_posts() ) : ?>
-          <?php while ( $featured_query->have_posts() ) : $featured_query->the_post(); ?>
-            
+        <?php if ( $top_post ) : ?>
+         <?php setup_postdata( $top_post ); ?>
         <?php get_template_part( 'template-parts/card/tokyo-card' );?>
-
-        <?php $used_posts[] = get_the_ID(); ?>
-          
-          
-        <?php endwhile; ?>
-          <?php endif; ?>
-
+<?php endif ?>
       </div>
 
        <div class="col-2">
           <div class="section-heading"><h2>Latest Articles</h2></div>
-          <?php if ( $latest_query->have_posts() ) : ?>
-            <?php while ( $latest_query->have_posts() ) : $latest_query->the_post(); ?>
-            
+          <?php if ( !@empty( $middle_posts ) ) : ?>
+            <?php foreach ( $middle_posts as $post ) : ?> 
+
+            <?php setup_postdata( $post ); ?>
             <?php get_template_part( 'template-parts/card/kanazawa-card' );?>
        
 
-        <?php $used_posts[] = get_the_ID(); ?>
-          
-          
-        <?php endwhile; ?>
+        <?php endforeach; ?>
           <?php endif; ?>
       </div>
 
@@ -96,18 +70,18 @@
 
 <section class="latest-section">
 
-<?php if ( $rest_of_posts_query->have_posts() ) : ?>
-            <?php while ( $rest_of_posts_query->have_posts() ) : $rest_of_posts_query->the_post(); ?>
+
+          <?php if ( !@empty( $bottom_posts ) ) : ?>
+            <?php foreach ( $bottom_posts as $post ) : ?> 
             
-           
+              <?php setup_postdata( $post ); ?>
             <?php get_template_part( 'template-parts/card/bg-card' ); ?>
        
 
-        <?php $used_posts[] = get_the_ID(); ?>
+ 
           
-          
-        <?php endwhile; ?>
-          <?php endif; ?>
+            <?php endforeach; ?>
+            <?php endif; ?>
 
 </section>
 
