@@ -1,0 +1,74 @@
+@use "breakpoints" as *;
+
+body section:first-of-type {
+  margin-top: var(--size-900);
+
+
+}
+
+section {
+  padding-bottom: var(--size-600);
+  margin-bottom: var(--size-1000);
+}
+
+.hokkaido-section {
+  display: flex;
+  gap: var(--size-600);
+  flex-direction: column;
+  margin-top: 3rem;
+
+  @include breakpoint(medium) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.shikoku-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--size-600);
+
+  @include breakpoint(medium) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.konto-section {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--size-600);
+
+  @include breakpoint(medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint(large) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+
+// SECURITY SECTION
+.security {
+  border-top: 8px solid var(--color-section-separator);
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+
+  .card {
+    margin-top: 2rem;
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-size: 3.25rem;
+  }
+}

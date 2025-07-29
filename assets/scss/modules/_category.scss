@@ -1,0 +1,163 @@
+@use "breakpoints" as *;
+
+.category {
+
+  .category-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    
+    // @include breakpoint(medium) {
+    //   display: grid;
+    //   grid-template-columns: repeat(2, 1fr);
+    // }
+
+    &__text {
+      font-size: 18px;
+    }
+  }
+
+  .children-category-wrapper {
+    margin-top: 1rem;
+    overflow-x: auto;
+
+    // @include breakpoint(medium) {
+    //   overflow-x: hidden;
+    // }
+
+    ul.category-children {
+      // margin-top: 1rem;
+      display: flex;
+      flex-wrap: nowrap;
+      gap: var(--size-300);
+      padding: 1rem 0; 
+      
+      li {
+        // padding-top: 1rem;
+        flex: 0 0 auto; 
+        list-style: none; 
+        a {
+          text-decoration: none;
+          color: #000;
+          font-family: var(--font-family-body);
+          font-weight: 400;
+          border: 1px solid var(--color-card-border);
+          padding: var(--size-200) var(--size-300);
+
+          font-size: 1rem;
+        
+          @include breakpoint(medium) {
+            font-size: inherit; 
+          }
+        }
+      }
+    }
+  }
+
+  .category-main-content {
+    border-top: 1px solid var(--slate-200); 
+    max-width: 900px;
+    padding-top: 2rem;
+  }
+}
+
+
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: var(--size-400);
+  font-family: var(--font-family-body);
+  font-size: 20px;
+  // font-weight: 500;
+  // font-weight: bold;
+
+  // color: var(--color-link);
+}
+
+.pagination a:active,
+.pagination a:link {
+  display: flex;
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+.pagination a:hover {
+  transform: scale(1.1);
+  transition: all 0.1s;
+  color: var(--color-link-active);
+}
+
+/* Sadok's code start */
+
+
+.background-image-cards {
+  border: var(--color-card-border) 1px solid; /* Border around the grid */
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center; /* Center the cards horizontally */
+  gap: 1rem; /* Space between cards */
+  margin-top: 2rem; /* Space above the grid */
+  margin-bottom: 2rem; /* Space below the grid */
+  padding: 1rem; /* Padding around the grid */
+  background-color: var(--color-background); /* Background color for the grid */
+ 
+
+}
+
+.background-image-card {
+  width: 100%; /* Fill full width of the grid cell */
+  aspect-ratio: 3 / 2; /* Keep consistent height based on width (optional but helpful) */
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+
+  position: relative;
+  overflow: hidden;
+}
+.background-image-card a {
+  position: absolute; /* Make the link fill the parent container */
+  top: 0;
+  left: 0;
+  width: 100%; /* Fill the entire width of the card */
+  height: 100%; /* Fill the entire height of the card */
+
+  text-decoration: none; /* Remove underline from the link */
+  color: #fff; /* Inherit text color from the parent */
+  display: flex;
+  align-items: center; /* Center the text vertically */
+  justify-content: center; /* Center the text horizontally */
+  z-index: 1; /* Ensure the link is above the background */
+}
+
+.background-image-card h3 {
+  position: relative; /* Ensure the text is above the link */
+  z-index: 2; /* Ensure the text is above the link */
+  color: #BFA055; /* Set the text color */
+}
+
+.background-image-card:hover {
+ transition: 0.5s ease; /* Smooth transition for hover effects */
+  transform: scale(1.05); /* Slightly enlarge the card on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+}
+
+
+
+
+/* Sadok's code end */

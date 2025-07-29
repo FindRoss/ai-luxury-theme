@@ -1,0 +1,33 @@
+@use "breakpoints" as *;
+
+.breadcrumbs {
+  margin-top: 1rem; 
+  margin-bottom: 1rem;
+
+  &__layout {
+    display: flex;
+    gap: var(--size-100);
+    align-items: center;
+    overflow-x: auto;   
+    overflow-y: hidden; 
+    white-space: nowrap; 
+    padding-bottom: 0.4rem;
+
+    &--item {
+      font-size: 14px;
+      text-transform: uppercase;      
+      font-family: var(--font-family-body);
+      color: var(--color-muted);
+
+      a {
+        text-decoration: none;
+      }
+
+      &:not(:last-child)::after {
+        content: ">";
+        margin-left: var(--size-100);
+        color: var(--color-muted);
+      }
+    }
+  }
+}

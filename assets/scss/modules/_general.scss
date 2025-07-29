@@ -1,0 +1,60 @@
+@use "breakpoints" as *;
+
+.frontpage-placeholder {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: var(--background-color-body);
+  color: var(--color-text);
+} 
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--background-color-body);
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+}
+
+article {
+  margin-bottom: 5rem;
+}
+
+.full-width {
+  margin-left: -1rem;
+  margin-right: -1rem;
+
+  @include breakpoint(medium) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.visibility-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+hr {
+  width: 100%;
+}

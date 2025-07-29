@@ -1,0 +1,79 @@
+@use "breakpoints" as *;
+
+
+
+header {
+  position: relative;
+  background-color: var(--background-color-header);
+
+  .nav-layout {
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 5rem;
+    gap: 1rem;
+
+    @include breakpoint(medium) {
+      justify-content: space-between;
+    }
+
+    .hamburger {
+      display: flex;
+      cursor: pointer;
+
+      svg path {
+        fill: var(--color-dark);
+      }
+
+      @include breakpoint(medium) {
+        display: none;
+      }
+    }
+
+    .site-logo {
+      a {
+        display: flex;
+      }
+    }
+
+    .desktop-navigation {
+      display: none;
+
+      @include breakpoint(medium) {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .search-icon {
+      display: block;
+      margin-left: auto;
+
+      svg {
+        width: 22px;
+        height: 22px;
+        
+        path {
+          fill: var(--color-dark);
+        }
+      }
+    }
+  }
+}
+
+.svg-logo {
+  &__stars,
+  &__box {
+    fill: var(--color-header-svg-box-stars); 
+  }
+
+  &__box-text {
+    fill: var(--color-header-svg-box-text);
+  }
+  
+  &__text {
+    fill: var(--color-header-svg-text);
+  }
+}

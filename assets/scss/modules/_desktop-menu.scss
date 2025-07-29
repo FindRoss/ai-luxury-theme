@@ -1,0 +1,87 @@
+@use "breakpoints" as *;
+
+ul.desktop-menu {
+  @include breakpoint(medium) {
+    height: 100%;
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    gap: var(--size-200);
+  }
+
+   @include breakpoint(medium) {
+    li:nth-child(1),
+    li:nth-child(2) {
+      display: none;
+    }
+  }
+  @include breakpoint(large) {
+    li:nth-child(2) {
+      display: flex;
+    }
+  }
+  @include breakpoint(xl) {
+    li:nth-child(1) {
+      display: flex;
+    }
+  }
+
+  >li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .sub-menu {
+    padding: var(--size-900) var(--size-400);
+    gap: var(--size-400);
+    grid-template-columns: repeat(2, 1fr);
+
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpoint(large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  >li>a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: var(--size-300);
+    padding-right: var(--size-300);
+    font-size: 14px;
+  }
+
+  >li:hover {
+    background: var(--background-color-desktop-sub-menu);
+  }
+
+  .sub-menu-wrapper {
+    z-index: 999;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    max-height: 0px;
+    background: var(--background-color-desktop-sub-menu);
+    visibility: hidden;
+  
+    &.open {
+      visibility: visible;
+      max-height: 1000px;
+    }
+  }
+
+  .sub-menu {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    padding: var(--size-900) 1rem;
+    gap: var(--size-400);
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

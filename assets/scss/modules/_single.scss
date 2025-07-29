@@ -1,0 +1,38 @@
+@use "breakpoints" as *;
+
+.heading {
+  margin-top: 1rem;
+
+  @include breakpoint(large) {
+    margin-top: var(--size-600);
+    display: flex;
+    justify-content: center;
+  }
+
+  &__content {
+    
+    @include breakpoint(large) {
+      max-width: 700px; 
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: var(--color-article-heading);
+      font-size: var(--size-800);
+      line-height: 1.2;
+  
+      @include breakpoint(medium) {
+        font-size: 4.75rem
+      }
+    }
+
+    .date {
+      margin-top: var(--size-400);
+      color: var(--color-card-date);
+      font-family: var(--font-family-body);
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}

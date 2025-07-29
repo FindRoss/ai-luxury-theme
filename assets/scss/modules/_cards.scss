@@ -1,0 +1,175 @@
+@use "breakpoints" as *;
+
+.card {
+  padding: 0.5rem;
+  margin-top: var(--size-400);
+  
+  @include breakpoint(medium) { 
+    padding: 1rem; 
+  }
+  
+  &__content {
+    a:not(.button) {
+      text-decoration: none;
+      color: var(--color-card-heading);
+      font-size: var(--size-600);
+    }
+
+    .title {
+      line-height: 1.2;
+      
+    }
+
+    .date {
+      display: inline-block;
+      margin-top: var(--size-200);
+      color: var(--color-card-date);
+      font-family: var(--font-family-body);
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: var(--size-300);
+    }
+
+    .excerpt {
+      color: var(--color-card-text);
+      margin-top: var(--size-400);
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.tokyo-card {
+  margin-top: 0;
+  padding: 0; 
+  border: none; 
+  display: flex; 
+  flex-direction: column;
+  border-top: 1px solid var(--color-card-border);
+  
+  .card__content { 
+    padding-top: var(--size-400);
+
+    a {
+      font-size: var(--size-900);
+
+      @include breakpoint(medium) {
+        font-size: var(--size-1000);
+      }
+    }
+
+    p {
+      font-size: var(--size-500);
+    }
+  }
+}
+
+.osaka-card {
+  border: 1px solid var(--color-card-border);
+  margin-top: 0;
+  
+  .card__content { 
+    padding-top: var(--size-400);
+
+    a {
+      font-size: var(--size-800);
+    }
+
+    .excerpt {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.kyoto-card {
+  border: 1px solid var(--color-card-border);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--size-400);
+
+  .card__content {
+    a {
+      font-size: var(--size-600);
+    }
+  }
+}
+
+.kanazawa-card {
+  border: 1px solid var(--color-card-border);
+  .card__content {
+    a {
+      text-decoration: none;
+      margin-top: 2rem;
+      font-weight: 700;
+    }
+  }
+}
+
+
+.bg-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 1rem 0;
+  gap: var(--size-200);
+  align-items: start;
+  justify-content: start;
+  border-bottom: 1px solid var(--color-card-border);
+
+  @include breakpoint(medium) {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: "image content";
+  }
+ 
+  .card__content {
+    grid-area: content;
+    display: grid;
+    text-align: left;
+    
+    a {
+      text-decoration: none;
+      margin-top: 2rem;
+      font-weight: 700;
+    }
+
+    .excerpt {
+      max-width: 60ch;
+    }
+  }
+
+  img {
+    @include breakpoint(medium) {
+      grid-area: image;
+      width: 250px;
+      height: auto;
+    }
+  }
+}
+
+/* Product Cards */
+.product-card {  
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .title {
+    font-size: 22px; 
+    flex-grow: 1;
+  }
+}
+
+.button {
+  margin-top: 1rem;
+  display: block;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  font-family: var(--font-family-heading);
+
+  &__primary {
+    background: var(--background-color-button-primary);
+    color: var(--color-button-primary-text);
+  }
+}
